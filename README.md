@@ -13,6 +13,6 @@
 ```
 Aperte a tecla de ponto final "." para abrir nosso projeto no VS Code pela web
 ```
-```
-Link de ajuda para subir as mudanças do Community no repo do projeto https://visualstudio.microsoft.com/vs/github/
-```
+
+> Link de ajuda para subir as mudanças do Community no repo do projeto [visualstudio.microsoft.com/vs/github](https://visualstudio.microsoft.com/vs/github/)
+
