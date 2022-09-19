@@ -10,6 +10,6 @@
 
 > :mortar_board: Pamela Dantas - Matheus Tosi - Angelica Acevedo :mortar_board:
 
-``
+```
 Aperte a tecla de ponto final "." para abrir nosso projeto no VS Code pela web
-``
+```
