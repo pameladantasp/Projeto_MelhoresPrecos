@@ -36,7 +36,7 @@ namespace ProjetoInterdisciplinar
                 connention.Open();
                 command.ExecuteReader();
 
-                MessageBox.Show("Deu tudo certo, Inserido");
+                MessageBox.Show("Deu tudo certo, Inserido!");
             }
             catch(Exception ex)
             {
