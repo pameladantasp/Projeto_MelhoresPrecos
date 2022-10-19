@@ -27,7 +27,6 @@ namespace ProjetoInterdisciplinar
                 // Criar conexao com MySQL
                 connention = new MySqlConnection(datasource);
 
-
                 string query = "INSERT INTO Consumer (nameConsumer, emailConsumer) " +
                                "VALUES ('" + txtName.Text + "', '" + txtEmail.Text + "')";
 
