@@ -23,7 +23,7 @@ namespace ProjetoInterdisciplinar
         {
             try
             {
-                string datasource = "datasource=sql10.freemysqlhosting.net;username=sql10527490;password=DRUcpZMmgz;database=sql10527490";
+                string datasource = "datasource=sql10.freemysqlhosting.net;username=sql10527490;password=MAPprojeto;database=sql10527490";
                 // Criar conexao com MySQL
                 connention = new MySqlConnection(datasource);
 
