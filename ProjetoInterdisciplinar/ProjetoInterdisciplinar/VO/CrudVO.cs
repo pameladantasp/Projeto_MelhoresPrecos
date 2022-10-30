@@ -1,46 +1,38 @@
-﻿using System;
+﻿using Org.BouncyCastle.Asn1.Mozilla;
+using ProjetoInterdisciplinar.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProjetoInterdisciplinar.DAO;
 
 namespace ProjetoInterdisciplinar.VO
 {
     internal class CrudVO
     {
-        private int _idConsumer;
-        private string _nameConsumer;
-        private string _emailConsumer;
-        private DAO.CrudDAO dao;
-        public int idConsumer
+        private CrudDAO dao;
+        public Customer customer;
+
+        public CrudVO()
         {
-            get { return _idConsumer; }
-            set { _idConsumer = value; }
+            customer = new Customer();
         }
-        public string nameConsumer
+
+        public void insertCostumer()
         {
-            get { return _nameConsumer; }
-            set { _nameConsumer = value;  }
+            dao = new CrudDAO();
+            dao.insertCostumerData(customer);
         }
-        public string emailConsumer
+        public void updateCostumer()
         {
-            get { return _emailConsumer; }
-            set { _emailConsumer = value; }
+            dao = new CrudDAO();
+            dao.updateCostumerData(customer);
         }
-        public void Insert()
+        public bool deleteCostumer()
         {
-            dao = new DAO.CrudDAO();
-            dao.InsertDate(nameConsumer, emailConsumer);
-        }
-        public void Update()
-        {
-            dao = new DAO.CrudDAO();
-            dao.Update(idConsumer, nameConsumer, emailConsumer);
-        }
-        public void Delate()
-        {
-            dao = new DAO.CrudDAO();
-            dao.DelateData(idConsumer, nameConsumer, emailConsumer);
+            dao = new CrudDAO();
+            return dao.deleteCostumer(customer.idCustomer);
         }
     }
 }
