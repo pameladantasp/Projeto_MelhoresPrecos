@@ -38,6 +38,7 @@
             this.txtConfPassword = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.customInstaller1 = new MySql.Data.MySqlClient.CustomInstaller();
             this.SuspendLayout();
             // 
             // label1
@@ -94,16 +95,22 @@
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(96, 244);
+            this.txtPassword.MaxLength = 14;
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(258, 31);
             this.txtPassword.TabIndex = 8;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // txtConfPassword
             // 
             this.txtConfPassword.Location = new System.Drawing.Point(96, 333);
+            this.txtConfPassword.MaxLength = 14;
             this.txtConfPassword.Name = "txtConfPassword";
+            this.txtConfPassword.PasswordChar = '*';
             this.txtConfPassword.Size = new System.Drawing.Size(258, 31);
             this.txtConfPassword.TabIndex = 9;
+            this.txtConfPassword.UseSystemPasswordChar = true;
             // 
             // label4
             // 
@@ -158,6 +165,7 @@
         private System.Windows.Forms.TextBox txtConfPassword;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnCancel;
+        private MySql.Data.MySqlClient.CustomInstaller customInstaller1;
     }
 }
 

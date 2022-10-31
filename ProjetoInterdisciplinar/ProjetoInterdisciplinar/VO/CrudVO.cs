@@ -11,27 +11,24 @@ namespace ProjetoInterdisciplinar.VO
 {
     internal class CrudVO
     {
-        private CrudDAO dao;
+        private CostumerDAO dao;
         public Customer customer;
 
         public CrudVO()
         {
             customer = new Customer();
+            dao = new CostumerDAO();
         }
-
         public void insertCostumer()
         {
-            dao = new CrudDAO();
-            dao.insertCostumerData(customer);
+            dao.insertData(customer);
         }
         public void updateCostumer()
         {
-            dao = new CrudDAO();
             dao.updateCostumerData(customer);
         }
         public bool deleteCostumer()
         {
-            dao = new CrudDAO();
             return dao.deleteCostumer(customer.idCustomer);
         }
     }

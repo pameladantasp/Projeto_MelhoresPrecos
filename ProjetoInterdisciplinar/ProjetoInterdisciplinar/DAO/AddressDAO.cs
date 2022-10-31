@@ -1,0 +1,44 @@
+﻿using ProjetoInterdisciplinar.Helpers;
+using ProjetoInterdisciplinar.Model;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ProjetoInterdisciplinar.DAO
+{
+    internal class AddressDAO
+    {
+        private Database database;
+
+        public AddressDAO()
+        {
+            database = new Database();
+        }
+
+        public void insertData(Address address)
+        {
+            try
+            {
+                database.setInsertAddressQueryString();
+                database.configureMySqlCommand();
+                database.command.Parameters.AddWithValue("@street", address.street);
+                database.command.Parameters.AddWithValue("@number", address.number);
+                database.command.Parameters.AddWithValue("@city", address.city);
+                database.command.Parameters.AddWithValue("@state", address.state);
+                database.command.Parameters.AddWithValue("@postalcode", address.postalCode);
+                database.insert();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                database.closeConnection();
+            }
+        }
+    }
+}

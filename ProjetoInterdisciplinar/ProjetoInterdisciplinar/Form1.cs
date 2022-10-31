@@ -18,38 +18,21 @@ namespace ProjetoInterdisciplinar
             InitializeComponent();
             crudVO = new CrudVO();
         }
-        private void loadData()
-        {
-            database = new Database();
-
-            string connetionString = database.getConnectionString();
-            string query = "SELECT * FROM Consumer";
-            using (MySqlConnection connection = new MySqlConnection(connetionString))
-            {
-                using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection))
-                {
-                    try
-                    {
-
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                    finally
-                    {
-                        connection.Close();
-                    }
-                }
-            }
-        }
-
         private void btnRegister_Click(object sender, EventArgs e)
         {
             try
             {
                 crudVO.customer.name = txtName.Text;
                 crudVO.customer.email = txtEmail.Text;
+                crudVO.customer.password = txtPassword.Text;
+
+                crudVO.customer.address = new Address();
+                crudVO.customer.address.street = "Rua Antonio Miguel";
+                crudVO.customer.address.number = "77";
+                crudVO.customer.address.city = "Campinas";
+                crudVO.customer.address.state = "SP";
+                crudVO.customer.address.postalCode = "00000-000";
+
                 crudVO.insertCostumer();
                 MessageBox.Show("DEU CERTO INSERT!");
 
