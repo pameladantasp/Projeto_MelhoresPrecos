@@ -50,39 +50,6 @@ namespace ProjetoInterdisciplinar.Helpers
         {
             connection.Close();
         }
-
-        public void setLoadQueryString()
-        {
-            query = "SELECT * FROM Consumer";
-        }
-        public void setInsertCustomerQueryString()
-        {
-            query = "INSERT INTO Consumer (nameConsumer, emailConsumer, password, idAddress)" +
-                " VALUES (@nameConsumer, @emailConsumer, @password, @idAddress)";
-        }
-        public void setInsertAddressQueryString()
-        {
-            query = "INSERT INTO Address (street, number, city, state, postalCode)" +
-                " VALUES (@street, @number, @city, @state, @postalCode)";
-        }
-        public void setInsertProductQueryString()
-        {
-            query = "INSERT INTO Product (name, category) VALUES (@name, @category)";
-        }
-        public void setUpdateQueryString()
-        {
-            query = "UPDATE Comsumer SET nameConsumer = @nameConsumer, emailConsumer = @emailConsumer password = @password " +
-                "WHERE idConsumer = @idConsumer";
-        }
-        public void setDeleteQueryString()
-        {
-            query = "DELETE FROM Consumer ";
-            query += "WHERE idConsumer = @idConsumer";
-        }
-        public void configureMySqlCommand()
-        {
-            command = new MySqlCommand(query, connection);
-        }
         public bool insert()
         {
             try
@@ -92,7 +59,7 @@ namespace ProjetoInterdisciplinar.Helpers
                     execute();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 return false;
@@ -103,7 +70,100 @@ namespace ProjetoInterdisciplinar.Helpers
         {
             command.ExecuteNonQuery();
         }
+        public void setLoadQueryString()
+        {
+            query = "SELECT * FROM Consumer";
+        }
+        public void configureMySqlCommand()
+        {
+            command = new MySqlCommand(query, connection);
+        }
 
+        //Query Address
+        public void setInsertAddressQueryString()
+        {
+            query = "INSERT INTO Address (street, number, city, state, postalCode)" +
+                " VALUES (@street, @number, @city, @state, @postalCode)";
+        }
+        public void setUpdateAddressQueryString()
+        {
+            query = "UPDATE Address SET street = @street, number = @number, city = @city, state = @state, postalCode = @postalCode " +
+                "WHERE idAddress = @idAddress";
+        }
+        public void setDeleteAddressQueryString()
+        {
+            query = "DELETE FROM Address ";
+            query += "WHERE idAddress = @idAddress";
+        }
+
+        //Query customer
+        public void setInsertCustomerQueryString()
+        {
+            query = "INSERT INTO Consumer (name, email, password, idAddress)" +
+                " VALUES (@name, @email, @password, @idAddress)";
+        }
+        public void setUpdateCustomerQueryString()
+        {
+            query = "UPDATE Comsumer SET name = @name, email = @email, password = @password " +
+                "WHERE idConsumer = @idConsumer";
+        }
+        public void setDeleteCustomerQueryString()
+        {
+            query = "DELETE FROM Consumer ";
+            query += "WHERE idConsumer = @idConsumer";
+        }
+
+        //Query supermarket
+        public void setInsertSupermarketQueryString()
+        {
+            query = "INSERT INTO Supermarket (name, idAddress)" +
+                " VALUES (@name, @idAddress)";
+        }
+        public void setUpdateSupermarketQueryString()
+        {
+            query = "UPDATE Supermarket SET name = @name "+
+                "WHERE idSupermarket = @idSupermarket";
+        }
+        public void setDeleteSupermarketQueryString()
+        {
+            query = "DELETE FROM Supermarket ";
+            query += "WHERE idSupermarket = @idSupermarket";
+        }
+
+        //Query category
+        public void setInsertCategoryQueryString()
+        {
+            query = "INSERT INTO Category (type) VALUES (@type)";
+        }
+        public void setUpdateCategoryQueryString()
+        {
+            query = "UPDATE Category SET type = @type " +
+                "WHERE idCategory = @idCategory";
+        }
+        public void setDeleteCategoryQueryString()
+        {
+            query = "DELETE FROM Category ";
+            query += "WHERE idCategory = @idCategory";
+        }
+
+        //Query Product
+        public void setInsertProductQueryString()
+        {
+            query = "INSERT INTO Product (name, idCategory) VALUES (@name, @idCategory)";
+        }
+        public void setUpdateProductQueryString()
+        {
+            query = "UPDATE Product SET name = @name " +
+                "WHERE idProduct = @idProduct";
+        }
+        public void setDeleteProductQueryString()
+        {
+            query = "DELETE FROM Product ";
+            query += "WHERE idProduct = @idProduct";
+        }
+
+        //Query registerProduct
+       
         public int getNextId(string nameTable)
         {
             query = "SELECT AUTO_INCREMENT FROM information_schema.TABLES " +

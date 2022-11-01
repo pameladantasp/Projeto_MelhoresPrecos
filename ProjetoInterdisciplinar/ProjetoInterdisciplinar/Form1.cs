@@ -26,7 +26,6 @@ namespace ProjetoInterdisciplinar
                 crudVO.customer.email = txtEmail.Text;
                 crudVO.customer.password = txtPassword.Text;
 
-                crudVO.customer.address = new Address();
                 crudVO.customer.address.street = "Rua Antonio Miguel";
                 crudVO.customer.address.number = "77";
                 crudVO.customer.address.city = "Campinas";

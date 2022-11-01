@@ -6,10 +6,10 @@ using ProjetoInterdisciplinar.Helpers;
 
 namespace ProjetoInterdisciplinar.DAO
 {
-    internal class CostumerDAO
+    internal class CustumerDAO
     {
         private Database database;
-        public CostumerDAO()
+        public CustumerDAO()
         {
             database = new Database();
         }
@@ -41,11 +41,11 @@ namespace ProjetoInterdisciplinar.DAO
                 database.closeConnection();
             }
         }
-        public void updateCostumerData(Customer customer)
+        public void updateData(Customer customer)
         {
             try
             {
-                database.setUpdateQueryString();
+                database.setUpdateCustomerQueryString();
                 database.configureMySqlCommand();
                 database.command.Parameters.AddWithValue("@nameConsumer", customer.name);
                 database.command.Parameters.AddWithValue("@emailConsumer", customer.email);
@@ -60,13 +60,13 @@ namespace ProjetoInterdisciplinar.DAO
                 database.closeConnection();
             }
         }
-        public bool deleteCostumer(int idConsumer)
+        public bool delete(int idConsumer)
         {
             bool didDelete;
 
             try
             {
-                database.setDeleteQueryString();
+                database.setDeleteCustomerQueryString();
                 database.configureMySqlCommand();
                 database.command.Parameters.AddWithValue("?idConsumer", idConsumer);
                 database.insert();
@@ -82,7 +82,7 @@ namespace ProjetoInterdisciplinar.DAO
                 database.closeConnection();
             }
             return didDelete;
-            //return true;
+            return true;
         }
     }
 }

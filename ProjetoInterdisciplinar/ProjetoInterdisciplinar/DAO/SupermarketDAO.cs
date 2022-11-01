@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoInterdisciplinar.DAO
 {
-    internal class SuperMallDAO
+    internal class SupermarketDAO
     {
     }
 }

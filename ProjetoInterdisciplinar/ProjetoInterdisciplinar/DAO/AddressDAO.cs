@@ -40,5 +40,53 @@ namespace ProjetoInterdisciplinar.DAO
                 database.closeConnection();
             }
         }
+
+        public void updateData(Address address)
+        {
+            try
+            {
+                database.setUpdateAddressQueryString();
+                database.configureMySqlCommand();
+                database.command.Parameters.AddWithValue("@street", address.street);
+                database.command.Parameters.AddWithValue("@number", address.number);
+                database.command.Parameters.AddWithValue("@city", address.city);
+                database.command.Parameters.AddWithValue("@state", address.state);
+                database.command.Parameters.AddWithValue("@postalcode", address.postalCode);
+                database.insert();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                database.closeConnection();
+            }
+        }
+
+        public bool delete(int idAddress)
+        {
+            bool didDelete;
+
+            try
+            {
+                database.setDeleteAddressQueryString();
+                database.configureMySqlCommand();
+                database.command.Parameters.AddWithValue("?idAddress", idAddress);
+                database.insert();
+                didDelete = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                didDelete = false;
+            }
+            finally
+            {
+                database.closeConnection();
+            }
+            return didDelete;
+            return true;
+        }
     }
 }
