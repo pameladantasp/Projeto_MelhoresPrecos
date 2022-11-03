@@ -8,15 +8,15 @@ using ProjetoInterdisciplinar.VO;
 
 namespace ProjetoInterdisciplinar
 {
-    public partial class Form1 : Form
+    public partial class RegisterView : Form
     {
         private Database database;
-        private CrudVO crudVO;
+        private CustomerVO crudVO;
 
-        public Form1()
+        public RegisterView()
         {
             InitializeComponent();
-            crudVO = new CrudVO();
+            crudVO = new CustomerVO();
         }
         private void btnRegister_Click(object sender, EventArgs e)
         {
@@ -26,11 +26,11 @@ namespace ProjetoInterdisciplinar
                 crudVO.customer.email = txtEmail.Text;
                 crudVO.customer.password = txtPassword.Text;
 
-                crudVO.customer.address.street = "Rua Antonio Miguel";
-                crudVO.customer.address.number = "77";
-                crudVO.customer.address.city = "Campinas";
-                crudVO.customer.address.state = "SP";
-                crudVO.customer.address.postalCode = "00000-000";
+                crudVO.customer.address.Street = txtStreet.Text;
+                crudVO.customer.address.Number = txtNumber.Text;
+                crudVO.customer.address.City = txtCity.Text;
+                crudVO.customer.address.State = txtState.Text;
+                crudVO.customer.address.PostalCode = txtPostalCode.Text;
 
                 crudVO.insertCostumer();
                 MessageBox.Show("DEU CERTO INSERT!");

@@ -17,19 +17,20 @@ namespace ProjetoInterdisciplinar.DAO
         {
             try
             {
-                int idAddress = database.getNextId("Address");
+                int idAddress = database.getNextId("address");
+                
+                AddressDAO addressDAO = new AddressDAO();
+                bool didInsert = addressDAO.insertData(customer.address);
 
-                database.setInsertCustomerQueryString();
-                database.configureMySqlCommand();
-                database.command.Parameters.AddWithValue("@nameConsumer", customer.name);
-                database.command.Parameters.AddWithValue("@emailConsumer", customer.email);
-                database.command.Parameters.AddWithValue("@password", customer.password);
-                database.command.Parameters.AddWithValue("@idAddress", idAddress);
-                bool didInsert = database.insert();
                 if (didInsert)
                 {
-                    AddressDAO addressDAO = new AddressDAO();
-                    addressDAO.insertData(customer.address);
+                    database.setInsertCustomerQueryString();
+                    database.configureMySqlCommand();
+                    database.command.Parameters.AddWithValue("@name", customer.name);
+                    database.command.Parameters.AddWithValue("@email", customer.email);
+                    database.command.Parameters.AddWithValue("@password", customer.password);
+                    database.command.Parameters.AddWithValue("@idAddress", idAddress);
+                    database.insert();
                 }
             }
             catch(Exception ex)
@@ -47,8 +48,9 @@ namespace ProjetoInterdisciplinar.DAO
             {
                 database.setUpdateCustomerQueryString();
                 database.configureMySqlCommand();
-                database.command.Parameters.AddWithValue("@nameConsumer", customer.name);
-                database.command.Parameters.AddWithValue("@emailConsumer", customer.email);
+                database.command.Parameters.AddWithValue("@name", customer.name);
+                database.command.Parameters.AddWithValue("@email", customer.email);
+                database.command.Parameters.AddWithValue("@password", customer.password);
                 database.insert();
             }
             catch (Exception ex)
@@ -68,7 +70,7 @@ namespace ProjetoInterdisciplinar.DAO
             {
                 database.setDeleteCustomerQueryString();
                 database.configureMySqlCommand();
-                database.command.Parameters.AddWithValue("?idConsumer", idConsumer);
+                database.command.Parameters.AddWithValue("@idConsumer", idConsumer);
                 database.insert();
                 didDelete = true;
             }
@@ -82,7 +84,6 @@ namespace ProjetoInterdisciplinar.DAO
                 database.closeConnection();
             }
             return didDelete;
-            return true;
         }
     }
 }

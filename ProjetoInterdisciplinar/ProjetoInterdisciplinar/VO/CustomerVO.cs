@@ -9,12 +9,12 @@ using ProjetoInterdisciplinar.DAO;
 
 namespace ProjetoInterdisciplinar.VO
 {
-    internal class CrudVO
+    internal class CustomerVO
     {
         private CustumerDAO dao;
         public Customer customer;
 
-        public CrudVO()
+        public CustomerVO()
         {
             customer = new Customer();
             customer.address = new Address();

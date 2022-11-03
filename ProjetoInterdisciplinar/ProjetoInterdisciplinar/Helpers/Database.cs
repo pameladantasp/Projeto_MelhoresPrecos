@@ -72,7 +72,7 @@ namespace ProjetoInterdisciplinar.Helpers
         }
         public void setLoadQueryString()
         {
-            query = "SELECT * FROM Consumer";
+            query = "SELECT * FROM costumer";
         }
         public void configureMySqlCommand()
         {
@@ -82,88 +82,104 @@ namespace ProjetoInterdisciplinar.Helpers
         //Query Address
         public void setInsertAddressQueryString()
         {
-            query = "INSERT INTO Address (street, number, city, state, postalCode)" +
-                " VALUES (@street, @number, @city, @state, @postalCode)";
+            query = "INSERT INTO address (Street, Number, City, State, PostalCode)" +
+                " VALUES (@Street, @Number, @City, @State, @PostalCode)";
         }
         public void setUpdateAddressQueryString()
         {
-            query = "UPDATE Address SET street = @street, number = @number, city = @city, state = @state, postalCode = @postalCode " +
+            query = "UPDATE address SET (Street = @Street, Number = @Number, City = @City, State = @State, PostalCode = @PostalCode) " +
                 "WHERE idAddress = @idAddress";
         }
         public void setDeleteAddressQueryString()
         {
-            query = "DELETE FROM Address ";
+            query = "DELETE FROM address ";
             query += "WHERE idAddress = @idAddress";
         }
 
         //Query customer
         public void setInsertCustomerQueryString()
         {
-            query = "INSERT INTO Consumer (name, email, password, idAddress)" +
+            query = "INSERT INTO costumer (name, email, password, idAddress)" +
                 " VALUES (@name, @email, @password, @idAddress)";
         }
         public void setUpdateCustomerQueryString()
         {
-            query = "UPDATE Comsumer SET name = @name, email = @email, password = @password " +
+            query = "UPDATE costumer SET name = @name, email = @email, password = @password " +
                 "WHERE idConsumer = @idConsumer";
         }
         public void setDeleteCustomerQueryString()
         {
-            query = "DELETE FROM Consumer ";
-            query += "WHERE idConsumer = @idConsumer";
+            query = "DELETE FROM costumer ";
+            query += "WHERE idCostumer = @idCostumer";
         }
 
         //Query supermarket
         public void setInsertSupermarketQueryString()
         {
-            query = "INSERT INTO Supermarket (name, idAddress)" +
-                " VALUES (@name, @idAddress)";
+            query = "INSERT INTO supermarket (Name, idAddress)" +
+                " VALUES (@Name, @idAddress)";
         }
         public void setUpdateSupermarketQueryString()
         {
-            query = "UPDATE Supermarket SET name = @name "+
+            query = "UPDATE supermarket SET Name = @Name "+
                 "WHERE idSupermarket = @idSupermarket";
         }
         public void setDeleteSupermarketQueryString()
         {
-            query = "DELETE FROM Supermarket ";
+            query = "DELETE FROM supermarket ";
             query += "WHERE idSupermarket = @idSupermarket";
         }
 
         //Query category
         public void setInsertCategoryQueryString()
         {
-            query = "INSERT INTO Category (type) VALUES (@type)";
+            query = "INSERT INTO category (Type) VALUES (@Type)";
         }
         public void setUpdateCategoryQueryString()
         {
-            query = "UPDATE Category SET type = @type " +
+            query = "UPDATE category SET Type = @Type " +
                 "WHERE idCategory = @idCategory";
         }
         public void setDeleteCategoryQueryString()
         {
-            query = "DELETE FROM Category ";
+            query = "DELETE FROM category ";
             query += "WHERE idCategory = @idCategory";
         }
 
         //Query Product
         public void setInsertProductQueryString()
         {
-            query = "INSERT INTO Product (name, idCategory) VALUES (@name, @idCategory)";
+            query = "INSERT INTO product (Name, idCategory) VALUES (@Name, @idCategory)";
         }
         public void setUpdateProductQueryString()
         {
-            query = "UPDATE Product SET name = @name " +
+            query = "UPDATE product SET Name = @Name " +
                 "WHERE idProduct = @idProduct";
         }
         public void setDeleteProductQueryString()
         {
-            query = "DELETE FROM Product ";
+            query = "DELETE FROM product ";
             query += "WHERE idProduct = @idProduct";
         }
 
         //Query registerProduct
-       
+
+        public void setInsertRegisterProductQueryString()
+        {
+            query = "INSERT INTO registerProduct (idRegister, idCustomer, idSupermarket, idProduct, Price, DateRegister) " +
+                "VALUES (@idRegister, @idCustomer, @idSupermarket, @idProduct, @Price, @DateRegister)";
+        }
+        public void setUpdateRegisterProductQueryString()
+        {
+            query = "UPDATE registerProduct SET (idRegister, idCustomer, idSupermarket, idProduct, Price, DateRegister) " +
+                "VALUES (@idRegister, @idCustomer, @idSupermarket, @idProduct, @Price, @DateRegister)";
+        }
+        public void setDeleteRegisterProductQueryString()
+        {
+            query = "DELETE FROM registerProduct ";
+            query += "WHERE idRegister = @idRegister";
+        }
+
         public int getNextId(string nameTable)
         {
             query = "SELECT AUTO_INCREMENT FROM information_schema.TABLES " +

@@ -9,6 +9,6 @@ namespace ProjetoInterdisciplinar.Model
     internal class Category
     {
         public int idCategory { get; set; }
-        public string type { get; set; }
+        public string Type { get; set; }
     }
 }
