@@ -1,16 +1,12 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using ProjetoInterdisciplinar.Helpers;
-using ProjetoInterdisciplinar.Model;
 using ProjetoInterdisciplinar.VO;
 
 namespace ProjetoInterdisciplinar
 {
     public partial class RegisterView : Form
     {
-        private Database database;
         private CustomerVO crudVO;
 
         public RegisterView()
