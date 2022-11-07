@@ -24,7 +24,7 @@ namespace ProjetoInterdisciplinar.DAO
             {
                 database.setInsertCategoryQueryString();
                 database.configureMySqlCommand();
-                database.command.Parameters.AddWithValue("@Type", category.Type);
+                database.command.Parameters.AddWithValue("@type", category.type);
                 database.insert();
             }
             catch (Exception ex)
@@ -43,7 +43,7 @@ namespace ProjetoInterdisciplinar.DAO
             {
                 database.setUpdateCategoryQueryString();
                 database.configureMySqlCommand();
-                database.command.Parameters.AddWithValue("@Type", category.Type);
+                database.command.Parameters.AddWithValue("@type", category.type);
                 database.insert();
             }
             catch (Exception ex)
@@ -78,7 +78,6 @@ namespace ProjetoInterdisciplinar.DAO
                 database.closeConnection();
             }
             return didDelete;
-            return true;
         }
     }
 }

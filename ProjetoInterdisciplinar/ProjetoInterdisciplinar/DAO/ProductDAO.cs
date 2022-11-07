@@ -27,13 +27,13 @@ namespace ProjetoInterdisciplinar.DAO
 
                 database.setInsertProductQueryString();
                 database.configureMySqlCommand();
-                database.command.Parameters.AddWithValue("@Name", product.Name);
+                database.command.Parameters.AddWithValue("@name", product.name);
                 database.command.Parameters.AddWithValue("@idCategory", idCategory);
                 bool didInsert = database.insert();
                 if (didInsert)
                 {
                     CategoryDAO categoryDAO = new CategoryDAO();
-                    categoryDAO.insertData(product.Category);
+                    categoryDAO.insertData(product.category);
                 }
             }
             catch (Exception ex)
@@ -51,7 +51,7 @@ namespace ProjetoInterdisciplinar.DAO
             {
                 database.setUpdateProductQueryString();
                 database.configureMySqlCommand();
-                database.command.Parameters.AddWithValue("@Name", product.Name);
+                database.command.Parameters.AddWithValue("@name", product.name);
                 database.insert();
             }
             catch (Exception ex)
@@ -85,7 +85,6 @@ namespace ProjetoInterdisciplinar.DAO
                 database.closeConnection();
             }
             return didDelete;
-            return true;
         }
     }
 }

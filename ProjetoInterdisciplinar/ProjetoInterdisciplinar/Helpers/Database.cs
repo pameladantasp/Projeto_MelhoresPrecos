@@ -82,12 +82,12 @@ namespace ProjetoInterdisciplinar.Helpers
         //Query Address
         public void setInsertAddressQueryString()
         {
-            query = "INSERT INTO address (Street, Number, City, State, PostalCode)" +
-                " VALUES (@Street, @Number, @City, @State, @PostalCode)";
+            query = "INSERT INTO address (street, number, city, state, postalCode)" +
+                " VALUES (@street, @number, @city, @state, @postalCode)";
         }
         public void setUpdateAddressQueryString()
         {
-            query = "UPDATE address SET (Street = @Street, Number = @Number, City = @City, State = @State, PostalCode = @PostalCode) " +
+            query = "UPDATE address SET (street = @street, number = @number, city = @city, state = @state, postalCode = @postalCode) " +
                 "WHERE idAddress = @idAddress";
         }
         public void setDeleteAddressQueryString()
@@ -116,12 +116,12 @@ namespace ProjetoInterdisciplinar.Helpers
         //Query supermarket
         public void setInsertSupermarketQueryString()
         {
-            query = "INSERT INTO supermarket (Name, idAddress)" +
-                " VALUES (@Name, @idAddress)";
+            query = "INSERT INTO supermarket (name, idAddress)" +
+                " VALUES (@name, @idAddress)";
         }
         public void setUpdateSupermarketQueryString()
         {
-            query = "UPDATE supermarket SET Name = @Name "+
+            query = "UPDATE supermarket SET name = @name " +
                 "WHERE idSupermarket = @idSupermarket";
         }
         public void setDeleteSupermarketQueryString()
@@ -133,11 +133,11 @@ namespace ProjetoInterdisciplinar.Helpers
         //Query category
         public void setInsertCategoryQueryString()
         {
-            query = "INSERT INTO category (Type) VALUES (@Type)";
+            query = "INSERT INTO category (type) VALUES (@type)";
         }
         public void setUpdateCategoryQueryString()
         {
-            query = "UPDATE category SET Type = @Type " +
+            query = "UPDATE category SET type = @type " +
                 "WHERE idCategory = @idCategory";
         }
         public void setDeleteCategoryQueryString()
@@ -149,11 +149,11 @@ namespace ProjetoInterdisciplinar.Helpers
         //Query Product
         public void setInsertProductQueryString()
         {
-            query = "INSERT INTO product (Name, idCategory) VALUES (@Name, @idCategory)";
+            query = "INSERT INTO product (name, category) VALUES (@name, @category)";
         }
         public void setUpdateProductQueryString()
         {
-            query = "UPDATE product SET Name = @Name " +
+            query = "UPDATE product SET name = @name " +
                 "WHERE idProduct = @idProduct";
         }
         public void setDeleteProductQueryString()
@@ -166,13 +166,13 @@ namespace ProjetoInterdisciplinar.Helpers
 
         public void setInsertRegisterProductQueryString()
         {
-            query = "INSERT INTO registerProduct (idRegister, idCustomer, idSupermarket, idProduct, Price, DateRegister) " +
-                "VALUES (@idRegister, @idCustomer, @idSupermarket, @idProduct, @Price, @DateRegister)";
+            query = "INSERT INTO registerProduct (idRegister, idCustomer, idSupermarket, idProduct, price, dateRegister) " +
+                "VALUES (@idRegister, @idCustomer, @idSupermarket, @idProduct, @price, @dateRegister)";
         }
         public void setUpdateRegisterProductQueryString()
         {
-            query = "UPDATE registerProduct SET (idRegister, idCustomer, idSupermarket, idProduct, Price, DateRegister) " +
-                "VALUES (@idRegister, @idCustomer, @idSupermarket, @idProduct, @Price, @DateRegister)";
+            query = "UPDATE registerProduct SET (idRegister, idCustomer, idSupermarket, idProduct, price, dateRegister) " +
+                "VALUES (@idRegister, @idCustomer, @idSupermarket, @idProduct, @price, @dateRegister)";
         }
         public void setDeleteRegisterProductQueryString()
         {

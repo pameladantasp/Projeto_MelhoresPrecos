@@ -9,7 +9,7 @@ namespace ProjetoInterdisciplinar.Model
     internal class Product
     {
         public int idProduct { get; set; }
-        public string Name { get; set; }
-        public Category Category { get; set; }
+        public string name { get; set; }
+        public Category category { get; set; }
     }
 }

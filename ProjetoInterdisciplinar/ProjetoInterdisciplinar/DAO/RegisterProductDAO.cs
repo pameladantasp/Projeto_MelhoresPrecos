@@ -30,8 +30,8 @@ namespace ProjetoInterdisciplinar.DAO
                 database.command.Parameters.AddWithValue("@idCustomer", idCustomer);
                 database.command.Parameters.AddWithValue("@idProduct", idProduct);
                 database.command.Parameters.AddWithValue("@idSupermarket", idSupermarket);
-                database.command.Parameters.AddWithValue("@Price", registerProduct.Price);
-                database.command.Parameters.AddWithValue("@DataRegister", registerProduct.DataRegister);
+                database.command.Parameters.AddWithValue("@price", registerProduct.price);
+                database.command.Parameters.AddWithValue("@dataRegister", registerProduct.dataRegister);
 
                 bool didInsert = database.insert();
                 if (didInsert)
@@ -60,9 +60,9 @@ namespace ProjetoInterdisciplinar.DAO
             try
             {
                 database.setUpdateRegisterProductQueryString();
-                database.configureMySqlCommand();
-                database.command.Parameters.AddWithValue("@Price", registerProduct.Price);
-                database.command.Parameters.AddWithValue("@DataRegister", registerProduct.DataRegister);
+                database.configureMySqlCommand(); 
+                database.command.Parameters.AddWithValue("@price", registerProduct.price);
+                database.command.Parameters.AddWithValue("@dataRegister", registerProduct.dataRegister);
                 database.insert();
             }
             catch (Exception ex)
@@ -96,7 +96,6 @@ namespace ProjetoInterdisciplinar.DAO
                 database.closeConnection();
             }
             return didDelete;
-            return true;
         }
     }
 }

@@ -16,7 +16,7 @@ namespace ProjetoInterdisciplinar.VO
         public ProductVO()
         {
             product = new Product();
-            product.Category = new Category();
+            product.category = new Category();
             dao = new ProductDAO();
         }
         public void insertProduct()

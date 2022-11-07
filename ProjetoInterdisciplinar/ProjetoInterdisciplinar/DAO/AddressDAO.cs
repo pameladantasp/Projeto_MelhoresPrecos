@@ -24,11 +24,11 @@ namespace ProjetoInterdisciplinar.DAO
             {
                 database.setInsertAddressQueryString();
                 database.configureMySqlCommand();
-                database.command.Parameters.AddWithValue("@Street", address.Street);
-                database.command.Parameters.AddWithValue("@Number", address.Number);
-                database.command.Parameters.AddWithValue("@City", address.City);
-                database.command.Parameters.AddWithValue("@State", address.State);
-                database.command.Parameters.AddWithValue("@Postalcode", address.PostalCode);
+                database.command.Parameters.AddWithValue("@street", address.street);
+                database.command.Parameters.AddWithValue("@number", address.number);
+                database.command.Parameters.AddWithValue("@city", address.city);
+                database.command.Parameters.AddWithValue("@state", address.state);
+                database.command.Parameters.AddWithValue("@postalCode", address.postalCode);
                 database.insert();
             }
             catch (Exception ex)
@@ -49,11 +49,11 @@ namespace ProjetoInterdisciplinar.DAO
             {
                 database.setUpdateAddressQueryString();
                 database.configureMySqlCommand();
-                database.command.Parameters.AddWithValue("@Street", address.Street);
-                database.command.Parameters.AddWithValue("@Number", address.Number);
-                database.command.Parameters.AddWithValue("@City", address.City);
-                database.command.Parameters.AddWithValue("@State", address.State);
-                database.command.Parameters.AddWithValue("@Postalcode", address.PostalCode);
+                database.command.Parameters.AddWithValue("@street", address.street);
+                database.command.Parameters.AddWithValue("@number", address.number);
+                database.command.Parameters.AddWithValue("@city", address.city);
+                database.command.Parameters.AddWithValue("@state", address.state);
+                database.command.Parameters.AddWithValue("@postalCode", address.postalCode);
                 database.insert();
             }
             catch (Exception ex)
@@ -88,7 +88,6 @@ namespace ProjetoInterdisciplinar.DAO
                 database.closeConnection();
             }
             return didDelete;
-            return true;
         }
     }
 }

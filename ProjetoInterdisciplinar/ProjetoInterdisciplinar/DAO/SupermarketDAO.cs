@@ -24,7 +24,7 @@ namespace ProjetoInterdisciplinar.DAO
 
                 database.setInsertSupermarketQueryString();
                 database.configureMySqlCommand();
-                database.command.Parameters.AddWithValue("@Name", supermarket.Name);
+                database.command.Parameters.AddWithValue("@name", supermarket.name);
                 database.command.Parameters.AddWithValue("@idAddress", idAddress);
                 bool didInsert = database.insert();
                 if (didInsert)
@@ -48,7 +48,7 @@ namespace ProjetoInterdisciplinar.DAO
             {
                 database.setUpdateSupermarketQueryString();
                 database.configureMySqlCommand();
-                database.command.Parameters.AddWithValue("@Name", supermarket.Name);
+                database.command.Parameters.AddWithValue("@name", supermarket.name);
                 database.insert();
             }
             catch (Exception ex)

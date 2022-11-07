@@ -22,11 +22,11 @@ namespace ProjetoInterdisciplinar
                 crudVO.customer.email = txtEmail.Text;
                 crudVO.customer.password = txtPassword.Text;
 
-                crudVO.customer.address.Street = txtStreet.Text;
-                crudVO.customer.address.Number = txtNumber.Text;
-                crudVO.customer.address.City = txtCity.Text;
-                crudVO.customer.address.State = txtState.Text;
-                crudVO.customer.address.PostalCode = txtPostalCode.Text;
+                crudVO.customer.address.street = txtStreet.Text;
+                crudVO.customer.address.number = txtNumber.Text;
+                crudVO.customer.address.city = txtCity.Text;
+                crudVO.customer.address.state = txtState.Text;
+                crudVO.customer.address.postalCode = txtPostalCode.Text;
 
                 crudVO.insertCostumer();
                 MessageBox.Show("DEU CERTO INSERT!");

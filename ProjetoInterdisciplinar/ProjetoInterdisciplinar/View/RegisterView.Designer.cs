@@ -210,6 +210,7 @@
             // txtPostalCode
             // 
             this.txtPostalCode.Location = new System.Drawing.Point(114, 723);
+            this.txtPostalCode.MaxLength = 8;
             this.txtPostalCode.Name = "txtPostalCode";
             this.txtPostalCode.Size = new System.Drawing.Size(258, 31);
             this.txtPostalCode.TabIndex = 19;
@@ -217,6 +218,7 @@
             // txtState
             // 
             this.txtState.Location = new System.Drawing.Point(114, 647);
+            this.txtState.MaxLength = 2;
             this.txtState.Name = "txtState";
             this.txtState.Size = new System.Drawing.Size(258, 31);
             this.txtState.TabIndex = 20;

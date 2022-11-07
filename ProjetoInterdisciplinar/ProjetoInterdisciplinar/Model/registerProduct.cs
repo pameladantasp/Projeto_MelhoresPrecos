@@ -12,7 +12,7 @@ namespace ProjetoInterdisciplinar.Model
         public Customer customer { get; set; }
         public Product  product { get; set; }
         public Supermarket supermarket { get; set; }
-        public float Price { get; set; }
-        public DateTime DataRegister { get; set; }
+        public float price { get; set; }
+        public DateTime dataRegister { get; set; }
     }
 }
