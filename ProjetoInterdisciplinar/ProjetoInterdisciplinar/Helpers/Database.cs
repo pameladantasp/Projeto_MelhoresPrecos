@@ -99,18 +99,18 @@ namespace ProjetoInterdisciplinar.Helpers
         //Query customer
         public void setInsertCustomerQueryString()
         {
-            query = "INSERT INTO costumer (name, email, password, idAddress)" +
+            query = "INSERT INTO customer (name, email, password, idAddress)" +
                 " VALUES (@name, @email, @password, @idAddress)";
         }
         public void setUpdateCustomerQueryString()
         {
-            query = "UPDATE costumer SET name = @name, email = @email, password = @password " +
-                "WHERE idConsumer = @idConsumer";
+            query = "UPDATE customer SET name = @name, email = @email, password = @password " +
+                "WHERE idCustomer = @idCustomer";
         }
         public void setDeleteCustomerQueryString()
         {
-            query = "DELETE FROM costumer ";
-            query += "WHERE idCostumer = @idCostumer";
+            query = "DELETE FROM customer ";
+            query += "WHERE idCustomer = @idCustomer";
         }
 
         //Query supermarket

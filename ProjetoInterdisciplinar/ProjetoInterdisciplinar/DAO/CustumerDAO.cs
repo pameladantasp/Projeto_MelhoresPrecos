@@ -62,7 +62,7 @@ namespace ProjetoInterdisciplinar.DAO
                 database.closeConnection();
             }
         }
-        public bool delete(int idConsumer)
+        public bool delete(int idCustomer)
         {
             bool didDelete;
 
@@ -70,7 +70,7 @@ namespace ProjetoInterdisciplinar.DAO
             {
                 database.setDeleteCustomerQueryString();
                 database.configureMySqlCommand();
-                database.command.Parameters.AddWithValue("@idConsumer", idConsumer);
+                database.command.Parameters.AddWithValue("@idCustomer", idCustomer);
                 database.insert();
                 didDelete = true;
             }
