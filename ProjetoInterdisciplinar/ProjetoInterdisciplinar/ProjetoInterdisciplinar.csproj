@@ -64,6 +64,7 @@
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.5.0.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
@@ -99,11 +100,35 @@
     <Compile Include="DAO\ProductDAO.cs" />
     <Compile Include="DAO\RegisterProductDAO.cs" />
     <Compile Include="DAO\SupermarketDAO.cs" />
-    <Compile Include="View\RegisterView.cs">
+    <Compile Include="View\FinallyView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\RegisterView.Designer.cs">
-      <DependentUpon>RegisterView.cs</DependentUpon>
+    <Compile Include="View\FinallyView.Designer.cs">
+      <DependentUpon>FinallyView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\InitialView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InitialView.Designer.cs">
+      <DependentUpon>InitialView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoginView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LoginView.Designer.cs">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\RegisterProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RegisterProduct.Designer.cs">
+      <DependentUpon>RegisterProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\RegisterUserView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RegisterUserView.Designer.cs">
+      <DependentUpon>RegisterUserView.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\Database.cs" />
     <Compile Include="Model\Address.cs" />
@@ -118,8 +143,20 @@
     <Compile Include="VO\ProductVO.cs" />
     <Compile Include="VO\RegisterProductVO.cs" />
     <Compile Include="VO\SupermarketVO.cs" />
-    <EmbeddedResource Include="View\RegisterView.resx">
-      <DependentUpon>RegisterView.cs</DependentUpon>
+    <EmbeddedResource Include="View\FinallyView.resx">
+      <DependentUpon>FinallyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\InitialView.resx">
+      <DependentUpon>InitialView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LoginView.resx">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RegisterProduct.resx">
+      <DependentUpon>RegisterProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RegisterUserView.resx">
+      <DependentUpon>RegisterUserView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

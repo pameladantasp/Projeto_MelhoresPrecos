@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoInterdisciplinar.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace ProjetoInterdisciplinar
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RegisterView());
+            Application.Run(new InitialView());
         }
     }
 }
