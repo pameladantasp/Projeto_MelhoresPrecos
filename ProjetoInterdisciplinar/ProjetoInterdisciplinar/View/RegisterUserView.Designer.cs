@@ -1,6 +1,6 @@
 ﻿namespace ProjetoInterdisciplinar.View
 {
-    partial class RegisterUserView2
+    partial class RegisterUserView
     {
         /// <summary>
         /// Required designer variable.

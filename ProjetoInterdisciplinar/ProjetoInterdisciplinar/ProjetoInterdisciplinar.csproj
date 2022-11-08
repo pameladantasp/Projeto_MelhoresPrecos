@@ -133,11 +133,11 @@
     <Compile Include="Model\Supermarket.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\RegisterUserView2.cs">
+    <Compile Include="View\RegisterUserView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\RegisterUserView2.Designer.cs">
-      <DependentUpon>RegisterUserView2.cs</DependentUpon>
+    <Compile Include="View\RegisterUserView.Designer.cs">
+      <DependentUpon>RegisterUserView.cs</DependentUpon>
     </Compile>
     <Compile Include="VO\CustomerVO.cs" />
     <Compile Include="VO\ProductVO.cs" />
@@ -165,8 +165,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="View\RegisterUserView2.resx">
-      <DependentUpon>RegisterUserView2.cs</DependentUpon>
+    <EmbeddedResource Include="View\RegisterUserView.resx">
+      <DependentUpon>RegisterUserView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

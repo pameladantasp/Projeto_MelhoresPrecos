@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace ProjetoInterdisciplinar.View
 {
-    public partial class RegisterUserView2 : Form
+    public partial class RegisterUserView : Form
     {
         private CustomerVO crudVO;
 
-        public RegisterUserView2()
+        public RegisterUserView()
         {
             InitializeComponent();
             crudVO = new CustomerVO();
