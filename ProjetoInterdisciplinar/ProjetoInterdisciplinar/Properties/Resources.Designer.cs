@@ -63,16 +63,6 @@ namespace ProjetoInterdisciplinar.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logoApp {
-            get {
-                object obj = ResourceManager.GetObject("logoApp", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap logoAppTranslucido {
             get {
                 object obj = ResourceManager.GetObject("logoAppTranslucido", resourceCulture);
