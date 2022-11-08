@@ -124,12 +124,6 @@
     <Compile Include="View\RegisterProduct.Designer.cs">
       <DependentUpon>RegisterProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\RegisterUserView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\RegisterUserView.Designer.cs">
-      <DependentUpon>RegisterUserView.cs</DependentUpon>
-    </Compile>
     <Compile Include="Helpers\Database.cs" />
     <Compile Include="Model\Address.cs" />
     <Compile Include="Model\Category.cs" />
@@ -160,9 +154,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\RegisterProduct.resx">
       <DependentUpon>RegisterProduct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\RegisterUserView.resx">
-      <DependentUpon>RegisterUserView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
