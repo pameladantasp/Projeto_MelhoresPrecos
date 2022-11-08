@@ -624,6 +624,8 @@
             // 
             // pctLogo
             // 
+            this.pctLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pctLogo.Image = global::ProjetoInterdisciplinar.Properties.Resources.logoApp;
             this.pctLogo.Location = new System.Drawing.Point(157, 28);
             this.pctLogo.Name = "pctLogo";
