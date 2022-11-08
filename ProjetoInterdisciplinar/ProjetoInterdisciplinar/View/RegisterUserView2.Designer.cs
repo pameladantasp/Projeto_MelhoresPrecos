@@ -60,7 +60,6 @@
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.txtConfPassword = new System.Windows.Forms.TextBox();
-            this.pctLogo = new System.Windows.Forms.PictureBox();
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -70,6 +69,7 @@
             this.txtCity = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.pctLogo = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -77,11 +77,11 @@
             this.panel13.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel17.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             this.panel19.SuspendLayout();
             this.panel20.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // lbName
@@ -110,7 +110,7 @@
             this.btnCancel.Location = new System.Drawing.Point(16, 2);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(318, 40);
+            this.btnCancel.Size = new System.Drawing.Size(330, 40);
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "CANCELAR";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -127,7 +127,7 @@
             this.btnRegister.Location = new System.Drawing.Point(16, 2);
             this.btnRegister.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(318, 40);
+            this.btnRegister.Size = new System.Drawing.Size(330, 40);
             this.btnRegister.TabIndex = 4;
             this.btnRegister.Text = "CADASTRAR";
             this.btnRegister.UseVisualStyleBackColor = false;
@@ -156,7 +156,7 @@
             this.panel3.Location = new System.Drawing.Point(40, 180);
             this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(343, 35);
+            this.panel3.Size = new System.Drawing.Size(355, 35);
             this.panel3.TabIndex = 7;
             // 
             // panel4
@@ -167,7 +167,7 @@
             this.panel4.Location = new System.Drawing.Point(16, 31);
             this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(318, 1);
+            this.panel4.Size = new System.Drawing.Size(330, 1);
             this.panel4.TabIndex = 1;
             // 
             // txtEmail
@@ -181,7 +181,7 @@
             this.txtEmail.Location = new System.Drawing.Point(62, 8);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(272, 16);
+            this.txtEmail.Size = new System.Drawing.Size(284, 16);
             this.txtEmail.TabIndex = 1;
             // 
             // lbStreet
@@ -208,7 +208,7 @@
             this.panel5.Location = new System.Drawing.Point(40, 217);
             this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(343, 35);
+            this.panel5.Size = new System.Drawing.Size(355, 35);
             this.panel5.TabIndex = 9;
             // 
             // panel6
@@ -219,7 +219,7 @@
             this.panel6.Location = new System.Drawing.Point(16, 31);
             this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(318, 1);
+            this.panel6.Size = new System.Drawing.Size(330, 1);
             this.panel6.TabIndex = 1;
             // 
             // txtStreet
@@ -233,7 +233,7 @@
             this.txtStreet.Location = new System.Drawing.Point(103, 8);
             this.txtStreet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtStreet.Name = "txtStreet";
-            this.txtStreet.Size = new System.Drawing.Size(231, 16);
+            this.txtStreet.Size = new System.Drawing.Size(243, 16);
             this.txtStreet.TabIndex = 2;
             // 
             // lbNumber
@@ -261,7 +261,7 @@
             this.panel9.Location = new System.Drawing.Point(235, 254);
             this.panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(148, 34);
+            this.panel9.Size = new System.Drawing.Size(160, 34);
             this.panel9.TabIndex = 13;
             // 
             // panel10
@@ -272,7 +272,7 @@
             this.panel10.Location = new System.Drawing.Point(16, 31);
             this.panel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(123, 1);
+            this.panel10.Size = new System.Drawing.Size(135, 1);
             this.panel10.TabIndex = 1;
             // 
             // txtNumber
@@ -286,7 +286,7 @@
             this.txtNumber.Location = new System.Drawing.Point(80, 8);
             this.txtNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNumber.Name = "txtNumber";
-            this.txtNumber.Size = new System.Drawing.Size(60, 16);
+            this.txtNumber.Size = new System.Drawing.Size(72, 16);
             this.txtNumber.TabIndex = 4;
             // 
             // lblState
@@ -314,7 +314,7 @@
             this.panel11.Location = new System.Drawing.Point(235, 294);
             this.panel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(148, 34);
+            this.panel11.Size = new System.Drawing.Size(160, 34);
             this.panel11.TabIndex = 17;
             // 
             // panel12
@@ -325,7 +325,7 @@
             this.panel12.Location = new System.Drawing.Point(16, 31);
             this.panel12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(123, 1);
+            this.panel12.Size = new System.Drawing.Size(135, 1);
             this.panel12.TabIndex = 1;
             // 
             // txtState
@@ -340,7 +340,7 @@
             this.txtState.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtState.MaxLength = 2;
             this.txtState.Name = "txtState";
-            this.txtState.Size = new System.Drawing.Size(70, 16);
+            this.txtState.Size = new System.Drawing.Size(82, 16);
             this.txtState.TabIndex = 6;
             // 
             // lblPostalCode
@@ -369,7 +369,7 @@
             this.panel13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel13.MaximumSize = new System.Drawing.Size(200, 35);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(179, 35);
+            this.panel13.Size = new System.Drawing.Size(191, 35);
             this.panel13.TabIndex = 15;
             // 
             // panel14
@@ -380,7 +380,7 @@
             this.panel14.Location = new System.Drawing.Point(16, 31);
             this.panel14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(154, 1);
+            this.panel14.Size = new System.Drawing.Size(166, 1);
             this.panel14.TabIndex = 1;
             // 
             // txtPostalCode
@@ -395,7 +395,7 @@
             this.txtPostalCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPostalCode.MaxLength = 8;
             this.txtPostalCode.Name = "txtPostalCode";
-            this.txtPostalCode.Size = new System.Drawing.Size(120, 16);
+            this.txtPostalCode.Size = new System.Drawing.Size(132, 16);
             this.txtPostalCode.TabIndex = 5;
             // 
             // lbPassword
@@ -423,7 +423,7 @@
             this.panel15.Location = new System.Drawing.Point(40, 332);
             this.panel15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(343, 35);
+            this.panel15.Size = new System.Drawing.Size(355, 35);
             this.panel15.TabIndex = 19;
             // 
             // panel16
@@ -434,7 +434,7 @@
             this.panel16.Location = new System.Drawing.Point(16, 31);
             this.panel16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(318, 1);
+            this.panel16.Size = new System.Drawing.Size(330, 1);
             this.panel16.TabIndex = 1;
             // 
             // txtPasword
@@ -449,7 +449,7 @@
             this.txtPasword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPasword.Name = "txtPasword";
             this.txtPasword.PasswordChar = '*';
-            this.txtPasword.Size = new System.Drawing.Size(265, 16);
+            this.txtPasword.Size = new System.Drawing.Size(277, 16);
             this.txtPasword.TabIndex = 7;
             // 
             // lbConfPassword
@@ -477,7 +477,7 @@
             this.panel17.Location = new System.Drawing.Point(40, 371);
             this.panel17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(343, 35);
+            this.panel17.Size = new System.Drawing.Size(355, 35);
             this.panel17.TabIndex = 21;
             // 
             // panel18
@@ -488,7 +488,7 @@
             this.panel18.Location = new System.Drawing.Point(16, 31);
             this.panel18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(318, 1);
+            this.panel18.Size = new System.Drawing.Size(330, 1);
             this.panel18.TabIndex = 1;
             // 
             // txtConfPassword
@@ -503,23 +503,8 @@
             this.txtConfPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtConfPassword.Name = "txtConfPassword";
             this.txtConfPassword.PasswordChar = '*';
-            this.txtConfPassword.Size = new System.Drawing.Size(187, 16);
+            this.txtConfPassword.Size = new System.Drawing.Size(199, 16);
             this.txtConfPassword.TabIndex = 8;
-            // 
-            // pctLogo
-            // 
-            this.pctLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pctLogo.BackColor = System.Drawing.Color.White;
-            this.pctLogo.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pctLogo.Image = global::ProjetoInterdisciplinar.Properties.Resources.logoApp;
-            this.pctLogo.Location = new System.Drawing.Point(127, 18);
-            this.pctLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pctLogo.Name = "pctLogo";
-            this.pctLogo.Size = new System.Drawing.Size(155, 106);
-            this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pctLogo.TabIndex = 0;
-            this.pctLogo.TabStop = false;
             // 
             // panel19
             // 
@@ -530,7 +515,7 @@
             this.panel19.Location = new System.Drawing.Point(40, 423);
             this.panel19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(343, 44);
+            this.panel19.Size = new System.Drawing.Size(355, 44);
             this.panel19.TabIndex = 22;
             // 
             // panel20
@@ -542,7 +527,7 @@
             this.panel20.Location = new System.Drawing.Point(40, 471);
             this.panel20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(343, 44);
+            this.panel20.Size = new System.Drawing.Size(355, 44);
             this.panel20.TabIndex = 23;
             // 
             // txtName
@@ -554,9 +539,9 @@
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(67, 8);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(267, 16);
+            this.txtName.Size = new System.Drawing.Size(279, 16);
             this.txtName.TabIndex = 0;
             // 
             // panel2
@@ -565,9 +550,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel2.Location = new System.Drawing.Point(16, 31);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(318, 1);
+            this.panel2.Size = new System.Drawing.Size(330, 1);
             this.panel2.TabIndex = 1;
             // 
             // panel1
@@ -578,9 +563,9 @@
             this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.lbName);
             this.panel1.Location = new System.Drawing.Point(40, 141);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(343, 35);
+            this.panel1.Size = new System.Drawing.Size(355, 35);
             this.panel1.TabIndex = 5;
             // 
             // lbCity
@@ -606,9 +591,9 @@
             this.txtCity.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCity.Location = new System.Drawing.Point(72, 7);
-            this.txtCity.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(101, 16);
+            this.txtCity.Size = new System.Drawing.Size(113, 16);
             this.txtCity.TabIndex = 3;
             // 
             // panel8
@@ -617,9 +602,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel8.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel8.Location = new System.Drawing.Point(16, 31);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(154, 1);
+            this.panel8.Size = new System.Drawing.Size(166, 1);
             this.panel8.TabIndex = 1;
             // 
             // panel7
@@ -631,11 +616,21 @@
             this.panel7.Controls.Add(this.lbCity);
             this.panel7.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel7.Location = new System.Drawing.Point(40, 254);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel7.MaximumSize = new System.Drawing.Size(200, 35);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(179, 35);
+            this.panel7.Size = new System.Drawing.Size(191, 35);
             this.panel7.TabIndex = 11;
+            // 
+            // pctLogo
+            // 
+            this.pctLogo.Image = global::ProjetoInterdisciplinar.Properties.Resources.logoApp;
+            this.pctLogo.Location = new System.Drawing.Point(157, 28);
+            this.pctLogo.Name = "pctLogo";
+            this.pctLogo.Size = new System.Drawing.Size(122, 108);
+            this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctLogo.TabIndex = 24;
+            this.pctLogo.TabStop = false;
             // 
             // RegisterUserView2
             // 
@@ -643,7 +638,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(426, 543);
+            this.ClientSize = new System.Drawing.Size(438, 521);
+            this.Controls.Add(this.pctLogo);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel20);
             this.Controls.Add(this.panel19);
@@ -655,10 +651,9 @@
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pctLogo);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MaximumSize = new System.Drawing.Size(573, 664);
-            this.MinimumSize = new System.Drawing.Size(442, 582);
+            this.MaximumSize = new System.Drawing.Size(568, 648);
+            this.MinimumSize = new System.Drawing.Size(437, 413);
             this.Name = "RegisterUserView2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterUserView2";
@@ -676,20 +671,18 @@
             this.panel15.PerformLayout();
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             this.panel19.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pctLogo;
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnRegister;
@@ -731,5 +724,6 @@
         private System.Windows.Forms.TextBox txtCity;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.PictureBox pctLogo;
     }
 }
