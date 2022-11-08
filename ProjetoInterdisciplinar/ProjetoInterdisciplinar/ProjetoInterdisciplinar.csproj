@@ -186,7 +186,10 @@
     <Folder Include="Controller\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logoApp.png" />
+    <None Include="Resources\logoAppTranslucido.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoAppTranslucidoVermelho.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
