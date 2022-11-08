@@ -627,14 +627,14 @@
             this.pctLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pctLogo.Image = global::ProjetoInterdisciplinar.Properties.Resources.logoApp;
-            this.pctLogo.Location = new System.Drawing.Point(157, 28);
+            this.pctLogo.Location = new System.Drawing.Point(143, 12);
             this.pctLogo.Name = "pctLogo";
-            this.pctLogo.Size = new System.Drawing.Size(122, 108);
+            this.pctLogo.Size = new System.Drawing.Size(134, 124);
             this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctLogo.TabIndex = 24;
             this.pctLogo.TabStop = false;
             // 
-            // RegisterUserView2
+            // RegisterUserView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -656,7 +656,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(568, 648);
             this.MinimumSize = new System.Drawing.Size(437, 413);
-            this.Name = "RegisterUserView2";
+            this.Name = "RegisterUserView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterUserView2";
             this.panel3.ResumeLayout(false);
