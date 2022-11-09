@@ -63,6 +63,16 @@ namespace ProjetoInterdisciplinar.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap grocery_png {
+            get {
+                object obj = ResourceManager.GetObject("grocery.png", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logoAppTranslucido {
             get {
                 object obj = ResourceManager.GetObject("logoAppTranslucido", resourceCulture);
@@ -76,6 +86,26 @@ namespace ProjetoInterdisciplinar.Properties {
         internal static System.Drawing.Bitmap logoAppTranslucidoVermelho {
             get {
                 object obj = ResourceManager.GetObject("logoAppTranslucidoVermelho", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_png {
+            get {
+                object obj = ResourceManager.GetObject("search.png", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap userIcon_png {
+            get {
+                object obj = ResourceManager.GetObject("userIcon.png", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

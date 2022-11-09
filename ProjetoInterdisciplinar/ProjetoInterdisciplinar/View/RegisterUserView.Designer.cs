@@ -33,54 +33,54 @@
             this.btnRegister = new System.Windows.Forms.Button();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelEmail = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lbStreet = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.panelStreet = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtStreet = new System.Windows.Forms.TextBox();
             this.lbNumber = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
+            this.panelNumber = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.txtNumber = new System.Windows.Forms.TextBox();
             this.lblState = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
+            this.panelState = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.txtState = new System.Windows.Forms.TextBox();
             this.lblPostalCode = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
+            this.panelPostalCode = new System.Windows.Forms.Panel();
+            this.txtPostalCode = new System.Windows.Forms.MaskedTextBox();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.txtPostalCode = new System.Windows.Forms.TextBox();
             this.lbPassword = new System.Windows.Forms.Label();
-            this.panel15 = new System.Windows.Forms.Panel();
+            this.panelPassword = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lbConfPassword = new System.Windows.Forms.Label();
-            this.panel17 = new System.Windows.Forms.Panel();
+            this.panelConfPassword = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.txtConfPassword = new System.Windows.Forms.TextBox();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.panel20 = new System.Windows.Forms.Panel();
+            this.panelBtnRegister = new System.Windows.Forms.Panel();
+            this.panelBtnCancel = new System.Windows.Forms.Panel();
             this.txtName = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelName = new System.Windows.Forms.Panel();
             this.lbCity = new System.Windows.Forms.Label();
             this.txtCity = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.panelCity = new System.Windows.Forms.Panel();
+            this.txtNumber = new System.Windows.Forms.TextBox();
             this.pctLogo = new System.Windows.Forms.PictureBox();
-            this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.panel15.SuspendLayout();
-            this.panel17.SuspendLayout();
-            this.panel19.SuspendLayout();
-            this.panel20.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel7.SuspendLayout();
+            this.panelEmail.SuspendLayout();
+            this.panelStreet.SuspendLayout();
+            this.panelNumber.SuspendLayout();
+            this.panelState.SuspendLayout();
+            this.panelPostalCode.SuspendLayout();
+            this.panelPassword.SuspendLayout();
+            this.panelConfPassword.SuspendLayout();
+            this.panelBtnRegister.SuspendLayout();
+            this.panelBtnCancel.SuspendLayout();
+            this.panelName.SuspendLayout();
+            this.panelCity.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,7 +111,7 @@
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(330, 40);
-            this.btnCancel.TabIndex = 2;
+            this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "CANCELAR";
             this.btnCancel.UseVisualStyleBackColor = false;
             // 
@@ -128,7 +128,7 @@
             this.btnRegister.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(330, 40);
-            this.btnRegister.TabIndex = 4;
+            this.btnRegister.TabIndex = 9;
             this.btnRegister.Text = "CADASTRAR";
             this.btnRegister.UseVisualStyleBackColor = false;
             // 
@@ -146,18 +146,18 @@
             this.lblEmail.TabIndex = 6;
             this.lblEmail.Text = "Email:";
             // 
-            // panel3
+            // panelEmail
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.txtEmail);
-            this.panel3.Controls.Add(this.lblEmail);
-            this.panel3.Location = new System.Drawing.Point(40, 180);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(355, 35);
-            this.panel3.TabIndex = 7;
+            this.panelEmail.Controls.Add(this.panel4);
+            this.panelEmail.Controls.Add(this.txtEmail);
+            this.panelEmail.Controls.Add(this.lblEmail);
+            this.panelEmail.Location = new System.Drawing.Point(40, 180);
+            this.panelEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.panelEmail.Name = "panelEmail";
+            this.panelEmail.Size = new System.Drawing.Size(355, 35);
+            this.panelEmail.TabIndex = 7;
             // 
             // panel4
             // 
@@ -198,18 +198,18 @@
             this.lbStreet.TabIndex = 8;
             this.lbStreet.Text = "Logradouro:";
             // 
-            // panel5
+            // panelStreet
             // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelStreet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel5.Controls.Add(this.panel6);
-            this.panel5.Controls.Add(this.txtStreet);
-            this.panel5.Controls.Add(this.lbStreet);
-            this.panel5.Location = new System.Drawing.Point(40, 217);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(355, 35);
-            this.panel5.TabIndex = 9;
+            this.panelStreet.Controls.Add(this.panel6);
+            this.panelStreet.Controls.Add(this.txtStreet);
+            this.panelStreet.Controls.Add(this.lbStreet);
+            this.panelStreet.Location = new System.Drawing.Point(40, 254);
+            this.panelStreet.Margin = new System.Windows.Forms.Padding(2);
+            this.panelStreet.Name = "panelStreet";
+            this.panelStreet.Size = new System.Drawing.Size(355, 35);
+            this.panelStreet.TabIndex = 9;
             // 
             // panel6
             // 
@@ -229,12 +229,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtStreet.BackColor = System.Drawing.Color.White;
             this.txtStreet.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtStreet.Enabled = false;
             this.txtStreet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStreet.Location = new System.Drawing.Point(103, 8);
             this.txtStreet.Margin = new System.Windows.Forms.Padding(2);
             this.txtStreet.Name = "txtStreet";
             this.txtStreet.Size = new System.Drawing.Size(243, 16);
-            this.txtStreet.TabIndex = 2;
+            this.txtStreet.TabIndex = 4;
             // 
             // lbNumber
             // 
@@ -250,19 +251,19 @@
             this.lbNumber.TabIndex = 12;
             this.lbNumber.Text = "Numero:";
             // 
-            // panel9
+            // panelNumber
             // 
-            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel9.Controls.Add(this.panel10);
-            this.panel9.Controls.Add(this.txtNumber);
-            this.panel9.Controls.Add(this.lbNumber);
-            this.panel9.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel9.Location = new System.Drawing.Point(235, 254);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(160, 34);
-            this.panel9.TabIndex = 13;
+            this.panelNumber.Controls.Add(this.panel10);
+            this.panelNumber.Controls.Add(this.txtNumber);
+            this.panelNumber.Controls.Add(this.lbNumber);
+            this.panelNumber.Cursor = System.Windows.Forms.Cursors.Default;
+            this.panelNumber.Location = new System.Drawing.Point(235, 294);
+            this.panelNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.panelNumber.Name = "panelNumber";
+            this.panelNumber.Size = new System.Drawing.Size(160, 34);
+            this.panelNumber.TabIndex = 13;
             // 
             // panel10
             // 
@@ -274,20 +275,6 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(135, 1);
             this.panel10.TabIndex = 1;
-            // 
-            // txtNumber
-            // 
-            this.txtNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNumber.BackColor = System.Drawing.Color.White;
-            this.txtNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumber.Location = new System.Drawing.Point(80, 8);
-            this.txtNumber.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNumber.Name = "txtNumber";
-            this.txtNumber.Size = new System.Drawing.Size(72, 16);
-            this.txtNumber.TabIndex = 4;
             // 
             // lblState
             // 
@@ -303,19 +290,19 @@
             this.lblState.TabIndex = 16;
             this.lblState.Text = "Estado:";
             // 
-            // panel11
+            // panelState
             // 
-            this.panel11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelState.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel11.Controls.Add(this.panel12);
-            this.panel11.Controls.Add(this.txtState);
-            this.panel11.Controls.Add(this.lblState);
-            this.panel11.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel11.Location = new System.Drawing.Point(235, 294);
-            this.panel11.Margin = new System.Windows.Forms.Padding(2);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(160, 34);
-            this.panel11.TabIndex = 17;
+            this.panelState.Controls.Add(this.panel12);
+            this.panelState.Controls.Add(this.txtState);
+            this.panelState.Controls.Add(this.lblState);
+            this.panelState.Cursor = System.Windows.Forms.Cursors.Default;
+            this.panelState.Location = new System.Drawing.Point(235, 217);
+            this.panelState.Margin = new System.Windows.Forms.Padding(2);
+            this.panelState.Name = "panelState";
+            this.panelState.Size = new System.Drawing.Size(160, 34);
+            this.panelState.TabIndex = 17;
             // 
             // panel12
             // 
@@ -335,13 +322,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtState.BackColor = System.Drawing.Color.White;
             this.txtState.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtState.Enabled = false;
             this.txtState.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtState.Location = new System.Drawing.Point(70, 8);
             this.txtState.Margin = new System.Windows.Forms.Padding(2);
             this.txtState.MaxLength = 2;
             this.txtState.Name = "txtState";
             this.txtState.Size = new System.Drawing.Size(82, 16);
-            this.txtState.TabIndex = 6;
+            this.txtState.TabIndex = 3;
             // 
             // lblPostalCode
             // 
@@ -357,20 +345,31 @@
             this.lblPostalCode.TabIndex = 14;
             this.lblPostalCode.Text = "CEP:";
             // 
-            // panel13
+            // panelPostalCode
             // 
-            this.panel13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelPostalCode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel13.Controls.Add(this.panel14);
-            this.panel13.Controls.Add(this.txtPostalCode);
-            this.panel13.Controls.Add(this.lblPostalCode);
-            this.panel13.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel13.Location = new System.Drawing.Point(40, 293);
-            this.panel13.Margin = new System.Windows.Forms.Padding(2);
-            this.panel13.MaximumSize = new System.Drawing.Size(200, 35);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(191, 35);
-            this.panel13.TabIndex = 15;
+            this.panelPostalCode.Controls.Add(this.txtPostalCode);
+            this.panelPostalCode.Controls.Add(this.panel14);
+            this.panelPostalCode.Controls.Add(this.lblPostalCode);
+            this.panelPostalCode.Cursor = System.Windows.Forms.Cursors.Default;
+            this.panelPostalCode.Location = new System.Drawing.Point(40, 216);
+            this.panelPostalCode.Margin = new System.Windows.Forms.Padding(2);
+            this.panelPostalCode.MaximumSize = new System.Drawing.Size(200, 35);
+            this.panelPostalCode.Name = "panelPostalCode";
+            this.panelPostalCode.Size = new System.Drawing.Size(191, 35);
+            this.panelPostalCode.TabIndex = 15;
+            // 
+            // txtPostalCode
+            // 
+            this.txtPostalCode.BackColor = System.Drawing.Color.White;
+            this.txtPostalCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPostalCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPostalCode.Location = new System.Drawing.Point(57, 8);
+            this.txtPostalCode.Mask = "00000-999";
+            this.txtPostalCode.Name = "txtPostalCode";
+            this.txtPostalCode.Size = new System.Drawing.Size(124, 15);
+            this.txtPostalCode.TabIndex = 2;
             // 
             // panel14
             // 
@@ -382,21 +381,6 @@
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(166, 1);
             this.panel14.TabIndex = 1;
-            // 
-            // txtPostalCode
-            // 
-            this.txtPostalCode.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPostalCode.BackColor = System.Drawing.Color.White;
-            this.txtPostalCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPostalCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPostalCode.Location = new System.Drawing.Point(53, 8);
-            this.txtPostalCode.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPostalCode.MaxLength = 8;
-            this.txtPostalCode.Name = "txtPostalCode";
-            this.txtPostalCode.Size = new System.Drawing.Size(132, 16);
-            this.txtPostalCode.TabIndex = 5;
             // 
             // lbPassword
             // 
@@ -412,19 +396,19 @@
             this.lbPassword.TabIndex = 18;
             this.lbPassword.Text = "Senha:";
             // 
-            // panel15
+            // panelPassword
             // 
-            this.panel15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel15.Controls.Add(this.panel16);
-            this.panel15.Controls.Add(this.txtPassword);
-            this.panel15.Controls.Add(this.lbPassword);
-            this.panel15.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel15.Location = new System.Drawing.Point(40, 332);
-            this.panel15.Margin = new System.Windows.Forms.Padding(2);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(355, 35);
-            this.panel15.TabIndex = 19;
+            this.panelPassword.Controls.Add(this.panel16);
+            this.panelPassword.Controls.Add(this.txtPassword);
+            this.panelPassword.Controls.Add(this.lbPassword);
+            this.panelPassword.Cursor = System.Windows.Forms.Cursors.Default;
+            this.panelPassword.Location = new System.Drawing.Point(40, 332);
+            this.panelPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.panelPassword.Name = "panelPassword";
+            this.panelPassword.Size = new System.Drawing.Size(355, 35);
+            this.panelPassword.TabIndex = 19;
             // 
             // panel16
             // 
@@ -466,19 +450,19 @@
             this.lbConfPassword.TabIndex = 20;
             this.lbConfPassword.Text = "Confirmar a senha:";
             // 
-            // panel17
+            // panelConfPassword
             // 
-            this.panel17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelConfPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel17.Controls.Add(this.panel18);
-            this.panel17.Controls.Add(this.txtConfPassword);
-            this.panel17.Controls.Add(this.lbConfPassword);
-            this.panel17.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel17.Location = new System.Drawing.Point(40, 371);
-            this.panel17.Margin = new System.Windows.Forms.Padding(2);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(355, 35);
-            this.panel17.TabIndex = 21;
+            this.panelConfPassword.Controls.Add(this.panel18);
+            this.panelConfPassword.Controls.Add(this.txtConfPassword);
+            this.panelConfPassword.Controls.Add(this.lbConfPassword);
+            this.panelConfPassword.Cursor = System.Windows.Forms.Cursors.Default;
+            this.panelConfPassword.Location = new System.Drawing.Point(40, 371);
+            this.panelConfPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.panelConfPassword.Name = "panelConfPassword";
+            this.panelConfPassword.Size = new System.Drawing.Size(355, 35);
+            this.panelConfPassword.TabIndex = 21;
             // 
             // panel18
             // 
@@ -506,29 +490,29 @@
             this.txtConfPassword.Size = new System.Drawing.Size(199, 16);
             this.txtConfPassword.TabIndex = 8;
             // 
-            // panel19
+            // panelBtnRegister
             // 
-            this.panel19.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelBtnRegister.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel19.Controls.Add(this.btnRegister);
-            this.panel19.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel19.Location = new System.Drawing.Point(40, 423);
-            this.panel19.Margin = new System.Windows.Forms.Padding(2);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(355, 44);
-            this.panel19.TabIndex = 22;
+            this.panelBtnRegister.Controls.Add(this.btnRegister);
+            this.panelBtnRegister.Cursor = System.Windows.Forms.Cursors.Default;
+            this.panelBtnRegister.Location = new System.Drawing.Point(40, 423);
+            this.panelBtnRegister.Margin = new System.Windows.Forms.Padding(2);
+            this.panelBtnRegister.Name = "panelBtnRegister";
+            this.panelBtnRegister.Size = new System.Drawing.Size(355, 44);
+            this.panelBtnRegister.TabIndex = 22;
             // 
-            // panel20
+            // panelBtnCancel
             // 
-            this.panel20.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelBtnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel20.Controls.Add(this.btnCancel);
-            this.panel20.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel20.Location = new System.Drawing.Point(40, 471);
-            this.panel20.Margin = new System.Windows.Forms.Padding(2);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(355, 44);
-            this.panel20.TabIndex = 23;
+            this.panelBtnCancel.Controls.Add(this.btnCancel);
+            this.panelBtnCancel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.panelBtnCancel.Location = new System.Drawing.Point(40, 471);
+            this.panelBtnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.panelBtnCancel.Name = "panelBtnCancel";
+            this.panelBtnCancel.Size = new System.Drawing.Size(355, 44);
+            this.panelBtnCancel.TabIndex = 23;
             // 
             // txtName
             // 
@@ -555,18 +539,18 @@
             this.panel2.Size = new System.Drawing.Size(330, 1);
             this.panel2.TabIndex = 1;
             // 
-            // panel1
+            // panelName
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.txtName);
-            this.panel1.Controls.Add(this.lbName);
-            this.panel1.Location = new System.Drawing.Point(40, 141);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(355, 35);
-            this.panel1.TabIndex = 5;
+            this.panelName.Controls.Add(this.panel2);
+            this.panelName.Controls.Add(this.txtName);
+            this.panelName.Controls.Add(this.lbName);
+            this.panelName.Location = new System.Drawing.Point(40, 141);
+            this.panelName.Margin = new System.Windows.Forms.Padding(2);
+            this.panelName.Name = "panelName";
+            this.panelName.Size = new System.Drawing.Size(355, 35);
+            this.panelName.TabIndex = 5;
             // 
             // lbCity
             // 
@@ -589,12 +573,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCity.BackColor = System.Drawing.Color.White;
             this.txtCity.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCity.Enabled = false;
             this.txtCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCity.Location = new System.Drawing.Point(72, 7);
             this.txtCity.Margin = new System.Windows.Forms.Padding(2);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(113, 16);
-            this.txtCity.TabIndex = 3;
+            this.txtCity.TabIndex = 5;
             // 
             // panel8
             // 
@@ -607,26 +592,40 @@
             this.panel8.Size = new System.Drawing.Size(166, 1);
             this.panel8.TabIndex = 1;
             // 
-            // panel7
+            // panelCity
             // 
-            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelCity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel7.Controls.Add(this.panel8);
-            this.panel7.Controls.Add(this.txtCity);
-            this.panel7.Controls.Add(this.lbCity);
-            this.panel7.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel7.Location = new System.Drawing.Point(40, 254);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2);
-            this.panel7.MaximumSize = new System.Drawing.Size(200, 35);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(191, 35);
-            this.panel7.TabIndex = 11;
+            this.panelCity.Controls.Add(this.panel8);
+            this.panelCity.Controls.Add(this.txtCity);
+            this.panelCity.Controls.Add(this.lbCity);
+            this.panelCity.Cursor = System.Windows.Forms.Cursors.Default;
+            this.panelCity.Location = new System.Drawing.Point(40, 293);
+            this.panelCity.Margin = new System.Windows.Forms.Padding(2);
+            this.panelCity.MaximumSize = new System.Drawing.Size(200, 35);
+            this.panelCity.Name = "panelCity";
+            this.panelCity.Size = new System.Drawing.Size(191, 35);
+            this.panelCity.TabIndex = 11;
+            // 
+            // txtNumber
+            // 
+            this.txtNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNumber.BackColor = System.Drawing.Color.White;
+            this.txtNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumber.Location = new System.Drawing.Point(80, 8);
+            this.txtNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNumber.Name = "txtNumber";
+            this.txtNumber.Size = new System.Drawing.Size(72, 16);
+            this.txtNumber.TabIndex = 6;
             // 
             // pctLogo
             // 
             this.pctLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pctLogo.Image = global::ProjetoInterdisciplinar.Properties.Resources.logoApp;
+            this.pctLogo.Image = global::ProjetoInterdisciplinar.Properties.Resources.logoAppTranslucidoVermelho;
             this.pctLogo.Location = new System.Drawing.Point(143, 12);
             this.pctLogo.Name = "pctLogo";
             this.pctLogo.Size = new System.Drawing.Size(134, 124);
@@ -642,43 +641,43 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(438, 521);
             this.Controls.Add(this.pctLogo);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel20);
-            this.Controls.Add(this.panel19);
-            this.Controls.Add(this.panel9);
-            this.Controls.Add(this.panel17);
-            this.Controls.Add(this.panel15);
-            this.Controls.Add(this.panel11);
-            this.Controls.Add(this.panel13);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelCity);
+            this.Controls.Add(this.panelBtnCancel);
+            this.Controls.Add(this.panelBtnRegister);
+            this.Controls.Add(this.panelNumber);
+            this.Controls.Add(this.panelConfPassword);
+            this.Controls.Add(this.panelPassword);
+            this.Controls.Add(this.panelState);
+            this.Controls.Add(this.panelPostalCode);
+            this.Controls.Add(this.panelStreet);
+            this.Controls.Add(this.panelEmail);
+            this.Controls.Add(this.panelName);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(568, 648);
             this.MinimumSize = new System.Drawing.Size(437, 413);
             this.Name = "RegisterUserView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterUserView2";
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
-            this.panel17.ResumeLayout(false);
-            this.panel17.PerformLayout();
-            this.panel19.ResumeLayout(false);
-            this.panel20.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
+            this.panelEmail.ResumeLayout(false);
+            this.panelEmail.PerformLayout();
+            this.panelStreet.ResumeLayout(false);
+            this.panelStreet.PerformLayout();
+            this.panelNumber.ResumeLayout(false);
+            this.panelNumber.PerformLayout();
+            this.panelState.ResumeLayout(false);
+            this.panelState.PerformLayout();
+            this.panelPostalCode.ResumeLayout(false);
+            this.panelPostalCode.PerformLayout();
+            this.panelPassword.ResumeLayout(false);
+            this.panelPassword.PerformLayout();
+            this.panelConfPassword.ResumeLayout(false);
+            this.panelConfPassword.PerformLayout();
+            this.panelBtnRegister.ResumeLayout(false);
+            this.panelBtnCancel.ResumeLayout(false);
+            this.panelName.ResumeLayout(false);
+            this.panelName.PerformLayout();
+            this.panelCity.ResumeLayout(false);
+            this.panelCity.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             this.ResumeLayout(false);
 
@@ -690,42 +689,42 @@
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelEmail;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lbStreet;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panelStreet;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox txtStreet;
         private System.Windows.Forms.Label lbNumber;
-        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panelNumber;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.TextBox txtNumber;
         private System.Windows.Forms.Label lblState;
-        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panelState;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.TextBox txtState;
         private System.Windows.Forms.Label lblPostalCode;
-        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panelPostalCode;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.TextBox txtPostalCode;
         private System.Windows.Forms.Label lbPassword;
-        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panelPassword;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label lbConfPassword;
-        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Panel panelConfPassword;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.TextBox txtConfPassword;
-        private System.Windows.Forms.Panel panel19;
-        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.Panel panelBtnRegister;
+        private System.Windows.Forms.Panel panelBtnCancel;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelName;
         private System.Windows.Forms.Label lbCity;
         private System.Windows.Forms.TextBox txtCity;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panelCity;
         private System.Windows.Forms.PictureBox pctLogo;
+        private System.Windows.Forms.MaskedTextBox txtPostalCode;
+        private System.Windows.Forms.TextBox txtNumber;
     }
 }
