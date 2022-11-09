@@ -628,7 +628,7 @@
             this.pctLogo.Image = global::ProjetoInterdisciplinar.Properties.Resources.logoAppTranslucidoVermelho;
             this.pctLogo.Location = new System.Drawing.Point(143, 12);
             this.pctLogo.Name = "pctLogo";
-            this.pctLogo.Size = new System.Drawing.Size(134, 124);
+            this.pctLogo.Size = new System.Drawing.Size(130, 113);
             this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctLogo.TabIndex = 24;
             this.pctLogo.TabStop = false;
@@ -639,7 +639,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(438, 521);
+            this.ClientSize = new System.Drawing.Size(438, 555);
             this.Controls.Add(this.pctLogo);
             this.Controls.Add(this.panelCity);
             this.Controls.Add(this.panelBtnCancel);
@@ -653,11 +653,10 @@
             this.Controls.Add(this.panelEmail);
             this.Controls.Add(this.panelName);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MaximumSize = new System.Drawing.Size(568, 648);
-            this.MinimumSize = new System.Drawing.Size(437, 413);
+            this.MaximumSize = new System.Drawing.Size(454, 594);
+            this.MinimumSize = new System.Drawing.Size(454, 594);
             this.Name = "RegisterUserView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RegisterUserView2";
             this.panelEmail.ResumeLayout(false);
             this.panelEmail.PerformLayout();
             this.panelStreet.ResumeLayout(false);

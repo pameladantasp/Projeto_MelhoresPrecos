@@ -16,5 +16,12 @@ namespace ProjetoInterdisciplinar.View
         {
             InitializeComponent();
         }
+
+
+        public string UserName { get; set; }
+        public string DescriptionProduct { get; set; }
+        public string SupermarketName { get; set; }
+        public string Price { get; set; }
+
     }
 }

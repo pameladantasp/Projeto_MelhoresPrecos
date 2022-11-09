@@ -17,7 +17,7 @@ namespace ProjetoInterdisciplinar
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new principalScreen());
+            Application.Run(new PrincipalView());
         }
     }
 }
