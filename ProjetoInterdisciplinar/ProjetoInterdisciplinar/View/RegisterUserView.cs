@@ -2,11 +2,14 @@
 using ProjetoInterdisciplinar.VO;
 using System;
 using System.Windows.Forms;
+using System.Threading;
+
 
 namespace ProjetoInterdisciplinar.View
 {
     public partial class RegisterUserView : Form
     {
+        Thread thread;
         private CustomerVO crudVO;
 
         public RegisterUserView()
@@ -98,6 +101,32 @@ namespace ProjetoInterdisciplinar.View
                     MessageBox.Show($"{error.Message}");
                 }
             }
+        }
+
+        private void btnRegister_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            thread = new Thread(openFinllayScreen);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+        }
+
+        private void openFinllayScreen(object obj)
+        {
+            Application.Run(new FinallyView());
+        }
+
+        private void btnCancel_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            thread = new Thread(openPrincipalScreen);
+            thread.SetApartmentState (ApartmentState.STA);
+            thread.Start();
+        }
+
+        private void openPrincipalScreen(object obj)
+        {
+            Application.Run(new PrincipalView());
         }
     }
 }

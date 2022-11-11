@@ -114,6 +114,7 @@
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "CANCELAR";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click_1);
             // 
             // btnRegister
             // 
@@ -131,6 +132,7 @@
             this.btnRegister.TabIndex = 6;
             this.btnRegister.Text = "CADASTRAR";
             this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click_1);
             // 
             // lblEmail
             // 
