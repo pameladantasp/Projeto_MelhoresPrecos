@@ -73,6 +73,36 @@ namespace ProjetoInterdisciplinar.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_add {
+            get {
+                object obj = ResourceManager.GetObject("icon_add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_logout {
+            get {
+                object obj = ResourceManager.GetObject("icon_logout", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_user_white_100 {
+            get {
+                object obj = ResourceManager.GetObject("icon_user_white_100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logoAppTranslucido {
             get {
                 object obj = ResourceManager.GetObject("logoAppTranslucido", resourceCulture);
@@ -96,6 +126,16 @@ namespace ProjetoInterdisciplinar.Properties {
         internal static System.Drawing.Bitmap search_png {
             get {
                 object obj = ResourceManager.GetObject("search.png", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_png {
+            get {
+                object obj = ResourceManager.GetObject("user.png", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -29,28 +29,239 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panelUserInfo = new System.Windows.Forms.Panel();
+            this.lbUserName = new System.Windows.Forms.Label();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnRegisterProduct = new System.Windows.Forms.Button();
+            this.pctUser = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelSearch = new System.Windows.Forms.Panel();
+            this.labelSearch = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.panel1.SuspendLayout();
+            this.panelUserInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctUser)).BeginInit();
+            this.panelSearch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(82)))), ((int)(((byte)(65)))));
+            this.panel1.Controls.Add(this.btnLogout);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnRegisterProduct);
+            this.panel1.Controls.Add(this.panelUserInfo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(180, 481);
+            this.panel1.Size = new System.Drawing.Size(176, 471);
             this.panel1.TabIndex = 5;
+            // 
+            // panelUserInfo
+            // 
+            this.panelUserInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelUserInfo.Controls.Add(this.pctUser);
+            this.panelUserInfo.Controls.Add(this.lbUserName);
+            this.panelUserInfo.Location = new System.Drawing.Point(0, 0);
+            this.panelUserInfo.Name = "panelUserInfo";
+            this.panelUserInfo.Size = new System.Drawing.Size(176, 171);
+            this.panelUserInfo.TabIndex = 0;
+            // 
+            // lbUserName
+            // 
+            this.lbUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbUserName.AutoSize = true;
+            this.lbUserName.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUserName.ForeColor = System.Drawing.Color.White;
+            this.lbUserName.Location = new System.Drawing.Point(44, 81);
+            this.lbUserName.Name = "lbUserName";
+            this.lbUserName.Size = new System.Drawing.Size(94, 21);
+            this.lbUserName.TabIndex = 1;
+            this.lbUserName.Text = "User Name";
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Image = global::ProjetoInterdisciplinar.Properties.Resources.icon_logout;
+            this.btnLogout.Location = new System.Drawing.Point(0, 423);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(176, 48);
+            this.btnLogout.TabIndex = 1;
+            this.btnLogout.Text = "SAIR";
+            this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnLogout.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = global::ProjetoInterdisciplinar.Properties.Resources.icon_add;
+            this.button3.Location = new System.Drawing.Point(0, 253);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(176, 48);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Cadastrar Produto";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::ProjetoInterdisciplinar.Properties.Resources.icon_add;
+            this.button2.Location = new System.Drawing.Point(0, 209);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(176, 48);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Cadastrar Produto";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::ProjetoInterdisciplinar.Properties.Resources.icon_add;
+            this.button1.Location = new System.Drawing.Point(0, 165);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(176, 48);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Cadastrar Produto";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnRegisterProduct
+            // 
+            this.btnRegisterProduct.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRegisterProduct.FlatAppearance.BorderSize = 0;
+            this.btnRegisterProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegisterProduct.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegisterProduct.ForeColor = System.Drawing.Color.White;
+            this.btnRegisterProduct.Image = global::ProjetoInterdisciplinar.Properties.Resources.icon_add;
+            this.btnRegisterProduct.Location = new System.Drawing.Point(0, 121);
+            this.btnRegisterProduct.Name = "btnRegisterProduct";
+            this.btnRegisterProduct.Size = new System.Drawing.Size(176, 48);
+            this.btnRegisterProduct.TabIndex = 1;
+            this.btnRegisterProduct.Text = "Cadastrar Produto";
+            this.btnRegisterProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnRegisterProduct.UseVisualStyleBackColor = true;
+            // 
+            // pctUser
+            // 
+            this.pctUser.Image = global::ProjetoInterdisciplinar.Properties.Resources.icon_user_white_100;
+            this.pctUser.Location = new System.Drawing.Point(38, 12);
+            this.pctUser.Name = "pctUser";
+            this.pctUser.Size = new System.Drawing.Size(100, 66);
+            this.pctUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctUser.TabIndex = 2;
+            this.pctUser.TabStop = false;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(197, 108);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(638, 337);
+            this.flowLayoutPanel1.TabIndex = 9;
+            // 
+            // panelSearch
+            // 
+            this.panelSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelSearch.Controls.Add(this.labelSearch);
+            this.panelSearch.Controls.Add(this.pictureBox2);
+            this.panelSearch.Controls.Add(this.txtSearch);
+            this.panelSearch.Location = new System.Drawing.Point(197, 35);
+            this.panelSearch.Name = "panelSearch";
+            this.panelSearch.Size = new System.Drawing.Size(638, 67);
+            this.panelSearch.TabIndex = 8;
+            // 
+            // labelSearch
+            // 
+            this.labelSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelSearch.AutoSize = true;
+            this.labelSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSearch.Location = new System.Drawing.Point(2, 11);
+            this.labelSearch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelSearch.Name = "labelSearch";
+            this.labelSearch.Size = new System.Drawing.Size(415, 17);
+            this.labelSearch.TabIndex = 2;
+            this.labelSearch.Text = "Pesquise seus produtos e descubra os melhores precos";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = global::ProjetoInterdisciplinar.Properties.Resources.search_png;
+            this.pictureBox2.Location = new System.Drawing.Point(593, 43);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(22, 16);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearch.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.Silver;
+            this.txtSearch.Location = new System.Drawing.Point(3, 41);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(615, 22);
+            this.txtSearch.TabIndex = 4;
+            this.txtSearch.Text = "Busque por um produto...";
             // 
             // FinallyView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(694, 481);
+            this.ClientSize = new System.Drawing.Size(847, 471);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.panelSearch);
             this.Controls.Add(this.panel1);
-            this.MaximumSize = new System.Drawing.Size(900, 900);
-            this.MinimumSize = new System.Drawing.Size(510, 510);
+            this.MaximumSize = new System.Drawing.Size(1050, 760);
+            this.MinimumSize = new System.Drawing.Size(660, 510);
             this.Name = "FinallyView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FinallyView_Load);
+            this.panel1.ResumeLayout(false);
+            this.panelUserInfo.ResumeLayout(false);
+            this.panelUserInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctUser)).EndInit();
+            this.panelSearch.ResumeLayout(false);
+            this.panelSearch.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -58,5 +269,18 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelUserInfo;
+        private System.Windows.Forms.Label lbUserName;
+        private System.Windows.Forms.Button btnRegisterProduct;
+        private System.Windows.Forms.PictureBox pctUser;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel panelSearch;
+        private System.Windows.Forms.Label labelSearch;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox txtSearch;
     }
 }
