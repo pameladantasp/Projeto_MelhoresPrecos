@@ -43,6 +43,7 @@
             this.lbNumber = new System.Windows.Forms.Label();
             this.panelNumber = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.txtNumber = new System.Windows.Forms.TextBox();
             this.lblState = new System.Windows.Forms.Label();
             this.panelState = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -68,7 +69,6 @@
             this.txtCity = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panelCity = new System.Windows.Forms.Panel();
-            this.txtNumber = new System.Windows.Forms.TextBox();
             this.pctLogo = new System.Windows.Forms.PictureBox();
             this.panelEmail.SuspendLayout();
             this.panelStreet.SuspendLayout();
@@ -111,7 +111,7 @@
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(330, 40);
-            this.btnCancel.TabIndex = 9;
+            this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "CANCELAR";
             this.btnCancel.UseVisualStyleBackColor = false;
             // 
@@ -128,7 +128,7 @@
             this.btnRegister.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(330, 40);
-            this.btnRegister.TabIndex = 9;
+            this.btnRegister.TabIndex = 6;
             this.btnRegister.Text = "CADASTRAR";
             this.btnRegister.UseVisualStyleBackColor = false;
             // 
@@ -157,7 +157,7 @@
             this.panelEmail.Margin = new System.Windows.Forms.Padding(2);
             this.panelEmail.Name = "panelEmail";
             this.panelEmail.Size = new System.Drawing.Size(355, 35);
-            this.panelEmail.TabIndex = 7;
+            this.panelEmail.TabIndex = 1;
             // 
             // panel4
             // 
@@ -263,7 +263,7 @@
             this.panelNumber.Margin = new System.Windows.Forms.Padding(2);
             this.panelNumber.Name = "panelNumber";
             this.panelNumber.Size = new System.Drawing.Size(160, 34);
-            this.panelNumber.TabIndex = 13;
+            this.panelNumber.TabIndex = 3;
             // 
             // panel10
             // 
@@ -275,6 +275,20 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(135, 1);
             this.panel10.TabIndex = 1;
+            // 
+            // txtNumber
+            // 
+            this.txtNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNumber.BackColor = System.Drawing.Color.White;
+            this.txtNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumber.Location = new System.Drawing.Point(80, 8);
+            this.txtNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNumber.Name = "txtNumber";
+            this.txtNumber.Size = new System.Drawing.Size(72, 16);
+            this.txtNumber.TabIndex = 6;
             // 
             // lblState
             // 
@@ -358,7 +372,7 @@
             this.panelPostalCode.MaximumSize = new System.Drawing.Size(200, 35);
             this.panelPostalCode.Name = "panelPostalCode";
             this.panelPostalCode.Size = new System.Drawing.Size(191, 35);
-            this.panelPostalCode.TabIndex = 15;
+            this.panelPostalCode.TabIndex = 2;
             // 
             // txtPostalCode
             // 
@@ -370,6 +384,7 @@
             this.txtPostalCode.Name = "txtPostalCode";
             this.txtPostalCode.Size = new System.Drawing.Size(124, 15);
             this.txtPostalCode.TabIndex = 2;
+            this.txtPostalCode.Leave += new System.EventHandler(this.txtPostalCode_Leave);
             // 
             // panel14
             // 
@@ -408,7 +423,7 @@
             this.panelPassword.Margin = new System.Windows.Forms.Padding(2);
             this.panelPassword.Name = "panelPassword";
             this.panelPassword.Size = new System.Drawing.Size(355, 35);
-            this.panelPassword.TabIndex = 19;
+            this.panelPassword.TabIndex = 4;
             // 
             // panel16
             // 
@@ -462,7 +477,7 @@
             this.panelConfPassword.Margin = new System.Windows.Forms.Padding(2);
             this.panelConfPassword.Name = "panelConfPassword";
             this.panelConfPassword.Size = new System.Drawing.Size(355, 35);
-            this.panelConfPassword.TabIndex = 21;
+            this.panelConfPassword.TabIndex = 5;
             // 
             // panel18
             // 
@@ -500,7 +515,7 @@
             this.panelBtnRegister.Margin = new System.Windows.Forms.Padding(2);
             this.panelBtnRegister.Name = "panelBtnRegister";
             this.panelBtnRegister.Size = new System.Drawing.Size(355, 44);
-            this.panelBtnRegister.TabIndex = 22;
+            this.panelBtnRegister.TabIndex = 6;
             // 
             // panelBtnCancel
             // 
@@ -512,7 +527,7 @@
             this.panelBtnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.panelBtnCancel.Name = "panelBtnCancel";
             this.panelBtnCancel.Size = new System.Drawing.Size(355, 44);
-            this.panelBtnCancel.TabIndex = 23;
+            this.panelBtnCancel.TabIndex = 7;
             // 
             // txtName
             // 
@@ -550,7 +565,7 @@
             this.panelName.Margin = new System.Windows.Forms.Padding(2);
             this.panelName.Name = "panelName";
             this.panelName.Size = new System.Drawing.Size(355, 35);
-            this.panelName.TabIndex = 5;
+            this.panelName.TabIndex = 0;
             // 
             // lbCity
             // 
@@ -606,20 +621,6 @@
             this.panelCity.Name = "panelCity";
             this.panelCity.Size = new System.Drawing.Size(191, 35);
             this.panelCity.TabIndex = 11;
-            // 
-            // txtNumber
-            // 
-            this.txtNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNumber.BackColor = System.Drawing.Color.White;
-            this.txtNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumber.Location = new System.Drawing.Point(80, 8);
-            this.txtNumber.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNumber.Name = "txtNumber";
-            this.txtNumber.Size = new System.Drawing.Size(72, 16);
-            this.txtNumber.TabIndex = 6;
             // 
             // pctLogo
             // 
