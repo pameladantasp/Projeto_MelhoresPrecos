@@ -32,12 +32,13 @@ namespace ProjetoInterdisciplinar.View
             Application.Run(new RegisterUserView());
         }
 
-        private void btnRegister_Click_1(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             this.Close();
             t1 = new Thread(openFinallyScreen);
-            t1.SetApartmentState (ApartmentState.STA);
+            t1.SetApartmentState(ApartmentState.STA);
             t1.Start();
+            
         }
 
         private void openFinallyScreen(object obj)
