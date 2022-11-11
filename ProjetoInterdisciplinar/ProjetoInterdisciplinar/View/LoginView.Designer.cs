@@ -58,7 +58,7 @@
             this.panelEmail.Controls.Add(this.txtEmail);
             this.panelEmail.Controls.Add(this.lblEmail);
             this.panelEmail.Location = new System.Drawing.Point(46, 217);
-            this.panelEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelEmail.Margin = new System.Windows.Forms.Padding(2);
             this.panelEmail.Name = "panelEmail";
             this.panelEmail.Size = new System.Drawing.Size(334, 35);
             this.panelEmail.TabIndex = 26;
@@ -69,7 +69,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel4.Location = new System.Drawing.Point(16, 31);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(309, 1);
             this.panel4.TabIndex = 1;
@@ -83,7 +83,7 @@
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(62, 8);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(263, 16);
             this.txtEmail.TabIndex = 0;
@@ -111,7 +111,7 @@
             this.panelPassword.Controls.Add(this.lbPassword);
             this.panelPassword.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelPassword.Location = new System.Drawing.Point(46, 265);
-            this.panelPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelPassword.Margin = new System.Windows.Forms.Padding(2);
             this.panelPassword.Name = "panelPassword";
             this.panelPassword.Size = new System.Drawing.Size(334, 35);
             this.panelPassword.TabIndex = 27;
@@ -122,7 +122,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel16.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel16.Location = new System.Drawing.Point(16, 31);
-            this.panel16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel16.Margin = new System.Windows.Forms.Padding(2);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(309, 1);
             this.panel16.TabIndex = 1;
@@ -136,7 +136,7 @@
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(69, 8);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(256, 16);
@@ -174,7 +174,7 @@
             this.panelBtnRegister.Controls.Add(this.btnRegister);
             this.panelBtnRegister.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelBtnRegister.Location = new System.Drawing.Point(46, 374);
-            this.panelBtnRegister.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelBtnRegister.Margin = new System.Windows.Forms.Padding(2);
             this.panelBtnRegister.Name = "panelBtnRegister";
             this.panelBtnRegister.Size = new System.Drawing.Size(334, 44);
             this.panelBtnRegister.TabIndex = 29;
@@ -189,12 +189,13 @@
             this.btnRegister.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.ForeColor = System.Drawing.Color.White;
             this.btnRegister.Location = new System.Drawing.Point(16, 2);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(309, 40);
             this.btnRegister.TabIndex = 3;
             this.btnRegister.Text = "LOGIN";
             this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click_1);
             // 
             // panel1
             // 
@@ -203,7 +204,7 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel1.Location = new System.Drawing.Point(46, 422);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(334, 44);
             this.panel1.TabIndex = 29;
@@ -218,7 +219,7 @@
             this.button1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(16, 2);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(309, 40);
             this.button1.TabIndex = 4;
@@ -262,7 +263,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelPassword);
             this.Controls.Add(this.panelEmail);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(454, 594);
             this.MinimumSize = new System.Drawing.Size(454, 594);
             this.Name = "LoginView";
