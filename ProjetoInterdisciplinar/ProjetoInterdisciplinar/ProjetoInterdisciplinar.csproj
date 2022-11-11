@@ -36,6 +36,12 @@
     <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
       <HintPath>..\packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
+    <Reference Include="Correios, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Correios-Api.1.1.1\lib\portable-net45+win\Correios.dll</HintPath>
+    </Reference>
+    <Reference Include="Correios.Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Correios.CEP.Net.1.1.6\lib\Correios.Net.dll</HintPath>
+    </Reference>
     <Reference Include="Google.Protobuf, Version=3.19.4.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.19.4\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
@@ -146,6 +152,7 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Text.Encodings.Web, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Text.Encodings.Web.5.0.1\lib\net461\System.Text.Encodings.Web.dll</HintPath>
     </Reference>
@@ -179,12 +186,6 @@
     <Compile Include="DAO\ProductDAO.cs" />
     <Compile Include="DAO\RegisterProductDAO.cs" />
     <Compile Include="DAO\SupermarketDAO.cs" />
-    <Compile Include="View\FinallyView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\FinallyView.Designer.cs">
-      <DependentUpon>FinallyView.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\ListItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -228,9 +229,6 @@
     <Compile Include="VO\ProductVO.cs" />
     <Compile Include="VO\RegisterProductVO.cs" />
     <Compile Include="VO\SupermarketVO.cs" />
-    <EmbeddedResource Include="View\FinallyView.resx">
-      <DependentUpon>FinallyView.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\ListItem.resx">
       <DependentUpon>ListItem.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,14 +243,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="View\RegisterUserView.resx">
       <DependentUpon>RegisterUserView.cs</DependentUpon>
     </EmbeddedResource>
@@ -280,13 +272,16 @@
     <None Include="Resources\logoAppTranslucidoVermelho.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\search.png.png" />
+    <None Include="Resources\search..png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\grocery.png.png" />
+    <None Include="Resources\grocery.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\userIcon.png.png" />
+    <None Include="Resources\userIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
