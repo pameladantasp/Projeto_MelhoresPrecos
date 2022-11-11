@@ -1,12 +1,6 @@
-﻿using ProjetoInterdisciplinar.VO;
+﻿using Correios;
+using ProjetoInterdisciplinar.VO;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoInterdisciplinar.View
@@ -64,7 +58,46 @@ namespace ProjetoInterdisciplinar.View
             {
                 MessageBox.Show(ex.Message);
             }
+        }
 
+        private void txtPostalCode_Leave(object sender, EventArgs e)
+        {
+            callPostalCodeService();
+        }
+
+        private void callPostalCodeService()
+        {
+            localizePostalCode();
+        }
+
+            private void localizePostalCode()
+        {
+            if (string.IsNullOrEmpty(txtPostalCode.Text))
+            {
+                MessageBox.Show("O campo CEP esta vazio", "Atencao!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                try
+                {
+                    CorreiosApi correiosApi = new CorreiosApi();
+                    var response = correiosApi.consultaCEP(txtPostalCode.Text);
+
+                    if (response is null)
+                    {
+                        MessageBox.Show("CEP nao encontrado", "Atencao!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return;
+                    }
+
+                    txtState.Text = response.uf;
+                    txtStreet.Text = response.end;
+                    txtCity.Text = response.cidade;
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show($"{error.Message}");
+                }
+            }
         }
     }
 }
