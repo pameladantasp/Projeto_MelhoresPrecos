@@ -22,14 +22,27 @@ namespace ProjetoInterdisciplinar.View
         private void btnRegister_Click(object sender, EventArgs e)
         {
             this.Close();
-            t1 = new Thread(openWindowRegisterUser);
+            t1 = new Thread(openRegisterUserScreen);
             t1.SetApartmentState(ApartmentState.STA);
             t1.Start();
         }
 
-        private void openWindowRegisterUser (object obj)
+        private void openRegisterUserScreen (object obj)
         {
             Application.Run(new RegisterUserView());
+        }
+
+        private void btnRegister_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            t1 = new Thread(openFinallyScreen);
+            t1.SetApartmentState (ApartmentState.STA);
+            t1.Start();
+        }
+
+        private void openFinallyScreen(object obj)
+        {
+            Application.Run(new FinallyView());
         }
     }
 }
