@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProjetoInterdisciplinar.View;
+using System.Threading;
 
 namespace ProjetoInterdisciplinar.View
 {
     public partial class FinallyView : Form
     {
+        Thread thread;
         public FinallyView()
         {
             InitializeComponent();
@@ -45,6 +47,19 @@ namespace ProjetoInterdisciplinar.View
                     flowLayoutPanel1.Controls.Add(listItems[i]);
                 }
             }
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            thread = new Thread(openPrincipalScreen);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+        }
+
+        private void openPrincipalScreen(object obj)
+        {
+            Application.Run(new PrincipalView());
         }
     }
 }
