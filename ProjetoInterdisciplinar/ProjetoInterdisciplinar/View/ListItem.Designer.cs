@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.panelInformationUser = new System.Windows.Forms.Panel();
-            this.labelPost = new System.Windows.Forms.Label();
             this.lbUserName = new System.Windows.Forms.Label();
+            this.labelPost = new System.Windows.Forms.Label();
             this.panelInformationItem = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbPrice = new System.Windows.Forms.Label();
+            this.lbNameSupermarket = new System.Windows.Forms.Label();
             this.lbDescriptionProduct = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.pctUserIcon = new System.Windows.Forms.PictureBox();
             this.pctDefault = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panelInformationUser.SuspendLayout();
             this.panelInformationItem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctUserIcon)).BeginInit();
@@ -53,16 +53,6 @@
             this.panelInformationUser.Size = new System.Drawing.Size(153, 42);
             this.panelInformationUser.TabIndex = 1;
             // 
-            // labelPost
-            // 
-            this.labelPost.AutoSize = true;
-            this.labelPost.ForeColor = System.Drawing.Color.Gray;
-            this.labelPost.Location = new System.Drawing.Point(4, 4);
-            this.labelPost.Name = "labelPost";
-            this.labelPost.Size = new System.Drawing.Size(67, 13);
-            this.labelPost.TabIndex = 0;
-            this.labelPost.Text = "Postado por:";
-            // 
             // lbUserName
             // 
             this.lbUserName.AutoSize = true;
@@ -73,18 +63,64 @@
             this.lbUserName.TabIndex = 1;
             this.lbUserName.Text = "Angelica Acevedo";
             // 
+            // labelPost
+            // 
+            this.labelPost.AutoSize = true;
+            this.labelPost.ForeColor = System.Drawing.Color.Gray;
+            this.labelPost.Location = new System.Drawing.Point(4, 4);
+            this.labelPost.Name = "labelPost";
+            this.labelPost.Size = new System.Drawing.Size(67, 13);
+            this.labelPost.TabIndex = 0;
+            this.labelPost.Text = "Postado por:";
+            // 
             // panelInformationItem
             // 
             this.panelInformationItem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelInformationItem.Controls.Add(this.panel1);
-            this.panelInformationItem.Controls.Add(this.label5);
-            this.panelInformationItem.Controls.Add(this.label4);
+            this.panelInformationItem.Controls.Add(this.lbPrice);
+            this.panelInformationItem.Controls.Add(this.lbNameSupermarket);
             this.panelInformationItem.Controls.Add(this.lbDescriptionProduct);
             this.panelInformationItem.Location = new System.Drawing.Point(3, 184);
             this.panelInformationItem.Name = "panelInformationItem";
             this.panelInformationItem.Size = new System.Drawing.Size(185, 67);
             this.panelInformationItem.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.Location = new System.Drawing.Point(1, 24);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(183, 1);
+            this.panel1.TabIndex = 3;
+            // 
+            // lbPrice
+            // 
+            this.lbPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbPrice.AutoSize = true;
+            this.lbPrice.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lbPrice.Location = new System.Drawing.Point(118, 43);
+            this.lbPrice.Name = "lbPrice";
+            this.lbPrice.Size = new System.Drawing.Size(64, 21);
+            this.lbPrice.TabIndex = 2;
+            this.lbPrice.Text = "R$ 9,49";
+            this.lbPrice.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // lbNameSupermarket
+            // 
+            this.lbNameSupermarket.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbNameSupermarket.AutoSize = true;
+            this.lbNameSupermarket.ForeColor = System.Drawing.Color.Gray;
+            this.lbNameSupermarket.Location = new System.Drawing.Point(33, 30);
+            this.lbNameSupermarket.Name = "lbNameSupermarket";
+            this.lbNameSupermarket.Size = new System.Drawing.Size(112, 13);
+            this.lbNameSupermarket.TabIndex = 1;
+            this.lbNameSupermarket.Text = "Supermercado Enxuto";
+            this.lbNameSupermarket.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbDescriptionProduct
             // 
@@ -96,33 +132,6 @@
             this.lbDescriptionProduct.TabIndex = 0;
             this.lbDescriptionProduct.Text = "Refrigerante Coca Cola Pet 3 L";
             this.lbDescriptionProduct.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(33, 30);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Supermercado Enxuto";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(82)))), ((int)(((byte)(65)))));
-            this.label5.Location = new System.Drawing.Point(130, 52);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "R$ 9,49";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // pctUserIcon
             // 
@@ -147,14 +156,6 @@
             this.pctDefault.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctDefault.TabIndex = 0;
             this.pctDefault.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Gray;
-            this.panel1.Location = new System.Drawing.Point(1, 24);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(183, 1);
-            this.panel1.TabIndex = 3;
             // 
             // ListItem
             // 
@@ -185,8 +186,8 @@
         private System.Windows.Forms.Label labelPost;
         private System.Windows.Forms.Label lbUserName;
         private System.Windows.Forms.Panel panelInformationItem;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbPrice;
+        private System.Windows.Forms.Label lbNameSupermarket;
         private System.Windows.Forms.Label lbDescriptionProduct;
         private System.Windows.Forms.PictureBox pctUserIcon;
         private System.Windows.Forms.Panel panel1;
