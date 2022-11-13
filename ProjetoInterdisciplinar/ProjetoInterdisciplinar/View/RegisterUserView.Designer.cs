@@ -108,13 +108,13 @@
             this.btnCancel.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Location = new System.Drawing.Point(16, 2);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(330, 40);
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "CANCELAR";
             this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click_1);
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnRegister
             // 
@@ -126,13 +126,13 @@
             this.btnRegister.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.ForeColor = System.Drawing.Color.White;
             this.btnRegister.Location = new System.Drawing.Point(16, 2);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(330, 40);
             this.btnRegister.TabIndex = 6;
             this.btnRegister.Text = "CADASTRAR";
             this.btnRegister.UseVisualStyleBackColor = false;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click_1);
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // lblEmail
             // 
@@ -156,7 +156,7 @@
             this.panelEmail.Controls.Add(this.txtEmail);
             this.panelEmail.Controls.Add(this.lblEmail);
             this.panelEmail.Location = new System.Drawing.Point(40, 180);
-            this.panelEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.panelEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelEmail.Name = "panelEmail";
             this.panelEmail.Size = new System.Drawing.Size(355, 35);
             this.panelEmail.TabIndex = 1;
@@ -167,7 +167,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel4.Location = new System.Drawing.Point(16, 31);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(330, 1);
             this.panel4.TabIndex = 1;
@@ -181,7 +181,7 @@
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(62, 8);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(284, 16);
             this.txtEmail.TabIndex = 1;
@@ -208,7 +208,7 @@
             this.panelStreet.Controls.Add(this.txtStreet);
             this.panelStreet.Controls.Add(this.lbStreet);
             this.panelStreet.Location = new System.Drawing.Point(40, 254);
-            this.panelStreet.Margin = new System.Windows.Forms.Padding(2);
+            this.panelStreet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelStreet.Name = "panelStreet";
             this.panelStreet.Size = new System.Drawing.Size(355, 35);
             this.panelStreet.TabIndex = 9;
@@ -219,7 +219,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel6.Location = new System.Drawing.Point(16, 31);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(330, 1);
             this.panel6.TabIndex = 1;
@@ -234,7 +234,7 @@
             this.txtStreet.Enabled = false;
             this.txtStreet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStreet.Location = new System.Drawing.Point(103, 8);
-            this.txtStreet.Margin = new System.Windows.Forms.Padding(2);
+            this.txtStreet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtStreet.Name = "txtStreet";
             this.txtStreet.Size = new System.Drawing.Size(243, 16);
             this.txtStreet.TabIndex = 4;
@@ -262,7 +262,7 @@
             this.panelNumber.Controls.Add(this.lbNumber);
             this.panelNumber.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelNumber.Location = new System.Drawing.Point(235, 294);
-            this.panelNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.panelNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelNumber.Name = "panelNumber";
             this.panelNumber.Size = new System.Drawing.Size(160, 34);
             this.panelNumber.TabIndex = 3;
@@ -273,7 +273,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel10.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel10.Location = new System.Drawing.Point(16, 31);
-            this.panel10.Margin = new System.Windows.Forms.Padding(2);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(135, 1);
             this.panel10.TabIndex = 1;
@@ -287,7 +287,7 @@
             this.txtNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumber.Location = new System.Drawing.Point(80, 8);
-            this.txtNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Size = new System.Drawing.Size(72, 16);
             this.txtNumber.TabIndex = 6;
@@ -315,7 +315,7 @@
             this.panelState.Controls.Add(this.lblState);
             this.panelState.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelState.Location = new System.Drawing.Point(235, 217);
-            this.panelState.Margin = new System.Windows.Forms.Padding(2);
+            this.panelState.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelState.Name = "panelState";
             this.panelState.Size = new System.Drawing.Size(160, 34);
             this.panelState.TabIndex = 17;
@@ -326,7 +326,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel12.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel12.Location = new System.Drawing.Point(16, 31);
-            this.panel12.Margin = new System.Windows.Forms.Padding(2);
+            this.panel12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(135, 1);
             this.panel12.TabIndex = 1;
@@ -341,7 +341,7 @@
             this.txtState.Enabled = false;
             this.txtState.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtState.Location = new System.Drawing.Point(70, 8);
-            this.txtState.Margin = new System.Windows.Forms.Padding(2);
+            this.txtState.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtState.MaxLength = 2;
             this.txtState.Name = "txtState";
             this.txtState.Size = new System.Drawing.Size(82, 16);
@@ -370,7 +370,7 @@
             this.panelPostalCode.Controls.Add(this.lblPostalCode);
             this.panelPostalCode.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelPostalCode.Location = new System.Drawing.Point(40, 216);
-            this.panelPostalCode.Margin = new System.Windows.Forms.Padding(2);
+            this.panelPostalCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelPostalCode.MaximumSize = new System.Drawing.Size(200, 35);
             this.panelPostalCode.Name = "panelPostalCode";
             this.panelPostalCode.Size = new System.Drawing.Size(191, 35);
@@ -394,7 +394,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel14.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel14.Location = new System.Drawing.Point(16, 31);
-            this.panel14.Margin = new System.Windows.Forms.Padding(2);
+            this.panel14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(166, 1);
             this.panel14.TabIndex = 1;
@@ -422,7 +422,7 @@
             this.panelPassword.Controls.Add(this.lbPassword);
             this.panelPassword.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelPassword.Location = new System.Drawing.Point(40, 332);
-            this.panelPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.panelPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelPassword.Name = "panelPassword";
             this.panelPassword.Size = new System.Drawing.Size(355, 35);
             this.panelPassword.TabIndex = 4;
@@ -433,7 +433,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel16.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel16.Location = new System.Drawing.Point(16, 31);
-            this.panel16.Margin = new System.Windows.Forms.Padding(2);
+            this.panel16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(330, 1);
             this.panel16.TabIndex = 1;
@@ -447,7 +447,7 @@
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(69, 8);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(277, 16);
@@ -476,7 +476,7 @@
             this.panelConfPassword.Controls.Add(this.lbConfPassword);
             this.panelConfPassword.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelConfPassword.Location = new System.Drawing.Point(40, 371);
-            this.panelConfPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.panelConfPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelConfPassword.Name = "panelConfPassword";
             this.panelConfPassword.Size = new System.Drawing.Size(355, 35);
             this.panelConfPassword.TabIndex = 5;
@@ -487,7 +487,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel18.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel18.Location = new System.Drawing.Point(16, 31);
-            this.panel18.Margin = new System.Windows.Forms.Padding(2);
+            this.panel18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(330, 1);
             this.panel18.TabIndex = 1;
@@ -501,7 +501,7 @@
             this.txtConfPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtConfPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfPassword.Location = new System.Drawing.Point(147, 8);
-            this.txtConfPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtConfPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtConfPassword.Name = "txtConfPassword";
             this.txtConfPassword.PasswordChar = '*';
             this.txtConfPassword.Size = new System.Drawing.Size(199, 16);
@@ -514,7 +514,7 @@
             this.panelBtnRegister.Controls.Add(this.btnRegister);
             this.panelBtnRegister.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelBtnRegister.Location = new System.Drawing.Point(40, 423);
-            this.panelBtnRegister.Margin = new System.Windows.Forms.Padding(2);
+            this.panelBtnRegister.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelBtnRegister.Name = "panelBtnRegister";
             this.panelBtnRegister.Size = new System.Drawing.Size(355, 44);
             this.panelBtnRegister.TabIndex = 6;
@@ -526,7 +526,7 @@
             this.panelBtnCancel.Controls.Add(this.btnCancel);
             this.panelBtnCancel.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelBtnCancel.Location = new System.Drawing.Point(40, 471);
-            this.panelBtnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.panelBtnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelBtnCancel.Name = "panelBtnCancel";
             this.panelBtnCancel.Size = new System.Drawing.Size(355, 44);
             this.panelBtnCancel.TabIndex = 7;
@@ -540,7 +540,7 @@
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(67, 8);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(279, 16);
             this.txtName.TabIndex = 0;
@@ -551,7 +551,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel2.Location = new System.Drawing.Point(16, 31);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(330, 1);
             this.panel2.TabIndex = 1;
@@ -564,7 +564,7 @@
             this.panelName.Controls.Add(this.txtName);
             this.panelName.Controls.Add(this.lbName);
             this.panelName.Location = new System.Drawing.Point(40, 141);
-            this.panelName.Margin = new System.Windows.Forms.Padding(2);
+            this.panelName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelName.Name = "panelName";
             this.panelName.Size = new System.Drawing.Size(355, 35);
             this.panelName.TabIndex = 0;
@@ -593,7 +593,7 @@
             this.txtCity.Enabled = false;
             this.txtCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCity.Location = new System.Drawing.Point(72, 7);
-            this.txtCity.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(113, 16);
             this.txtCity.TabIndex = 5;
@@ -604,7 +604,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel8.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel8.Location = new System.Drawing.Point(16, 31);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(166, 1);
             this.panel8.TabIndex = 1;
@@ -618,7 +618,7 @@
             this.panelCity.Controls.Add(this.lbCity);
             this.panelCity.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelCity.Location = new System.Drawing.Point(40, 293);
-            this.panelCity.Margin = new System.Windows.Forms.Padding(2);
+            this.panelCity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelCity.MaximumSize = new System.Drawing.Size(200, 35);
             this.panelCity.Name = "panelCity";
             this.panelCity.Size = new System.Drawing.Size(191, 35);
@@ -642,7 +642,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(438, 555);
+            this.ClientSize = new System.Drawing.Size(433, 531);
             this.Controls.Add(this.pctLogo);
             this.Controls.Add(this.panelCity);
             this.Controls.Add(this.panelBtnCancel);
@@ -655,9 +655,9 @@
             this.Controls.Add(this.panelStreet);
             this.Controls.Add(this.panelEmail);
             this.Controls.Add(this.panelName);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.MaximumSize = new System.Drawing.Size(454, 594);
-            this.MinimumSize = new System.Drawing.Size(454, 594);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximumSize = new System.Drawing.Size(449, 579);
+            this.MinimumSize = new System.Drawing.Size(449, 570);
             this.Name = "RegisterUserView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panelEmail.ResumeLayout(false);
