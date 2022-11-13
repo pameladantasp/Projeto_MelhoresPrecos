@@ -11,14 +11,14 @@ namespace ProjetoInterdisciplinar.VO
 {
     internal class CustomerVO
     {
-        private CustumerDAO dao;
+        private CustomerDAO dao;
         public Customer customer;
 
         public CustomerVO()
         {
             customer = new Customer();
             customer.address = new Address();
-            dao = new CustumerDAO();
+            dao = new CustomerDAO();
         }
         public void insertCostumer()
         {

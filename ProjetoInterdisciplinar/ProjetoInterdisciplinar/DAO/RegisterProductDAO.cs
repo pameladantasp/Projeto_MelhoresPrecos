@@ -36,7 +36,7 @@ namespace ProjetoInterdisciplinar.DAO
                 bool didInsert = database.insert();
                 if (didInsert)
                 {
-                    CustumerDAO custumerDAO = new CustumerDAO();
+                    CustomerDAO custumerDAO = new CustomerDAO();
                     custumerDAO.insertData(registerProduct.customer);
 
                     ProductDAO productDAO = new ProductDAO();
