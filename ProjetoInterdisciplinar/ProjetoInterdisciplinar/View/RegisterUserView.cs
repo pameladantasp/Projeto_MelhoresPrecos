@@ -35,6 +35,11 @@ namespace ProjetoInterdisciplinar.View
                 crudVO.insertCostumer();
                 MessageBox.Show("DEU CERTO INSERT!");
 
+                this.Close();
+                thread = new Thread(openFinllayScreen);
+                thread.SetApartmentState(ApartmentState.STA);
+                thread.Start();
+
             }
             catch (Exception)
             {
@@ -44,23 +49,10 @@ namespace ProjetoInterdisciplinar.View
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            try
-            {
-                bool didDelete = crudVO.deleteCostumer();
-
-                if (didDelete)
-                {
-                    MessageBox.Show("DEU CERTO, DELETADO!");
-                }
-                else
-                {
-                    MessageBox.Show("POR FAVOR, TENTE MAIS TARDE!");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            this.Close();
+            thread = new Thread(openPrincipalScreen);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
         }
 
         private void txtPostalCode_Leave(object sender, EventArgs e)
@@ -103,25 +95,9 @@ namespace ProjetoInterdisciplinar.View
             }
         }
 
-        private void btnRegister_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-            thread = new Thread(openFinllayScreen);
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-        }
-
         private void openFinllayScreen(object obj)
         {
             Application.Run(new FinallyView());
-        }
-
-        private void btnCancel_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-            thread = new Thread(openPrincipalScreen);
-            thread.SetApartmentState (ApartmentState.STA);
-            thread.Start();
         }
 
         private void openPrincipalScreen(object obj)
