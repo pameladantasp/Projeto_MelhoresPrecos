@@ -1,10 +1,8 @@
-﻿using ProjetoInterdisciplinar.Helpers;
+﻿using MySql.Data.MySqlClient;
+using ProjetoInterdisciplinar.Helpers;
 using ProjetoInterdisciplinar.Model;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
 using System.Windows.Forms;
 
 namespace ProjetoInterdisciplinar.DAO
@@ -12,10 +10,39 @@ namespace ProjetoInterdisciplinar.DAO
     internal class CategoryDAO
     {
         private Database database;
+        
 
         public CategoryDAO()
         {
             database = new Database();
+        }
+
+        public DataTable selectData(Category category)
+        {
+            DataTable dataTable = new DataTable();
+
+            try
+            {
+                database.selectCategoryQueryString();
+                database.configureMySqlCommand();
+                database.selectCategories();
+    
+                dataTable.Load(database.dataReader);
+    
+                DataRow row = dataTable.NewRow();
+                row[dataTable.Columns[1].ColumnName] = "";
+                dataTable.Rows.InsertAt(row, 0);
+            }
+            catch(Exception ex)
+            {
+
+            }
+            finally
+            {
+                database.closeConnection();
+            }
+
+            return dataTable;
         }
 
         public void insertData(Category category)
