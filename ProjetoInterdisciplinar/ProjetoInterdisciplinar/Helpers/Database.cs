@@ -71,16 +71,12 @@ namespace ProjetoInterdisciplinar.Helpers
         {
             command.ExecuteNonQuery();
         }
-        public void setLoadQueryString()
-        {
-            query = "SELECT * FROM costumer";
-        }
         public void configureMySqlCommand()
         {
             command = new MySqlCommand(query, connection);
         }
 
-        public void selectCategories()
+        public void select()
         {
             try
             {
@@ -119,6 +115,11 @@ namespace ProjetoInterdisciplinar.Helpers
         }
 
         //Query customer
+
+        public void setLoadQueryString()
+        {
+            query = "SELECT * FROM costumer";
+        }
         public void setInsertCustomerQueryString()
         {
             query = "INSERT INTO customer (name, email, password, idAddress)" +
@@ -136,6 +137,10 @@ namespace ProjetoInterdisciplinar.Helpers
         }
 
         //Query supermarket
+        public void selectSupermarketQueryString()
+        {
+            query = "SELECT idSupermarket, name FROM supermarket ORDER BY name";
+        }
         public void setInsertSupermarketQueryString()
         {
             query = "INSERT INTO supermarket (name, idAddress)" +
