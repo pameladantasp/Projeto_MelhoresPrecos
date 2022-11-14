@@ -228,6 +228,7 @@
     <Compile Include="View\RegisterUserView.Designer.cs">
       <DependentUpon>RegisterUserView.cs</DependentUpon>
     </Compile>
+    <Compile Include="VO\CategoryVO.cs" />
     <Compile Include="VO\CustomerVO.cs" />
     <Compile Include="VO\ProductVO.cs" />
     <Compile Include="VO\RegisterProductVO.cs" />
