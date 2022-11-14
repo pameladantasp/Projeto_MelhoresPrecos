@@ -51,6 +51,7 @@
             this.btnAddProduct = new System.Windows.Forms.Button();
             this.panelBtnRegister = new System.Windows.Forms.Panel();
             this.btnRegisterProduct = new System.Windows.Forms.Button();
+            this.linkLbSupermarket = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             this.panelName.SuspendLayout();
             this.panelCategory.SuspendLayout();
@@ -80,10 +81,10 @@
             this.panelName.Controls.Add(this.panel2);
             this.panelName.Controls.Add(this.txtDescription);
             this.panelName.Controls.Add(this.lbDescription);
-            this.panelName.Location = new System.Drawing.Point(36, 165);
+            this.panelName.Location = new System.Drawing.Point(38, 153);
             this.panelName.Margin = new System.Windows.Forms.Padding(2);
             this.panelName.Name = "panelName";
-            this.panelName.Size = new System.Drawing.Size(355, 35);
+            this.panelName.Size = new System.Drawing.Size(353, 40);
             this.panelName.TabIndex = 0;
             // 
             // panel2
@@ -94,7 +95,7 @@
             this.panel2.Location = new System.Drawing.Point(16, 31);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(330, 1);
+            this.panel2.Size = new System.Drawing.Size(328, 1);
             this.panel2.TabIndex = 1;
             // 
             // txtDescription
@@ -108,7 +109,7 @@
             this.txtDescription.Location = new System.Drawing.Point(93, 8);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(253, 16);
+            this.txtDescription.Size = new System.Drawing.Size(251, 16);
             this.txtDescription.TabIndex = 0;
             // 
             // lbDescription
@@ -131,9 +132,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelCategory.Controls.Add(this.cbCategory);
             this.panelCategory.Controls.Add(this.lbCategory);
-            this.panelCategory.Location = new System.Drawing.Point(36, 205);
+            this.panelCategory.Location = new System.Drawing.Point(38, 193);
             this.panelCategory.Name = "panelCategory";
-            this.panelCategory.Size = new System.Drawing.Size(219, 35);
+            this.panelCategory.Size = new System.Drawing.Size(217, 40);
             this.panelCategory.TabIndex = 1;
             // 
             // cbCategory
@@ -144,7 +145,7 @@
             this.cbCategory.FormattingEnabled = true;
             this.cbCategory.Location = new System.Drawing.Point(92, 11);
             this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(121, 21);
+            this.cbCategory.Size = new System.Drawing.Size(119, 21);
             this.cbCategory.TabIndex = 1;
             // 
             // lbCategory
@@ -167,9 +168,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelSupermarket.Controls.Add(this.cbSupermarket);
             this.panelSupermarket.Controls.Add(this.lbNameSupermarket);
-            this.panelSupermarket.Location = new System.Drawing.Point(36, 246);
+            this.panelSupermarket.Location = new System.Drawing.Point(38, 234);
             this.panelSupermarket.Name = "panelSupermarket";
-            this.panelSupermarket.Size = new System.Drawing.Size(355, 35);
+            this.panelSupermarket.Size = new System.Drawing.Size(353, 40);
             this.panelSupermarket.TabIndex = 2;
             // 
             // cbSupermarket
@@ -180,7 +181,7 @@
             this.cbSupermarket.FormattingEnabled = true;
             this.cbSupermarket.Location = new System.Drawing.Point(123, 11);
             this.cbSupermarket.Name = "cbSupermarket";
-            this.cbSupermarket.Size = new System.Drawing.Size(226, 21);
+            this.cbSupermarket.Size = new System.Drawing.Size(224, 21);
             this.cbSupermarket.TabIndex = 2;
             // 
             // lbNameSupermarket
@@ -205,10 +206,10 @@
             this.panelPrice.Controls.Add(this.txtPrice);
             this.panelPrice.Controls.Add(this.lbPrice);
             this.panelPrice.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panelPrice.Location = new System.Drawing.Point(36, 286);
+            this.panelPrice.Location = new System.Drawing.Point(38, 304);
             this.panelPrice.Margin = new System.Windows.Forms.Padding(2);
             this.panelPrice.Name = "panelPrice";
-            this.panelPrice.Size = new System.Drawing.Size(160, 35);
+            this.panelPrice.Size = new System.Drawing.Size(158, 35);
             this.panelPrice.TabIndex = 3;
             // 
             // panel10
@@ -219,7 +220,7 @@
             this.panel10.Location = new System.Drawing.Point(16, 31);
             this.panel10.Margin = new System.Windows.Forms.Padding(2);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(135, 1);
+            this.panel10.Size = new System.Drawing.Size(133, 1);
             this.panel10.TabIndex = 1;
             // 
             // txtPrice
@@ -233,8 +234,9 @@
             this.txtPrice.Location = new System.Drawing.Point(65, 8);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(87, 16);
+            this.txtPrice.Size = new System.Drawing.Size(85, 16);
             this.txtPrice.TabIndex = 3;
+            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
             // lbPrice
             // 
@@ -258,11 +260,11 @@
             this.panelDate.Controls.Add(this.panel8);
             this.panelDate.Controls.Add(this.lbDate);
             this.panelDate.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panelDate.Location = new System.Drawing.Point(200, 286);
+            this.panelDate.Location = new System.Drawing.Point(202, 304);
             this.panelDate.Margin = new System.Windows.Forms.Padding(2);
             this.panelDate.MaximumSize = new System.Drawing.Size(200, 35);
             this.panelDate.Name = "panelDate";
-            this.panelDate.Size = new System.Drawing.Size(191, 35);
+            this.panelDate.Size = new System.Drawing.Size(189, 35);
             this.panelDate.TabIndex = 4;
             // 
             // txtDate
@@ -285,7 +287,7 @@
             this.panel8.Location = new System.Drawing.Point(16, 31);
             this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(166, 1);
+            this.panel8.Size = new System.Drawing.Size(164, 1);
             this.panel8.TabIndex = 1;
             // 
             // lbDate
@@ -308,7 +310,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBtnCancel.Controls.Add(this.btnAddProduct);
             this.panelBtnCancel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panelBtnCancel.Location = new System.Drawing.Point(36, 402);
+            this.panelBtnCancel.Location = new System.Drawing.Point(38, 419);
             this.panelBtnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.panelBtnCancel.Name = "panelBtnCancel";
             this.panelBtnCancel.Size = new System.Drawing.Size(355, 44);
@@ -330,6 +332,7 @@
             this.btnAddProduct.TabIndex = 7;
             this.btnAddProduct.Text = "ADICIONAR PRODUTO";
             this.btnAddProduct.UseVisualStyleBackColor = false;
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
             // panelBtnRegister
             // 
@@ -337,7 +340,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBtnRegister.Controls.Add(this.btnRegisterProduct);
             this.panelBtnRegister.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panelBtnRegister.Location = new System.Drawing.Point(36, 354);
+            this.panelBtnRegister.Location = new System.Drawing.Point(38, 371);
             this.panelBtnRegister.Margin = new System.Windows.Forms.Padding(2);
             this.panelBtnRegister.Name = "panelBtnRegister";
             this.panelBtnRegister.Size = new System.Drawing.Size(355, 44);
@@ -352,13 +355,27 @@
             this.btnRegisterProduct.FlatAppearance.BorderSize = 0;
             this.btnRegisterProduct.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegisterProduct.ForeColor = System.Drawing.Color.White;
-            this.btnRegisterProduct.Location = new System.Drawing.Point(16, 2);
+            this.btnRegisterProduct.Location = new System.Drawing.Point(14, 2);
             this.btnRegisterProduct.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegisterProduct.Name = "btnRegisterProduct";
             this.btnRegisterProduct.Size = new System.Drawing.Size(330, 40);
             this.btnRegisterProduct.TabIndex = 6;
-            this.btnRegisterProduct.Text = "CADASTRAR RPODUTO";
+            this.btnRegisterProduct.Text = "CADASTRAR PRODUTO";
             this.btnRegisterProduct.UseVisualStyleBackColor = false;
+            this.btnRegisterProduct.Click += new System.EventHandler(this.btnRegisterProduct_Click);
+            // 
+            // linkLbSupermarket
+            // 
+            this.linkLbSupermarket.AutoSize = true;
+            this.linkLbSupermarket.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLbSupermarket.LinkColor = System.Drawing.Color.Blue;
+            this.linkLbSupermarket.Location = new System.Drawing.Point(158, 277);
+            this.linkLbSupermarket.Name = "linkLbSupermarket";
+            this.linkLbSupermarket.Size = new System.Drawing.Size(233, 15);
+            this.linkLbSupermarket.TabIndex = 29;
+            this.linkLbSupermarket.TabStop = true;
+            this.linkLbSupermarket.Text = "Seu supermercado não aparece na lista?";
+            this.linkLbSupermarket.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLbSupermarket_LinkClicked);
             // 
             // RegisterProduct
             // 
@@ -366,6 +383,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(433, 531);
+            this.Controls.Add(this.linkLbSupermarket);
             this.Controls.Add(this.panelBtnCancel);
             this.Controls.Add(this.panelBtnRegister);
             this.Controls.Add(this.panelDate);
@@ -377,6 +395,7 @@
             this.MaximumSize = new System.Drawing.Size(449, 570);
             this.MinimumSize = new System.Drawing.Size(449, 570);
             this.Name = "RegisterProduct";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.RegisterProduct_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             this.panelName.ResumeLayout(false);
@@ -392,6 +411,7 @@
             this.panelBtnCancel.ResumeLayout(false);
             this.panelBtnRegister.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -420,5 +440,6 @@
         private System.Windows.Forms.Button btnAddProduct;
         private System.Windows.Forms.Panel panelBtnRegister;
         private System.Windows.Forms.Button btnRegisterProduct;
+        private System.Windows.Forms.LinkLabel linkLbSupermarket;
     }
 }

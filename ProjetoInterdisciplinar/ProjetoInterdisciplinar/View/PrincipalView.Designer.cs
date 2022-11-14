@@ -191,7 +191,7 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(510, 510);
             this.Name = "PrincipalView";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.PrincipalView_Load);
             this.panelToolbar.ResumeLayout(false);
             this.panelButtons.ResumeLayout(false);
