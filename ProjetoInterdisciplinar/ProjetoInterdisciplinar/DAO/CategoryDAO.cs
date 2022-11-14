@@ -25,7 +25,7 @@ namespace ProjetoInterdisciplinar.DAO
             {
                 database.selectCategoryQueryString();
                 database.configureMySqlCommand();
-                database.selectCategories();
+                database.select();
     
                 dataTable.Load(database.dataReader);
     
@@ -35,7 +35,7 @@ namespace ProjetoInterdisciplinar.DAO
             }
             catch(Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
             finally
             {
