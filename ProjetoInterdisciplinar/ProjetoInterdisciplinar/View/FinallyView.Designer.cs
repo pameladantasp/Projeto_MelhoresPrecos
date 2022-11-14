@@ -142,6 +142,7 @@
             this.btnRegisterProduct.Text = "Cadastrar Produto";
             this.btnRegisterProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnRegisterProduct.UseVisualStyleBackColor = true;
+            this.btnRegisterProduct.Click += new System.EventHandler(this.btnRegisterProduct_Click);
             // 
             // panelUserInfo
             // 
