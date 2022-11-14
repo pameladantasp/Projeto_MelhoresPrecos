@@ -2,6 +2,7 @@
 using ProjetoInterdisciplinar.Model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,10 @@ namespace ProjetoInterdisciplinar.VO
             supermarket = new Supermarket();
             supermarket.address = new Address();
             dao = new SupermarketDAO();
+        }
+        public DataTable selectSupermarket()
+        {
+            return dao.selectData(supermarket);
         }
         public void insertCostumer()
         {

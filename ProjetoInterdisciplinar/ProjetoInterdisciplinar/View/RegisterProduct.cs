@@ -1,37 +1,33 @@
 ﻿using ProjetoInterdisciplinar.VO;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.Common;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoInterdisciplinar.View
 {
     public partial class RegisterProduct : Form
     {
-        private CategoryVO crudVO;
+        private CategoryVO categoryVO;
+        private SupermarketVO supermarketVO;
 
         public RegisterProduct()
         {
             InitializeComponent();
-            crudVO = new CategoryVO();
+            categoryVO = new CategoryVO();
+            supermarketVO = new SupermarketVO();
         }
 
         private void RegisterProduct_Load(object sender, EventArgs e)
         {
             loadCategory();
+            loadSupermarket();
         }
 
         private void loadCategory()
         {
             try
             {
-                DataTable dataTable = crudVO.selectCategory();
+                DataTable dataTable = categoryVO.selectCategory();
                 if (dataTable.Rows.Count > 0)
                 {
                     cbCategory.DataSource = dataTable;
@@ -45,5 +41,22 @@ namespace ProjetoInterdisciplinar.View
             }
         }
 
+        private void loadSupermarket()
+        {
+            try
+            {
+                DataTable dataTable = supermarketVO.selectSupermarket();
+                if (dataTable.Rows.Count > 0)
+                {
+                    cbSupermarket.DataSource = dataTable;
+                    cbSupermarket.ValueMember = dataTable.Columns[0].ColumnName;
+                    cbSupermarket.DisplayMember = dataTable.Columns[1].ColumnName;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
