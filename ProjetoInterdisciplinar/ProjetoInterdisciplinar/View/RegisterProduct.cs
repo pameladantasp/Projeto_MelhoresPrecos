@@ -2,6 +2,7 @@
 using System;
 using System.Data;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace ProjetoInterdisciplinar.View
 {
@@ -9,6 +10,7 @@ namespace ProjetoInterdisciplinar.View
     {
         private CategoryVO categoryVO;
         private SupermarketVO supermarketVO;
+        private Thread thread;
 
         public RegisterProduct()
         {
@@ -57,6 +59,44 @@ namespace ProjetoInterdisciplinar.View
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!Char.IsControl(e.KeyChar) && !Char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void linkLbSupermarket_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+        }
+
+        private void btnRegisterProduct_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            thread = new Thread(openFinallyScreen);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+        }
+
+        private void openFinallyScreen()
+        {
+            Application.Run(new FinallyView());
+        }
+
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            thread = new Thread(openRegisterProductScreen);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start(); 
+        }
+
+        private void openRegisterProductScreen()
+        {
+            Application.Run(new RegisterProduct());
         }
     }
 }
