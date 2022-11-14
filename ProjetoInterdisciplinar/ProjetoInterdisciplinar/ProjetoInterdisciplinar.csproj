@@ -222,6 +222,12 @@
     <Compile Include="Model\Supermarket.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\RegisterSupermarket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RegisterSupermarket.Designer.cs">
+      <DependentUpon>RegisterSupermarket.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\RegisterUserView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -258,6 +264,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\RegisterSupermarket.resx">
+      <DependentUpon>RegisterSupermarket.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\RegisterUserView.resx">
       <DependentUpon>RegisterUserView.cs</DependentUpon>
     </EmbeddedResource>
