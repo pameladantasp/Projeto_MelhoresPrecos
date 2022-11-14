@@ -71,6 +71,15 @@ namespace ProjetoInterdisciplinar.View
 
         private void linkLbSupermarket_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Close();
+            thread = new Thread(openRegisterSupermarket);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+        }
+
+        private void openRegisterSupermarket()
+        {
+            Application.Run(new RegisterSupermarket());
         }
 
         private void btnRegisterProduct_Click(object sender, EventArgs e)
