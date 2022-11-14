@@ -61,5 +61,18 @@ namespace ProjetoInterdisciplinar.View
         {
             Application.Run(new PrincipalView());
         }
+
+        private void btnRegisterProduct_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            thread= new Thread(openRegisterProductScreen);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+        }
+
+        private void openRegisterProductScreen()
+        {
+            Application.Run(new RegisterProduct());
+        }
     }
 }
