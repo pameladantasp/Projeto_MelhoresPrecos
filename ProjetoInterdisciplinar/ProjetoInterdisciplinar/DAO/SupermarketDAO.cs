@@ -2,6 +2,7 @@
 using ProjetoInterdisciplinar.Model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,34 @@ namespace ProjetoInterdisciplinar.DAO
         public SupermarketDAO()
         {
             database = new Database();
+        }
+
+        public DataTable selectData(Supermarket supermarket)
+        {
+            DataTable dataTable = new DataTable();
+
+            try
+            {
+                database.selectSupermarketQueryString();
+                database.configureMySqlCommand();
+                database.select();
+
+                dataTable.Load(database.dataReader);
+
+                DataRow row = dataTable.NewRow();
+                row[dataTable.Columns[1].ColumnName] = "";
+                dataTable.Rows.InsertAt(row, 0);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                database.closeConnection();
+            }
+
+            return dataTable;
         }
         public void insertData(Supermarket supermarket)
         {
