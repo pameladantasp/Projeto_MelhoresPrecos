@@ -12,6 +12,7 @@ namespace ProjetoInterdisciplinar.Helpers
         private MySqlConnection connection;
         public MySqlCommand command;
         private string query;
+        public MySqlDataReader dataReader;
 
         public Database()
         {
@@ -79,6 +80,27 @@ namespace ProjetoInterdisciplinar.Helpers
             command = new MySqlCommand(query, connection);
         }
 
+        public void selectCategories()
+        {
+            try
+            {
+                if (openConnection())
+                {
+                    executeDataReader();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void executeDataReader()
+        {
+
+            dataReader = command.ExecuteReader();
+        }
+
         //Query Address
         public void setInsertAddressQueryString()
         {
@@ -131,6 +153,11 @@ namespace ProjetoInterdisciplinar.Helpers
         }
 
         //Query category
+
+        public void selectCategoryQueryString()
+        {
+            query = "SELECT idCategory, type FROM category ORDER BY type";
+        }
         public void setInsertCategoryQueryString()
         {
             query = "INSERT INTO category (type) VALUES (@type)";
