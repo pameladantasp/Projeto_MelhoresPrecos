@@ -29,7 +29,10 @@ namespace ProjetoInterdisciplinar.Helpers
         {
             try
             {
-                connection.Open();
+                if(connection.State == ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
                 return true;
             }
             catch(MySqlException ex)
@@ -49,7 +52,10 @@ namespace ProjetoInterdisciplinar.Helpers
         }
         public void closeConnection()
         {
-            connection.Close();
+            if(connection.State == ConnectionState.Open)
+            {
+                connection.Close();
+            }
         }
         public bool insert()
         {
@@ -115,10 +121,17 @@ namespace ProjetoInterdisciplinar.Helpers
         }
 
         //Query customer
-
+        
         public void setLoadQueryString()
         {
             query = "SELECT * FROM costumer";
+        }
+
+        //login
+        public void selectLoginQueryString()
+        {
+            query = "SELECT email, password FROM customer" +
+               "WHERE email = @login AND password = @password";
         }
         public void setInsertCustomerQueryString()
         {
@@ -198,8 +211,8 @@ namespace ProjetoInterdisciplinar.Helpers
 
         public void setInsertRegisterProductQueryString()
         {
-            query = "INSERT INTO registerProduct (idRegister, idCustomer, idSupermarket, idProduct, price, dateRegister) " +
-                "VALUES (@idRegister, @idCustomer, @idSupermarket, @idProduct, @price, @dateRegister)";
+            query = "INSERT INTO registerProduct (idCustomer, idSupermarket, idProduct, price, dateRegister) " +
+                "VALUES (@idCustomer, @idSupermarket, @idProduct, @price, @dateRegister)";
         }
         public void setUpdateRegisterProductQueryString()
         {
