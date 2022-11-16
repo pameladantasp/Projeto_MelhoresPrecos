@@ -3,15 +3,36 @@ using ProjetoInterdisciplinar.Model;
 using System;
 using System.Windows.Forms;
 using ProjetoInterdisciplinar.Helpers;
+using System.Drawing;
 
 namespace ProjetoInterdisciplinar.DAO
 {
     internal class CustomerDAO
     {
         private Database database;
+        public bool exist;
+        public string message;
         public CustomerDAO()
         {
             database = new Database();
+        }
+
+        public bool verifyLogin(string login, string password)
+        {
+            try
+            {
+                database.selectLoginQueryString();
+                database.configureMySqlCommand();
+                database.command.Parameters.AddWithValue("@login", login);
+                database.command.Parameters.AddWithValue("password", password);
+                database.select();
+                exist = true;
+            }
+            catch(MySqlException)
+            {
+                this.message = "Erro com o Banco de Dados!!";
+            }
+            return exist;
         }
         public void insertData(Customer customer)
         {
