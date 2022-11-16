@@ -13,6 +13,6 @@ namespace ProjetoInterdisciplinar.Model
         public Product  product { get; set; }
         public Supermarket supermarket { get; set; }
         public float price { get; set; }
-        public DateTime dataRegister { get; set; }
+        public DateTime dateRegister { get; set; }
     }
 }
