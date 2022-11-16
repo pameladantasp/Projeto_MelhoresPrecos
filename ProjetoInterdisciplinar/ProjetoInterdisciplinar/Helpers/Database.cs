@@ -99,7 +99,6 @@ namespace ProjetoInterdisciplinar.Helpers
 
         private void executeDataReader()
         {
-
             dataReader = command.ExecuteReader();
         }
 
@@ -121,17 +120,16 @@ namespace ProjetoInterdisciplinar.Helpers
         }
 
         //Query customer
-        
-        public void setLoadQueryString()
-        {
-            query = "SELECT * FROM costumer";
-        }
 
         //login
         public void selectLoginQueryString()
         {
-            query = "SELECT email, password FROM customer" +
+            query = "SELECT idCustomer, name, email FROM customer " +
                "WHERE email = @login AND password = @password";
+        }
+        public void setLoadQueryString()
+        {
+            query = "SELECT * FROM customer";
         }
         public void setInsertCustomerQueryString()
         {
