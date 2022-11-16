@@ -10,6 +10,7 @@ namespace ProjetoInterdisciplinar.View
     {
         private CategoryVO categoryVO;
         private SupermarketVO supermarketVO;
+        private RegisterProductVO registerProductVO;
         private Thread thread;
 
         public RegisterProduct()
@@ -17,6 +18,7 @@ namespace ProjetoInterdisciplinar.View
             InitializeComponent();
             categoryVO = new CategoryVO();
             supermarketVO = new SupermarketVO();
+            registerProductVO = new RegisterProductVO();
         }
 
         private void RegisterProduct_Load(object sender, EventArgs e)
@@ -84,6 +86,24 @@ namespace ProjetoInterdisciplinar.View
 
         private void btnRegisterProduct_Click(object sender, EventArgs e)
         {
+            try
+            {
+                registerProductVO.registerProduct.product.name = txtDescription.Text;
+                registerProductVO.registerProduct.product.category.idCategory = Int32.Parse(cbCategory.SelectedValue.ToString());
+                registerProductVO.registerProduct.product.category.type = cbCategory.Text;
+                registerProductVO.registerProduct.supermarket.idSupermarket = Int32.Parse(cbSupermarket.SelectedValue.ToString());
+                registerProductVO.registerProduct.supermarket.name = cbSupermarket.Text;
+                registerProductVO.registerProduct.price = float.Parse(txtPrice.Text);
+                registerProductVO.registerProduct.dateRegister = DateTime.Parse(txtDate.Text);
+
+                registerProductVO.insertProduct();
+                MessageBox.Show("DEU CERTO INSERT!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);   
+            }
+
             this.Close();
             thread = new Thread(openFinallyScreen);
             thread.SetApartmentState(ApartmentState.STA);
