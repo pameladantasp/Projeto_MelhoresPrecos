@@ -4,35 +4,62 @@ using System;
 using System.Windows.Forms;
 using ProjetoInterdisciplinar.Helpers;
 using System.Drawing;
+using System.Data;
+
+enum LoginResult
+{
+    success,
+    invalide,
+    failure
+}
 
 namespace ProjetoInterdisciplinar.DAO
 {
     internal class CustomerDAO
     {
         private Database database;
-        public bool exist;
+        private LoginResult result;
         public string message;
         public CustomerDAO()
         {
             database = new Database();
         }
 
-        public bool verifyLogin(string login, string password)
+        public LoginResult verifyLogin(Customer customer)
         {
             try
             {
                 database.selectLoginQueryString();
                 database.configureMySqlCommand();
-                database.command.Parameters.AddWithValue("@login", login);
-                database.command.Parameters.AddWithValue("password", password);
+                database.command.Parameters.AddWithValue("@login", customer.email);
+                database.command.Parameters.AddWithValue("@password", customer.password);
                 database.select();
-                exist = true;
+
+                if (database.dataReader.HasRows)
+                {
+                    while(database.dataReader.Read())
+                    {
+                        customer.idCustomer = Int32.Parse(database.dataReader["idCustomer"].ToString());
+                        customer.name = database.dataReader["name"].ToString();
+                        customer.email = database.dataReader["email"].ToString();
+                        result = LoginResult.success;
+                    }
+                }
+                else
+                {
+                    result = LoginResult.invalide;
+                }
             }
             catch(MySqlException)
             {
                 this.message = "Erro com o Banco de Dados!!";
+                result = LoginResult.failure;
             }
-            return exist;
+            finally
+            {
+               database.closeConnection();
+            }
+            return result;
         }
         public void insertData(Customer customer)
         {

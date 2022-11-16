@@ -21,7 +21,7 @@ namespace ProjetoInterdisciplinar.VO
             dao = new CustomerDAO();
         }
 
-        public bool loginCustomer()
+        public LoginResult loginCustomer()
         {
             return dao.verifyLogin(customer);
         }
