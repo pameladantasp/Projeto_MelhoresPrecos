@@ -21,15 +21,15 @@ namespace ProjetoInterdisciplinar.VO
             registerProduct.product = new Product();
             dao = new RegisterProductDAO();
         }
-        public void insertCostumer()
+        public void insertProduct()
         {
             dao.insertData(registerProduct);
         }
-        public void updateCostumer()
+        public void updateProduct()
         {
             dao.updateData(registerProduct);
         }
-        public bool deleteCostumer()
+        public bool deleteProduct()
         {
             return dao.delete(registerProduct.idRegister);
         }
