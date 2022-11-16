@@ -20,6 +20,11 @@ namespace ProjetoInterdisciplinar.VO
             customer.address = new Address();
             dao = new CustomerDAO();
         }
+
+        public bool loginCustomer()
+        {
+            return dao.verifyLogin(customer);
+        }
         public void insertCostumer()
         {
             dao.insertData(customer);

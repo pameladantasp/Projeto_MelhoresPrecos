@@ -22,9 +22,9 @@ namespace ProjetoInterdisciplinar.View
         {
             try
             {
-                crudVO.customer.name = txtName.Text;
-                crudVO.customer.email = txtEmail.Text;
-                crudVO.customer.password = txtPassword.Text;
+                crudVO.customer.name = txtName.Text.Trim();
+                crudVO.customer.email = txtEmail.Text.Trim();
+                crudVO.customer.password = txtPassword.Text.Trim();
 
                 crudVO.customer.address.street = txtStreet.Text;
                 crudVO.customer.address.number = txtNumber.Text;

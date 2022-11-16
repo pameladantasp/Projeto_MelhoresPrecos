@@ -88,12 +88,12 @@ namespace ProjetoInterdisciplinar.View
         {
             try
             {
-                registerProductVO.registerProduct.product.name = txtDescription.Text;
+                registerProductVO.registerProduct.product.name = txtDescription.Text.Trim();
                 registerProductVO.registerProduct.product.category.idCategory = Int32.Parse(cbCategory.SelectedValue.ToString());
                 registerProductVO.registerProduct.product.category.type = cbCategory.Text;
                 registerProductVO.registerProduct.supermarket.idSupermarket = Int32.Parse(cbSupermarket.SelectedValue.ToString());
                 registerProductVO.registerProduct.supermarket.name = cbSupermarket.Text;
-                registerProductVO.registerProduct.price = float.Parse(txtPrice.Text);
+                registerProductVO.registerProduct.price = float.Parse(txtPrice.Text.Trim());
                 registerProductVO.registerProduct.dateRegister = DateTime.Parse(txtDate.Text);
 
                 registerProductVO.insertProduct();
