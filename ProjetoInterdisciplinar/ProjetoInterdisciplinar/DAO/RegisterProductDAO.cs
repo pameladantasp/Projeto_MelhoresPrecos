@@ -21,29 +21,23 @@ namespace ProjetoInterdisciplinar.DAO
         {
             try
             {
-                int idCustomer = database.getNextId("customer");
+                //int idCustomer = database.getNextId("customer");
                 int idProduct = database.getNextId("product");
-                int idSupermarket = database.getNextId("supermarket");
 
                 database.setInsertRegisterProductQueryString();
                 database.configureMySqlCommand();
-                database.command.Parameters.AddWithValue("@idCustomer", idCustomer);
+                database.command.Parameters.AddWithValue("@idCustomer", registerProduct.customer.idCustomer);
+                database.command.Parameters.AddWithValue("@idCategory", registerProduct.product.category.idCategory);
                 database.command.Parameters.AddWithValue("@idProduct", idProduct);
-                database.command.Parameters.AddWithValue("@idSupermarket", idSupermarket);
+                database.command.Parameters.AddWithValue("@idSupermarket", registerProduct.supermarket.idSupermarket);
                 database.command.Parameters.AddWithValue("@price", registerProduct.price);
-                database.command.Parameters.AddWithValue("@dataRegister", registerProduct.dataRegister);
+                database.command.Parameters.AddWithValue("@dateRegister", Convert.ToDateTime(registerProduct.dateRegister).ToString("yyyy/MM/dd"));
 
                 bool didInsert = database.insert();
                 if (didInsert)
                 {
-                    CustomerDAO custumerDAO = new CustomerDAO();
-                    custumerDAO.insertData(registerProduct.customer);
-
                     ProductDAO productDAO = new ProductDAO();
                     productDAO.insertData(registerProduct.product);
-
-                    SupermarketDAO supermarketDAO = new SupermarketDAO();
-                    supermarketDAO.insertData(registerProduct.supermarket);
                 }
             }
             catch (Exception ex)
@@ -62,7 +56,7 @@ namespace ProjetoInterdisciplinar.DAO
                 database.setUpdateRegisterProductQueryString();
                 database.configureMySqlCommand(); 
                 database.command.Parameters.AddWithValue("@price", registerProduct.price);
-                database.command.Parameters.AddWithValue("@dataRegister", registerProduct.dataRegister);
+                database.command.Parameters.AddWithValue("@dataRegister", registerProduct.dateRegister);
                 database.insert();
             }
             catch (Exception ex)
