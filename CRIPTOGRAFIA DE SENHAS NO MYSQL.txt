@@ -1,31 +1,41 @@
-﻿CRIPTOGRAFIA DE SENHAS NO MYSQL
-
-
+﻿         CRIPTOGRAFIA DE SENHAS NO MYSQL
 Alguns dos recursos voltados para a criptografia de dados existentes no MySQL.
+
+_______________________________________________________
 AES_ENCRYPT
 Criptografa o dado com algoritmos simétricos (AES) que só pode ser descriptografada se a chave informada para recuperar o dado for igual a chave utilizada para criptografar.
 Este comando possui a seguinte sintaxe:
-AES_ENCRYPT('texto a ser criptografado', 'chave criptográfica')
+
+            AES_ENCRYPT('texto a ser criptografado', 'chave criptográfica')
+
 Exemplo:
-INSERT INTO usuarios(login, senha) VALUES ('meuusuario', AES_ENCRYPT('minha_senha123*', 'ASKASKSDJVS106DVSDJAHDLDSDFSBGXHG');
+            INSERT INTO usuarios(login, senha) VALUES ('meuusuario', AES_ENCRYPT('minha_senha123*', 'ASKASKSDJVS106DVSDJAHDLDSDFSBGXHG');
+
+
+_______________________________________________________
 AES_DECRYPT
 Sua função é descriptografar a sequência que foi criptografada com o comando AES_ENCRYPT.
 A sintaxe do comando é esta:
-AES_DECRYPT('dado a ser descriptografado', 'chave criptográfica')
+    
+            AES_DECRYPT('dado a ser descriptografado', 'chave criptográfica')
+
 Exemplo:
 Para recuperar a senha do usuário ‘meuusuario’ podemos utilizar a seguinte consulta:
-SELECT AES_DECRYPT(senha, 'ASKASKSDJVS106DVSDJAHDLDSDFSBGXHG') FROM usuarios WHERE login = 'meuusuario'
+
+            SELECT AES_DECRYPT(senha, 'ASKASKSDJVS106DVSDJAHDLDSDFSBGXHG') FROM usuarios WHERE login = 'meuusuario'
+
+
+_______________________________________________________
 PASSWORD
 Esta função não é bem uma criptografia, ela na verdade embaralha os valores e até o presente momento não é possível recuperar o valor original da string.
 
 
 Sua sintaxe é:
-PASSWORD('string a ser embaralhada')
+            PASSWORD('string a ser embaralhada')
 
 
-Exemplo
-INSERT INTO usuarios(login, senha) VALUES('mynewuser', PASSWORD('mypassword'));
+Exemplo:
+            INSERT INTO usuarios(login, senha) VALUES('mynewuser', PASSWORD('mypassword'));
 
-
-Para recuperar a mesma é só por comparações (tentativa/erro)
-SELECT * FROM usuarios WHERE login = 'mynewuser' AND senha = PASSWORD('mypassord');
+Para recuperar a mesma é só por comparações (tentativa/erro):
+            SELECT * FROM usuarios WHERE login = 'mynewuser' AND senha = PASSWORD('mypassord');
