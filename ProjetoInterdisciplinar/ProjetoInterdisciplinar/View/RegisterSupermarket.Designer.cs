@@ -57,6 +57,7 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.panelBtnRegister = new System.Windows.Forms.Panel();
             this.btnRegister = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             this.panelCity.SuspendLayout();
             this.panelNumber.SuspendLayout();
@@ -88,7 +89,7 @@
             this.panelCity.Controls.Add(this.txtCity);
             this.panelCity.Controls.Add(this.lbCity);
             this.panelCity.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panelCity.Location = new System.Drawing.Point(42, 302);
+            this.panelCity.Location = new System.Drawing.Point(42, 345);
             this.panelCity.Margin = new System.Windows.Forms.Padding(2);
             this.panelCity.MaximumSize = new System.Drawing.Size(200, 35);
             this.panelCity.Name = "panelCity";
@@ -143,7 +144,7 @@
             this.panelNumber.Controls.Add(this.txtNumber);
             this.panelNumber.Controls.Add(this.lbNumber);
             this.panelNumber.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panelNumber.Location = new System.Drawing.Point(237, 303);
+            this.panelNumber.Location = new System.Drawing.Point(237, 346);
             this.panelNumber.Margin = new System.Windows.Forms.Padding(2);
             this.panelNumber.Name = "panelNumber";
             this.panelNumber.Size = new System.Drawing.Size(160, 34);
@@ -196,7 +197,7 @@
             this.panelState.Controls.Add(this.txtState);
             this.panelState.Controls.Add(this.lblState);
             this.panelState.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panelState.Location = new System.Drawing.Point(42, 225);
+            this.panelState.Location = new System.Drawing.Point(42, 268);
             this.panelState.Margin = new System.Windows.Forms.Padding(2);
             this.panelState.Name = "panelState";
             this.panelState.Size = new System.Drawing.Size(160, 34);
@@ -251,7 +252,7 @@
             this.panelPostalCode.Controls.Add(this.panel14);
             this.panelPostalCode.Controls.Add(this.lblPostalCode);
             this.panelPostalCode.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panelPostalCode.Location = new System.Drawing.Point(42, 186);
+            this.panelPostalCode.Location = new System.Drawing.Point(42, 229);
             this.panelPostalCode.Margin = new System.Windows.Forms.Padding(2);
             this.panelPostalCode.MaximumSize = new System.Drawing.Size(200, 35);
             this.panelPostalCode.Name = "panelPostalCode";
@@ -302,7 +303,7 @@
             this.panelStreet.Controls.Add(this.panel6);
             this.panelStreet.Controls.Add(this.txtStreet);
             this.panelStreet.Controls.Add(this.lbStreet);
-            this.panelStreet.Location = new System.Drawing.Point(42, 263);
+            this.panelStreet.Location = new System.Drawing.Point(42, 306);
             this.panelStreet.Margin = new System.Windows.Forms.Padding(2);
             this.panelStreet.Name = "panelStreet";
             this.panelStreet.Size = new System.Drawing.Size(355, 35);
@@ -355,7 +356,7 @@
             this.panelName.Controls.Add(this.panel2);
             this.panelName.Controls.Add(this.txtName);
             this.panelName.Controls.Add(this.lbName);
-            this.panelName.Location = new System.Drawing.Point(42, 147);
+            this.panelName.Location = new System.Drawing.Point(42, 190);
             this.panelName.Margin = new System.Windows.Forms.Padding(2);
             this.panelName.Name = "panelName";
             this.panelName.Size = new System.Drawing.Size(355, 35);
@@ -406,7 +407,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBtnCancel.Controls.Add(this.btnCancel);
             this.panelBtnCancel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panelBtnCancel.Location = new System.Drawing.Point(42, 412);
+            this.panelBtnCancel.Location = new System.Drawing.Point(42, 455);
             this.panelBtnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.panelBtnCancel.Name = "panelBtnCancel";
             this.panelBtnCancel.Size = new System.Drawing.Size(355, 44);
@@ -428,6 +429,7 @@
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "CANCELAR";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // panelBtnRegister
             // 
@@ -435,7 +437,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBtnRegister.Controls.Add(this.btnRegister);
             this.panelBtnRegister.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panelBtnRegister.Location = new System.Drawing.Point(42, 364);
+            this.panelBtnRegister.Location = new System.Drawing.Point(42, 407);
             this.panelBtnRegister.Margin = new System.Windows.Forms.Padding(2);
             this.panelBtnRegister.Name = "panelBtnRegister";
             this.panelBtnRegister.Size = new System.Drawing.Size(355, 44);
@@ -457,6 +459,19 @@
             this.btnRegister.TabIndex = 6;
             this.btnRegister.Text = "CADASTRAR";
             this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(94, 140);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(247, 30);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "Cadastro Supermercado";
             // 
             // RegisterSupermarket
             // 
@@ -464,6 +479,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(433, 531);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panelBtnCancel);
             this.Controls.Add(this.panelBtnRegister);
             this.Controls.Add(this.pctLogo);
@@ -493,6 +509,7 @@
             this.panelBtnCancel.ResumeLayout(false);
             this.panelBtnRegister.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -527,5 +544,6 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Panel panelBtnRegister;
         private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.Label label1;
     }
 }

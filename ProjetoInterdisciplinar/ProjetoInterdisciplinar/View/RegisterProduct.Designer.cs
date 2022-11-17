@@ -52,6 +52,7 @@
             this.panelBtnRegister = new System.Windows.Forms.Panel();
             this.btnRegisterProduct = new System.Windows.Forms.Button();
             this.linkLbSupermarket = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             this.panelName.SuspendLayout();
             this.panelCategory.SuspendLayout();
@@ -81,7 +82,7 @@
             this.panelName.Controls.Add(this.panel2);
             this.panelName.Controls.Add(this.txtDescription);
             this.panelName.Controls.Add(this.lbDescription);
-            this.panelName.Location = new System.Drawing.Point(38, 153);
+            this.panelName.Location = new System.Drawing.Point(38, 198);
             this.panelName.Margin = new System.Windows.Forms.Padding(2);
             this.panelName.Name = "panelName";
             this.panelName.Size = new System.Drawing.Size(353, 40);
@@ -132,7 +133,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelCategory.Controls.Add(this.cbCategory);
             this.panelCategory.Controls.Add(this.lbCategory);
-            this.panelCategory.Location = new System.Drawing.Point(38, 193);
+            this.panelCategory.Location = new System.Drawing.Point(38, 238);
             this.panelCategory.Name = "panelCategory";
             this.panelCategory.Size = new System.Drawing.Size(217, 40);
             this.panelCategory.TabIndex = 1;
@@ -168,7 +169,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelSupermarket.Controls.Add(this.cbSupermarket);
             this.panelSupermarket.Controls.Add(this.lbNameSupermarket);
-            this.panelSupermarket.Location = new System.Drawing.Point(38, 234);
+            this.panelSupermarket.Location = new System.Drawing.Point(38, 279);
             this.panelSupermarket.Name = "panelSupermarket";
             this.panelSupermarket.Size = new System.Drawing.Size(353, 40);
             this.panelSupermarket.TabIndex = 2;
@@ -206,7 +207,7 @@
             this.panelPrice.Controls.Add(this.txtPrice);
             this.panelPrice.Controls.Add(this.lbPrice);
             this.panelPrice.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panelPrice.Location = new System.Drawing.Point(38, 304);
+            this.panelPrice.Location = new System.Drawing.Point(38, 349);
             this.panelPrice.Margin = new System.Windows.Forms.Padding(2);
             this.panelPrice.Name = "panelPrice";
             this.panelPrice.Size = new System.Drawing.Size(158, 35);
@@ -260,7 +261,7 @@
             this.panelDate.Controls.Add(this.panel8);
             this.panelDate.Controls.Add(this.lbDate);
             this.panelDate.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panelDate.Location = new System.Drawing.Point(202, 304);
+            this.panelDate.Location = new System.Drawing.Point(202, 349);
             this.panelDate.Margin = new System.Windows.Forms.Padding(2);
             this.panelDate.MaximumSize = new System.Drawing.Size(200, 35);
             this.panelDate.Name = "panelDate";
@@ -310,7 +311,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBtnCancel.Controls.Add(this.btnAddProduct);
             this.panelBtnCancel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panelBtnCancel.Location = new System.Drawing.Point(38, 419);
+            this.panelBtnCancel.Location = new System.Drawing.Point(38, 464);
             this.panelBtnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.panelBtnCancel.Name = "panelBtnCancel";
             this.panelBtnCancel.Size = new System.Drawing.Size(355, 44);
@@ -340,7 +341,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBtnRegister.Controls.Add(this.btnRegisterProduct);
             this.panelBtnRegister.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panelBtnRegister.Location = new System.Drawing.Point(38, 371);
+            this.panelBtnRegister.Location = new System.Drawing.Point(38, 416);
             this.panelBtnRegister.Margin = new System.Windows.Forms.Padding(2);
             this.panelBtnRegister.Name = "panelBtnRegister";
             this.panelBtnRegister.Size = new System.Drawing.Size(355, 44);
@@ -369,7 +370,7 @@
             this.linkLbSupermarket.AutoSize = true;
             this.linkLbSupermarket.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLbSupermarket.LinkColor = System.Drawing.Color.Blue;
-            this.linkLbSupermarket.Location = new System.Drawing.Point(158, 277);
+            this.linkLbSupermarket.Location = new System.Drawing.Point(158, 322);
             this.linkLbSupermarket.Name = "linkLbSupermarket";
             this.linkLbSupermarket.Size = new System.Drawing.Size(233, 15);
             this.linkLbSupermarket.TabIndex = 29;
@@ -377,12 +378,25 @@
             this.linkLbSupermarket.Text = "Seu supermercado não aparece na lista?";
             this.linkLbSupermarket.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLbSupermarket_LinkClicked);
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(125, 150);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(186, 30);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Cadastro Produto";
+            // 
             // RegisterProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(433, 531);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.linkLbSupermarket);
             this.Controls.Add(this.panelBtnCancel);
             this.Controls.Add(this.panelBtnRegister);
@@ -441,5 +455,6 @@
         private System.Windows.Forms.Panel panelBtnRegister;
         private System.Windows.Forms.Button btnRegisterProduct;
         private System.Windows.Forms.LinkLabel linkLbSupermarket;
+        private System.Windows.Forms.Label label1;
     }
 }
