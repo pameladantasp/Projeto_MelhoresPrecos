@@ -1,11 +1,13 @@
 ﻿using Correios;
 using System;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace ProjetoInterdisciplinar.View
 {
     public partial class RegisterSupermarket : Form
     {
+        private Thread thread;
         public RegisterSupermarket()
         {
             InitializeComponent();
@@ -49,6 +51,27 @@ namespace ProjetoInterdisciplinar.View
         private void txtPostalCode_Leave(object sender, EventArgs e)
         {
             callPostalCodeService();
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            thread = new Thread(openRegisterProduct);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+        }
+
+        private void openRegisterProduct()
+        {
+            Application.Run(new RegisterProduct());
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            thread = new Thread(openRegisterProduct);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
         }
     }
 }
