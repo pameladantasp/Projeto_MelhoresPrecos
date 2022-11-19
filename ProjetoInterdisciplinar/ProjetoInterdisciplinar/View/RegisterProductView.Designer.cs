@@ -1,6 +1,6 @@
 ﻿namespace ProjetoInterdisciplinar.View
 {
-    partial class RegisterProduct
+    partial class RegisterProductView
     {
         /// <summary>
         /// Required designer variable.
@@ -390,7 +390,7 @@
             this.label1.TabIndex = 36;
             this.label1.Text = "Cadastro Produto";
             // 
-            // RegisterProduct
+            // RegisterProductView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -408,7 +408,7 @@
             this.Controls.Add(this.pctLogo);
             this.MaximumSize = new System.Drawing.Size(449, 570);
             this.MinimumSize = new System.Drawing.Size(449, 570);
-            this.Name = "RegisterProduct";
+            this.Name = "RegisterProductView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.RegisterProduct_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();

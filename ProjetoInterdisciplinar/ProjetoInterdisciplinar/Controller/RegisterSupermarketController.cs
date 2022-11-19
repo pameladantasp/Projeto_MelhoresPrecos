@@ -1,25 +1,44 @@
 ﻿using Correios;
+using ProjetoInterdisciplinar.View;
 using System;
-using System.Windows.Forms;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.NetworkInformation;
+using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace ProjetoInterdisciplinar.View
+namespace ProjetoInterdisciplinar.Controller
 {
-    public partial class RegisterSupermarket : Form
+    internal class RegisterSupermarketController: Form
     {
-        private Thread thread;
-        public RegisterSupermarket()
+        Thread t1;
+
+        public void navigateToRegisterProductView()
         {
-            InitializeComponent();
+            setThread(new Thread(openRegisterProductScreen));
         }
 
-        private void callPostalCodeService()
+        private void setThread(Thread thread)
         {
-            localizePostalCode();
+            this.Close();
+            t1 = thread;
+            t1.SetApartmentState(ApartmentState.STA);
+            t1.Start();
         }
 
-        private void localizePostalCode()
+        private void openRegisterProductScreen(object obj)
         {
+            Application.Run(new RegisterProductView());
+        }
+
+        public void localizePostalCode(
+            MaskedTextBox txtPostalCode,
+            TextBox txtState,
+            TextBox txtStreet,
+            TextBox txtCity
+        ) {
             if (string.IsNullOrEmpty(txtPostalCode.Text))
             {
                 MessageBox.Show("O campo CEP esta vazio", "Atencao!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -46,32 +65,6 @@ namespace ProjetoInterdisciplinar.View
                     MessageBox.Show($"{error.Message}");
                 }
             }
-        }
-
-        private void txtPostalCode_Leave(object sender, EventArgs e)
-        {
-            callPostalCodeService();
-        }
-
-        private void btnRegister_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            thread = new Thread(openRegisterProduct);
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-        }
-
-        private void openRegisterProduct()
-        {
-            Application.Run(new RegisterProduct());
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            thread = new Thread(openRegisterProduct);
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace ProjetoInterdisciplinar.View
 {
-    partial class RegisterSupermarket
+    partial class RegisterSupermarketView
     {
         /// <summary>
         /// Required designer variable.
@@ -473,7 +473,7 @@
             this.label1.TabIndex = 35;
             this.label1.Text = "Cadastro Supermercado";
             // 
-            // RegisterSupermarket
+            // RegisterSupermarketView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -491,7 +491,7 @@
             this.Controls.Add(this.panelName);
             this.MaximumSize = new System.Drawing.Size(449, 570);
             this.MinimumSize = new System.Drawing.Size(449, 570);
-            this.Name = "RegisterSupermarket";
+            this.Name = "RegisterSupermarketView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             this.panelCity.ResumeLayout(false);

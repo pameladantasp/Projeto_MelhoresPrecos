@@ -72,7 +72,7 @@ namespace ProjetoInterdisciplinar.View
 
         private void openRegisterProductScreen()
         {
-            Application.Run(new RegisterProduct());
+            Application.Run(new RegisterProductView());
         }
     }
 }

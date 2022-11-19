@@ -5,14 +5,14 @@ using System.Threading;
 
 namespace ProjetoInterdisciplinar.View
 {
-    public partial class RegisterProduct : Form
+    public partial class RegisterProductView : Form
     {
         private CategoryVO categoryVO;
         private SupermarketVO supermarketVO;
         private RegisterProductVO registerProductVO;
         private Thread thread;
 
-        public RegisterProduct()
+        public RegisterProductView()
         {
             InitializeComponent();
             categoryVO = new CategoryVO();
@@ -80,7 +80,7 @@ namespace ProjetoInterdisciplinar.View
 
         private void openRegisterSupermarket()
         {
-            Application.Run(new RegisterSupermarket());
+            Application.Run(new RegisterSupermarketView());
         }
 
         private void btnRegisterProduct_Click(object sender, EventArgs e)
@@ -124,7 +124,7 @@ namespace ProjetoInterdisciplinar.View
 
         private void openRegisterProductScreen()
         {
-            Application.Run(new RegisterProduct());
+            Application.Run(new RegisterProductView());
         }
     }
 }
