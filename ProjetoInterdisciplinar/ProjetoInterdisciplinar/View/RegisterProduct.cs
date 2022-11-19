@@ -1,5 +1,4 @@
-﻿using ProjetoInterdisciplinar.VO;
-using System;
+﻿using System;
 using System.Data;
 using System.Windows.Forms;
 using System.Threading;
@@ -112,7 +111,7 @@ namespace ProjetoInterdisciplinar.View
 
         private void openFinallyScreen()
         {
-            Application.Run(new FinallyView());
+            Application.Run(new HomeView());
         }
 
         private void btnAddProduct_Click(object sender, EventArgs e)

@@ -89,7 +89,7 @@ namespace ProjetoInterdisciplinar.DAO
                 database.closeConnection();
             }
         }
-        public bool delete(int idSupermarket)
+        public bool deleteData(int idSupermarket)
         {
             bool didDelete;
 

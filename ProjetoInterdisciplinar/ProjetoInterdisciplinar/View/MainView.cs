@@ -5,11 +5,11 @@ using System.Threading;
 
 namespace ProjetoInterdisciplinar.View
 {
-    public partial class PrincipalView : Form
+    public partial class MainView : Form
     {
         Thread t2;
         Thread t3;
-        public PrincipalView()
+        public MainView()
         {
             InitializeComponent();
         }

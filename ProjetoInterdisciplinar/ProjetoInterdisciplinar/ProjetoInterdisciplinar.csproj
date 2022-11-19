@@ -183,11 +183,14 @@
     <Compile Include="DAO\ProductDAO.cs" />
     <Compile Include="DAO\RegisterProductDAO.cs" />
     <Compile Include="DAO\SupermarketDAO.cs" />
-    <Compile Include="View\FinallyView.cs">
+    <Compile Include="Controller\LoginController.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FinallyView.Designer.cs">
-      <DependentUpon>FinallyView.cs</DependentUpon>
+    <Compile Include="View\HomeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\HomeView.Designer.cs">
+      <DependentUpon>HomeView.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ListItem.cs">
       <SubType>UserControl</SubType>
@@ -234,13 +237,8 @@
     <Compile Include="View\RegisterUserView.Designer.cs">
       <DependentUpon>RegisterUserView.cs</DependentUpon>
     </Compile>
-    <Compile Include="VO\CategoryVO.cs" />
-    <Compile Include="VO\CustomerVO.cs" />
-    <Compile Include="VO\ProductVO.cs" />
-    <Compile Include="VO\RegisterProductVO.cs" />
-    <Compile Include="VO\SupermarketVO.cs" />
-    <EmbeddedResource Include="View\FinallyView.resx">
-      <DependentUpon>FinallyView.cs</DependentUpon>
+    <EmbeddedResource Include="View\HomeView.resx">
+      <DependentUpon>HomeView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ListItem.resx">
       <DependentUpon>ListItem.cs</DependentUpon>
@@ -284,9 +282,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\logoAppTranslucido.png" />
   </ItemGroup>

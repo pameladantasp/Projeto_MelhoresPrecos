@@ -17,7 +17,7 @@ namespace ProjetoInterdisciplinar.DAO
             database = new Database();
         }
 
-        public DataTable selectData(Category category)
+        public DataTable selectData()
         {
             DataTable dataTable = new DataTable();
 
@@ -83,7 +83,7 @@ namespace ProjetoInterdisciplinar.DAO
             }
         }
 
-        public bool delete(int idCategory)
+        public bool deleteData(int idCategory)
         {
             bool didDelete;
 

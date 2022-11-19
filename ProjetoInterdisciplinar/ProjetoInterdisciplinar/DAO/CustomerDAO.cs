@@ -110,7 +110,7 @@ namespace ProjetoInterdisciplinar.DAO
                 database.closeConnection();
             }
         }
-        public bool delete(int idCustomer)
+        public bool deleteData(int idCustomer)
         {
             bool didDelete;
 

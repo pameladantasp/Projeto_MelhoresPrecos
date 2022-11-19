@@ -71,7 +71,7 @@ namespace ProjetoInterdisciplinar.DAO
                 database.closeConnection();
             }
         }
-        public bool delete(int idRegisterProduct)
+        public bool deleteData(int idRegisterProduct)
         {
             bool didDelete;
 

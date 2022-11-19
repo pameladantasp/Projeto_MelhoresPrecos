@@ -1,5 +1,4 @@
 ﻿using Correios;
-using ProjetoInterdisciplinar.VO;
 using System;
 using System.Windows.Forms;
 using System.Threading;
@@ -97,12 +96,12 @@ namespace ProjetoInterdisciplinar.View
 
         private void openFinllayScreen(object obj)
         {
-            Application.Run(new FinallyView());
+            Application.Run(new HomeView());
         }
 
         private void openPrincipalScreen(object obj)
         {
-            Application.Run(new PrincipalView());
+            Application.Run(new MainView());
         }
     }
 }

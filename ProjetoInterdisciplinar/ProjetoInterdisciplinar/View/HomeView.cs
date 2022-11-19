@@ -12,10 +12,10 @@ using System.Threading;
 
 namespace ProjetoInterdisciplinar.View
 {
-    public partial class FinallyView : Form
+    public partial class HomeView : Form
     {
         Thread thread;
-        public FinallyView()
+        public HomeView()
         {
             InitializeComponent();
         }
@@ -59,7 +59,7 @@ namespace ProjetoInterdisciplinar.View
 
         private void openPrincipalScreen(object obj)
         {
-            Application.Run(new PrincipalView());
+            Application.Run(new MainView());
         }
 
         private void btnRegisterProduct_Click(object sender, EventArgs e)

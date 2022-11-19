@@ -1,6 +1,6 @@
 ﻿namespace ProjetoInterdisciplinar.View
 {
-    partial class FinallyView
+    partial class HomeView
     {
         /// <summary>
         /// Required designer variable.
@@ -242,7 +242,7 @@
             this.txtSearch.TabIndex = 4;
             this.txtSearch.Text = "Busque por um produto...";
             // 
-            // FinallyView
+            // HomeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -253,7 +253,7 @@
             this.Controls.Add(this.panel1);
             this.MaximumSize = new System.Drawing.Size(1050, 760);
             this.MinimumSize = new System.Drawing.Size(660, 510);
-            this.Name = "FinallyView";
+            this.Name = "HomeView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FinallyView_Load);
             this.panel1.ResumeLayout(false);

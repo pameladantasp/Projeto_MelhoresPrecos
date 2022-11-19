@@ -1,6 +1,6 @@
 ﻿namespace ProjetoInterdisciplinar.View
 {
-    partial class PrincipalView
+    partial class MainView
     {
         /// <summary>
         /// Required designer variable.
@@ -176,7 +176,7 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(621, 313);
             this.flowLayoutPanel1.TabIndex = 7;
             // 
-            // PrincipalView
+            // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -190,7 +190,7 @@
             this.MaximumSize = new System.Drawing.Size(900, 900);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(510, 510);
-            this.Name = "PrincipalView";
+            this.Name = "MainView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.PrincipalView_Load);
             this.panelToolbar.ResumeLayout(false);
