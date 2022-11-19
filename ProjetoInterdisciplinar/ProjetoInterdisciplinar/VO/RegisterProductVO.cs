@@ -19,6 +19,7 @@ namespace ProjetoInterdisciplinar.VO
             registerProduct.customer = new Customer();
             registerProduct.supermarket = new Supermarket();
             registerProduct.product = new Product();
+            registerProduct.product.category = new Category();
             dao = new RegisterProductDAO();
         }
         public void insertProduct()
