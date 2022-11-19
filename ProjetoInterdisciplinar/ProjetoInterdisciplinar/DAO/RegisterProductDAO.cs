@@ -21,23 +21,26 @@ namespace ProjetoInterdisciplinar.DAO
         {
             try
             {
-                //int idCustomer = database.getNextId("customer");
                 int idProduct = database.getNextId("product");
 
-                database.setInsertRegisterProductQueryString();
+                database.setInsertProductQueryString();
                 database.configureMySqlCommand();
-                database.command.Parameters.AddWithValue("@idCustomer", registerProduct.customer.idCustomer);
-                database.command.Parameters.AddWithValue("@idCategory", registerProduct.product.category.idCategory);
-                database.command.Parameters.AddWithValue("@idProduct", idProduct);
-                database.command.Parameters.AddWithValue("@idSupermarket", registerProduct.supermarket.idSupermarket);
-                database.command.Parameters.AddWithValue("@price", registerProduct.price);
-                database.command.Parameters.AddWithValue("@dateRegister", Convert.ToDateTime(registerProduct.dateRegister).ToString("yyyy/MM/dd"));
-
+                database.command.Parameters.AddWithValue("@name", registerProduct.product.name);
+                database.command.Parameters.AddWithValue("@category", registerProduct.product.category.idCategory);
                 bool didInsert = database.insert();
+                
                 if (didInsert)
                 {
-                    ProductDAO productDAO = new ProductDAO();
-                    productDAO.insertData(registerProduct.product);
+                    database.closeConnection();
+                    database.setInsertRegisterProductQueryString();
+                    database.configureMySqlCommand();
+                    database.command.Parameters.AddWithValue("@idCustomer", registerProduct.customer.idCustomer);
+                    database.command.Parameters.AddWithValue("@idCategory", registerProduct.product.category.idCategory);
+                    database.command.Parameters.AddWithValue("@idProduct", idProduct);
+                    database.command.Parameters.AddWithValue("@idSupermarket", registerProduct.supermarket.idSupermarket);
+                    database.command.Parameters.AddWithValue("@price", registerProduct.price);
+                    database.command.Parameters.AddWithValue("@dateRegister", Convert.ToDateTime(registerProduct.dateRegister).ToString("yyyy/MM/dd"));
+                    database.insert();
                 }
             }
             catch (Exception ex)
