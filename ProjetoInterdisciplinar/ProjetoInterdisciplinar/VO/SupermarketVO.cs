@@ -24,15 +24,15 @@ namespace ProjetoInterdisciplinar.VO
         {
             return dao.selectData(supermarket);
         }
-        public void insertCostumer()
+        public void insertSupermarket()
         {
             dao.insertData(supermarket);
         }
-        public void updateCostumer()
+        public void updateSupermarket()
         {
             dao.updateData(supermarket);
         }
-        public bool deleteCostumer()
+        public bool deleteSupermarket()
         {
             return dao.delete(supermarket.idSupermarket);
         }
