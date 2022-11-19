@@ -177,6 +177,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\MainController.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DAO\AddressDAO.cs" />
     <Compile Include="DAO\CategoryDAO.cs" />
     <Compile Include="DAO\CustomerDAO.cs" />
@@ -198,11 +201,11 @@
     <Compile Include="View\ListItem.Designer.cs">
       <DependentUpon>ListItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\PrincipalView.cs">
+    <Compile Include="View\MainView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\PrincipalView.Designer.cs">
-      <DependentUpon>PrincipalView.cs</DependentUpon>
+    <Compile Include="View\MainView.Designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
     <Compile Include="View\LoginView.cs">
       <SubType>Form</SubType>
@@ -243,8 +246,8 @@
     <EmbeddedResource Include="View\ListItem.resx">
       <DependentUpon>ListItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\PrincipalView.resx">
-      <DependentUpon>PrincipalView.cs</DependentUpon>
+    <EmbeddedResource Include="View\MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
