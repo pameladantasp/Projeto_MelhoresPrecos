@@ -23,7 +23,7 @@ namespace ProjetoInterdisciplinar.View
         private void btnRegister_Click(object sender, EventArgs e)
         {
             Supermarket supermarket = new Supermarket();
-            supermarket.name = txtName.Text;
+            supermarket.name = txtName.Text.Trim();
 
             supermarket.address = new Address();
             supermarket.address.street = txtStreet.Text;
