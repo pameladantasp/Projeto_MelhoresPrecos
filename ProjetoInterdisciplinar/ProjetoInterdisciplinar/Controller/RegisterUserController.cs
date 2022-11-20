@@ -1,6 +1,7 @@
 ﻿using Correios;
 using ProjetoInterdisciplinar.Model;
 using ProjetoInterdisciplinar.View;
+using static ProjetoInterdisciplinar.Helpers.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using MySqlX.XDevAPI.Common;
 
 namespace ProjetoInterdisciplinar.Controller
 {
@@ -27,6 +29,11 @@ namespace ProjetoInterdisciplinar.Controller
             setThread(new Thread(openHomeScreen));
         }
 
+        public void navigateToLoginView()
+        {
+            setThread(new Thread(openLoginScreen));
+        }
+
         private void setThread(Thread thread)
         {
             t1 = thread;
@@ -42,6 +49,11 @@ namespace ProjetoInterdisciplinar.Controller
         private void openHomeScreen(object obj)
         {
             Application.Run(new HomeView());
+        }
+
+        private void openLoginScreen(object obj)
+        {
+            Application.Run(new LoginView());
         }
         public void closeView(Form form)
         {
@@ -82,15 +94,42 @@ namespace ProjetoInterdisciplinar.Controller
             }
         }
 
-        public void userSignUp(Customer customer)
+        public ErrorResult userSignUp(Customer customer)
         {
+            ErrorResult result = ErrorResult.invalide;
+
             try
             {
-                customer.insert();
+                result = customer.insert();
+
+                if (result == ErrorResult.success)
+                {
+                    result = customer.login(); 
+                }
             }
             catch (Exception)
             {
                 MessageBox.Show("Ocorreu um erro ao realizar a operação", "Database", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            showMessageBox(result);
+
+            return result;
+        }
+        private void showMessageBox(ErrorResult result)
+        {
+            switch (result)
+            {
+                case ErrorResult.success:
+                    MessageBox.Show("Cadastro realizado e logado com sucesso", "Entrando", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    break;
+
+                case ErrorResult.invalide:
+                    MessageBox.Show("Cadastro realizado com sucesso", "Faca seu login", MessageBoxButtons.OK);
+                    break;
+
+                case ErrorResult.failure:
+                    MessageBox.Show("Tente novamente", "Falha no cadastro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
             }
         }
     }

@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.Threading;
 using ProjetoInterdisciplinar.Controller;
 using ProjetoInterdisciplinar.Model;
+using static ProjetoInterdisciplinar.Helpers.Enums;
 
 namespace ProjetoInterdisciplinar.View
 {
@@ -31,9 +32,17 @@ namespace ProjetoInterdisciplinar.View
             customer.address.state = txtState.Text;
             customer.address.postalCode = txtPostalCode.Text;
 
-            registerUserController.userSignUp(customer);
-            registerUserController.closeView(this);
-            registerUserController.navigateToHomeView();
+            ErrorResult result = registerUserController.userSignUp(customer);
+            if (result == ErrorResult.success)
+            {
+                registerUserController.closeView(this);
+                registerUserController.navigateToHomeView();
+            }
+            else if(result == ErrorResult.invalide)
+            {
+                registerUserController.closeView(this);
+                registerUserController.navigateToLoginView();
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
