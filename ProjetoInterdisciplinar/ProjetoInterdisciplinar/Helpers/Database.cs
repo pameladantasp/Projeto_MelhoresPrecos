@@ -3,6 +3,7 @@ using MySqlX.XDevAPI.Relational;
 using System;
 using System.Data;
 using System.Windows.Forms;
+using static ProjetoInterdisciplinar.Helpers.Enums;
 
 namespace ProjetoInterdisciplinar.Helpers
 {
@@ -102,12 +103,41 @@ namespace ProjetoInterdisciplinar.Helpers
             dataReader = command.ExecuteReader();
         }
 
-        //Query Address
-        public void setInsertAddressQueryString()
+        public void setInsertQueryString(QueryType queryType)
         {
-            query = "INSERT INTO address (street, number, city, state, postalCode)" +
-                " VALUES (@street, @number, @city, @state, @postalCode)";
+            switch(queryType)
+            {
+                case QueryType.address:
+                    query = "INSERT INTO address (street, number, city, state, postalCode)" +
+                            " VALUES (@street, @number, @city, @state, @postalCode)";
+                    break;
+
+                case QueryType.category:
+                    query = "INSERT INTO category (type) VALUES (@type)";
+                    break;
+
+                case QueryType.customer:
+                    query = "INSERT INTO customer (name, email, password, idAddress)" +
+                            " VALUES (@name, @email, @password, @idAddress)";
+                    break;
+
+                case QueryType.product:
+                    query = "INSERT INTO product (name, category) VALUES (@name, @category)";
+                    break;
+
+                case QueryType.supermarket:
+                    query = "INSERT INTO supermarket (name, idAddress)" +
+                            " VALUES (@name, @idAddress)";
+                    break;
+
+                case QueryType.registerProduct:
+                    query = "INSERT INTO registerProduct (idCustomer, idSupermarket, idProduct, price, dateRegister)" +
+                            " VALUES (@idCustomer, @idSupermarket, @idProduct, @price, @dateRegister)";
+                    break;
+            }
         }
+
+        //Query Address
         public void setUpdateAddressQueryString()
         {
             query = "UPDATE address SET (street = @street, number = @number, city = @city, state = @state, postalCode = @postalCode) " +
@@ -131,11 +161,6 @@ namespace ProjetoInterdisciplinar.Helpers
         {
             query = "SELECT * FROM customer";
         }
-        public void setInsertCustomerQueryString()
-        {
-            query = "INSERT INTO customer (name, email, password, idAddress)" +
-                " VALUES (@name, @email, @password, @idAddress)";
-        }
         public void setUpdateCustomerQueryString()
         {
             query = "UPDATE customer SET name = @name, email = @email, password = @password " +
@@ -151,11 +176,6 @@ namespace ProjetoInterdisciplinar.Helpers
         public void selectSupermarketQueryString()
         {
             query = "SELECT idSupermarket, name FROM supermarket ORDER BY name";
-        }
-        public void setInsertSupermarketQueryString()
-        {
-            query = "INSERT INTO supermarket (name, idAddress)" +
-                " VALUES (@name, @idAddress)";
         }
         public void setUpdateSupermarketQueryString()
         {
@@ -174,10 +194,6 @@ namespace ProjetoInterdisciplinar.Helpers
         {
             query = "SELECT idCategory, type FROM category ORDER BY type";
         }
-        public void setInsertCategoryQueryString()
-        {
-            query = "INSERT INTO category (type) VALUES (@type)";
-        }
         public void setUpdateCategoryQueryString()
         {
             query = "UPDATE category SET type = @type " +
@@ -190,10 +206,6 @@ namespace ProjetoInterdisciplinar.Helpers
         }
 
         //Query Product
-        public void setInsertProductQueryString()
-        {
-            query = "INSERT INTO product (name, category) VALUES (@name, @category)";
-        }
         public void setUpdateProductQueryString()
         {
             query = "UPDATE product SET name = @name " +
@@ -206,12 +218,6 @@ namespace ProjetoInterdisciplinar.Helpers
         }
 
         //Query registerProduct
-
-        public void setInsertRegisterProductQueryString()
-        {
-            query = "INSERT INTO registerProduct (idCustomer, idSupermarket, idProduct, price, dateRegister) " +
-                "VALUES (@idCustomer, @idSupermarket, @idProduct, @price, @dateRegister)";
-        }
         public void setUpdateRegisterProductQueryString()
         {
             query = "UPDATE registerProduct SET (idRegister, idCustomer, idSupermarket, idProduct, price, dateRegister) " +

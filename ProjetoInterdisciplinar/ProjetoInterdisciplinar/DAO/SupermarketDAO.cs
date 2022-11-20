@@ -56,7 +56,7 @@ namespace ProjetoInterdisciplinar.DAO
 
                 if (didInsert)
                 {
-                    database.setInsertSupermarketQueryString();
+                    database.setInsertQueryString(Enums.QueryType.supermarket);
                     database.configureMySqlCommand();
                     database.command.Parameters.AddWithValue("@name", supermarket.name);
                     database.command.Parameters.AddWithValue("@idAddress", idAddress);

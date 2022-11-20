@@ -23,7 +23,7 @@ namespace ProjetoInterdisciplinar.DAO
             {
                 int idProduct = database.getNextId("product");
 
-                database.setInsertProductQueryString();
+                database.setInsertQueryString(Enums.QueryType.product);
                 database.configureMySqlCommand();
                 database.command.Parameters.AddWithValue("@name", registerProduct.product.name);
                 database.command.Parameters.AddWithValue("@category", registerProduct.product.category.idCategory);
@@ -32,7 +32,7 @@ namespace ProjetoInterdisciplinar.DAO
                 if (didInsert)
                 {
                     database.closeConnection();
-                    database.setInsertRegisterProductQueryString();
+                    database.setInsertQueryString(Enums.QueryType.registerProduct);
                     database.configureMySqlCommand();
                     database.command.Parameters.AddWithValue("@idCustomer", registerProduct.customer.idCustomer);
                     database.command.Parameters.AddWithValue("@idCategory", registerProduct.product.category.idCategory);

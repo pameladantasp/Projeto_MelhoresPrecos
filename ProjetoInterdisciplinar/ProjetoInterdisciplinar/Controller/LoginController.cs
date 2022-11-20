@@ -1,5 +1,7 @@
 ﻿using ProjetoInterdisciplinar.Model;
 using ProjetoInterdisciplinar.View;
+using ProjetoInterdisciplinar.Helpers;
+using static ProjetoInterdisciplinar.Helpers.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,30 +48,30 @@ namespace ProjetoInterdisciplinar
             form.Close();
         }
 
-        public LoginResult userSignIn(TextBox email, TextBox password)
+        public ErrorResult userSignIn(TextBox email, TextBox password)
         {
             Customer customer = new Customer();
             customer.email = email.Text.Trim();
             customer.password = password.Text;
-            LoginResult result = customer.login();
+            ErrorResult result = customer.login();
             showMessageBox(result);
 
             return result;
         }
 
-        private void showMessageBox(LoginResult result)
+        private void showMessageBox(ErrorResult result)
         {
             switch (result)
             {
-                case LoginResult.success:
+                case ErrorResult.success:
                     MessageBox.Show("Logado com sucesso", "Entrando", MessageBoxButtons.OK, MessageBoxIcon.Warning);          
                     break;
 
-                case LoginResult.invalide:
+                case ErrorResult.invalide:
                     MessageBox.Show("Login não encontrado", "Verifique login e senha", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
 
-                case LoginResult.failure:
+                case ErrorResult.failure:
                     MessageBox.Show("Falha de internet", "Verifique sua internet", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
 

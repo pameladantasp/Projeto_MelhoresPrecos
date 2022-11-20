@@ -1,4 +1,5 @@
 ﻿using ProjetoInterdisciplinar.DAO;
+using ProjetoInterdisciplinar.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +26,7 @@ namespace ProjetoInterdisciplinar.Model
             dao = new CustomerDAO();
         }
 
-        public LoginResult login()
+        public Enums.ErrorResult login()
         {
             return dao.verifyLogin(this);
         }

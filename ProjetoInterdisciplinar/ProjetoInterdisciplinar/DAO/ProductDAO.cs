@@ -24,7 +24,7 @@ namespace ProjetoInterdisciplinar.DAO
             {
                 int idCategory = database.getNextId("category");
 
-                database.setInsertProductQueryString();
+                database.setInsertQueryString(Enums.QueryType.product);
                 database.configureMySqlCommand();
                 database.command.Parameters.AddWithValue("@name", product.name);
                 database.command.Parameters.AddWithValue("@idCategory", idCategory);

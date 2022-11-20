@@ -48,7 +48,7 @@ namespace ProjetoInterdisciplinar.DAO
         {
             try
             {
-                database.setInsertCategoryQueryString();
+                database.setInsertQueryString(Enums.QueryType.category);
                 database.configureMySqlCommand();
                 database.command.Parameters.AddWithValue("@type", category.type);
                 database.insert();

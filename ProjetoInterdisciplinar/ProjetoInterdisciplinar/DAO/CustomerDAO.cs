@@ -5,28 +5,23 @@ using System.Windows.Forms;
 using ProjetoInterdisciplinar.Helpers;
 using System.Drawing;
 using System.Data;
-
-enum LoginResult
-{
-    success,
-    invalide,
-    failure
-}
+using static ProjetoInterdisciplinar.Helpers.Enums;
 
 namespace ProjetoInterdisciplinar.DAO
 {
     internal class CustomerDAO
     {
         private Database database;
-        private LoginResult result;
         public string message;
         public CustomerDAO()
         {
             database = new Database();
         }
 
-        public LoginResult verifyLogin(Customer customer)
+        public ErrorResult verifyLogin(Customer customer)
         {
+            ErrorResult result = ErrorResult.invalide;
+
             try
             {
                 database.selectLoginQueryString();
@@ -42,18 +37,18 @@ namespace ProjetoInterdisciplinar.DAO
                         Customer.shared.idCustomer = Int32.Parse(database.dataReader["idCustomer"].ToString());
                         Customer.shared.name = database.dataReader["name"].ToString();
                         Customer.shared.email = database.dataReader["email"].ToString();
-                        result = LoginResult.success;
+                        result = ErrorResult.success;
                     }
                 }
                 else
                 {
-                    result = LoginResult.invalide;
+                    result = ErrorResult.invalide;
                 }
             }
             catch(MySqlException)
             {
                 this.message = "Erro com o Banco de Dados!!";
-                result = LoginResult.failure;
+                result = ErrorResult.failure;
             }
             finally
             {
@@ -72,7 +67,7 @@ namespace ProjetoInterdisciplinar.DAO
 
                 if (didInsert)
                 {
-                    database.setInsertCustomerQueryString();
+                    database.setInsertQueryString(Enums.QueryType.customer);
                     database.configureMySqlCommand();
                     database.command.Parameters.AddWithValue("@name", customer.name);
                     database.command.Parameters.AddWithValue("@email", customer.email);

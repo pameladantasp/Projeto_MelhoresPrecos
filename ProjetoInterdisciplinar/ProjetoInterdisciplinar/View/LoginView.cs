@@ -2,6 +2,7 @@
 using System;
 using System.Threading;
 using System.Windows.Forms;
+using static ProjetoInterdisciplinar.Helpers.Enums;
 
 namespace ProjetoInterdisciplinar.View
 {
@@ -23,9 +24,9 @@ namespace ProjetoInterdisciplinar.View
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            LoginResult result = loginController.userSignIn(txtEmail, txtPassword);
+            ErrorResult result = loginController.userSignIn(txtEmail, txtPassword);
 
-            if ( result == LoginResult.success) {
+            if ( result == ErrorResult.success) {
                 loginController.closeView(this);
                 loginController.navigateToHomeView();
             }

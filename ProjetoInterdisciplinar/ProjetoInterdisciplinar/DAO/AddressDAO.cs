@@ -17,12 +17,11 @@ namespace ProjetoInterdisciplinar.DAO
         {
             database = new Database();
         }
-
         public bool insertData(Address address)
         {
             try
             {
-                database.setInsertAddressQueryString();
+                database.setInsertQueryString(Enums.QueryType.address);
                 database.configureMySqlCommand();
                 database.command.Parameters.AddWithValue("@street", address.street);
                 database.command.Parameters.AddWithValue("@number", address.number);
