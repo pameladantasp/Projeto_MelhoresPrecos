@@ -3,15 +3,8 @@ using ProjetoInterdisciplinar.Model;
 using ProjetoInterdisciplinar.View;
 using static ProjetoInterdisciplinar.Helpers.Enums;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.NetworkInformation;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using MySqlX.XDevAPI.Common;
 
 namespace ProjetoInterdisciplinar.Controller
 {

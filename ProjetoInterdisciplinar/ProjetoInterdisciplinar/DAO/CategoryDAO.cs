@@ -1,5 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using ProjetoInterdisciplinar.Helpers;
+﻿using ProjetoInterdisciplinar.Helpers;
 using ProjetoInterdisciplinar.Model;
 using System;
 using System.Data;

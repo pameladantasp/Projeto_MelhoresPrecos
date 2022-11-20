@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Drawing;
 using System.Windows.Forms;
-using System.Threading;
 using ProjetoInterdisciplinar.Controller;
 
 namespace ProjetoInterdisciplinar.View

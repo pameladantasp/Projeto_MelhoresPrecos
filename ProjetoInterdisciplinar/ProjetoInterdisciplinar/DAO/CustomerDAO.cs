@@ -3,8 +3,6 @@ using ProjetoInterdisciplinar.Model;
 using System;
 using System.Windows.Forms;
 using ProjetoInterdisciplinar.Helpers;
-using System.Drawing;
-using System.Data;
 using static ProjetoInterdisciplinar.Helpers.Enums;
 
 namespace ProjetoInterdisciplinar.DAO

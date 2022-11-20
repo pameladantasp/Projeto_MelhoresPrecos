@@ -1,6 +1,4 @@
-﻿using ProjetoInterdisciplinar.Controller;
-using System;
-using System.Threading;
+﻿using System;
 using System.Windows.Forms;
 using static ProjetoInterdisciplinar.Helpers.Enums;
 
