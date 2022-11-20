@@ -2,18 +2,20 @@
 using ProjetoInterdisciplinar.Model;
 using System;
 using System.Windows.Forms;
+using static ProjetoInterdisciplinar.Helpers.Enums;
 
 namespace ProjetoInterdisciplinar.DAO
 {
     internal class RegisterProductDAO
     {
         private Database database;
+        private ErrorResult result;
         public RegisterProductDAO()
         {
             database = new Database();
         }
 
-        public void insertData(RegisterProduct registerProduct)
+        public ErrorResult insertData(RegisterProduct registerProduct)
         {
             try
             {
@@ -37,16 +39,23 @@ namespace ProjetoInterdisciplinar.DAO
                     database.command.Parameters.AddWithValue("@price", registerProduct.price);
                     database.command.Parameters.AddWithValue("@dateRegister", Convert.ToDateTime(registerProduct.dateRegister).ToString("yyyy/MM/dd"));
                     database.insert();
+                    result = ErrorResult.success;
+                }
+                else
+                {
+                    result = ErrorResult.failure;
                 }
             }
             catch (Exception ex)
             {
+                result = ErrorResult.failure;
                 MessageBox.Show(ex.Message);
             }
             finally
             {
                 database.closeConnection();
             }
+            return result;
         }
         public void updateData(RegisterProduct registerProduct)
         {

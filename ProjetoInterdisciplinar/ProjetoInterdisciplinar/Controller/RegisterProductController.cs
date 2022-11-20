@@ -4,6 +4,7 @@ using System;
 using System.Data;
 using System.Threading;
 using System.Windows.Forms;
+using static ProjetoInterdisciplinar.Helpers.Enums;
 
 namespace ProjetoInterdisciplinar.Controller
 {
@@ -59,6 +60,23 @@ namespace ProjetoInterdisciplinar.Controller
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+        public void showMessageBox(ErrorResult result)
+        {
+            switch (result)
+            {
+                case ErrorResult.success:
+                    MessageBox.Show("Cadastro realizado e logado com sucesso", "Entrando", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    break;
+
+                case ErrorResult.invalide:
+                    MessageBox.Show("Cadastro realizado com sucesso", "Faca seu login", MessageBoxButtons.OK);
+                    break;
+
+                case ErrorResult.failure:
+                    MessageBox.Show("Tente novamente", "Falha no cadastro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
             }
         }
     }

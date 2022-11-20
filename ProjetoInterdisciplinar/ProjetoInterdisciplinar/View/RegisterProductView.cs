@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using ProjetoInterdisciplinar.Controller;
 using ProjetoInterdisciplinar.Model;
+using static ProjetoInterdisciplinar.Helpers.Enums;
 
 namespace ProjetoInterdisciplinar.View
 {
@@ -56,9 +57,17 @@ namespace ProjetoInterdisciplinar.View
 
                 registerProduct.customer = Customer.shared;
 
-                registerProduct.insert();
-                registerProductController.closeView(this);
-                registerProductController.navigateToHomeView();
+                ErrorResult result = registerProduct.insert();
+                if(result == ErrorResult.success)
+                {
+                    registerProductController.showMessageBox(result);
+                    registerProductController.closeView(this);
+                    registerProductController.navigateToHomeView();
+                }
+                else
+                {
+                    registerProductController.showMessageBox(result);
+                }
             }
             catch (Exception ex)
             {

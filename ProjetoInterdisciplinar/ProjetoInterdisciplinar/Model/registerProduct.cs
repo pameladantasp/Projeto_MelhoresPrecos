@@ -1,4 +1,6 @@
 ﻿using ProjetoInterdisciplinar.DAO;
+using System;
+using static ProjetoInterdisciplinar.Helpers.Enums;
 
 namespace ProjetoInterdisciplinar.Model
 {
@@ -17,9 +19,9 @@ namespace ProjetoInterdisciplinar.Model
         {
             dao = new RegisterProductDAO();
         }
-        public void insert()
+        public ErrorResult insert()
         {
-            dao.insertData(this);
+            return dao.insertData(this);
         }
         public void update()
         {

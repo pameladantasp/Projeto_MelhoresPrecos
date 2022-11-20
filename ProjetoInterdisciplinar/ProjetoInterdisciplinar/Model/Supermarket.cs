@@ -1,6 +1,7 @@
 ﻿using ProjetoInterdisciplinar.DAO;
 using ProjetoInterdisciplinar.Helpers;
 using System.Data;
+using static ProjetoInterdisciplinar.Helpers.Enums;
 
 namespace ProjetoInterdisciplinar.Model
 {
@@ -21,9 +22,9 @@ namespace ProjetoInterdisciplinar.Model
         {
             return dao.selectData(this);
         }
-        public void insert()
+        public ErrorResult insert()
         {
-            dao.insertData(this);
+            return dao.insertData(this);
         }
         public void update()
         {
