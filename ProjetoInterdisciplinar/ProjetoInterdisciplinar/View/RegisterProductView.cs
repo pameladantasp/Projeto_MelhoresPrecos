@@ -48,12 +48,16 @@ namespace ProjetoInterdisciplinar.View
 
                 registerProduct.product = new Product();
                 registerProduct.product.name = txtDescription.Text.Trim();
+
+                registerProduct.product.category = new Category();
                 registerProduct.product.category.idCategory = Int32.Parse(cbCategory.SelectedValue.ToString());
                 registerProduct.product.category.type = cbCategory.Text;
 
                 registerProduct.supermarket = new Supermarket();
                 registerProduct.supermarket.idSupermarket = Int32.Parse(cbSupermarket.SelectedValue.ToString());
                 registerProduct.supermarket.name = cbSupermarket.Text;
+
+                registerProduct.customer = Customer.shared;
 
                 registerProduct.insert();
                 registerProductController.closeView(this);

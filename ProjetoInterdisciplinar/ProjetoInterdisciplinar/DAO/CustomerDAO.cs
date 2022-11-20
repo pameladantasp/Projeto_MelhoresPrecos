@@ -39,9 +39,9 @@ namespace ProjetoInterdisciplinar.DAO
                 {
                     while(database.dataReader.Read())
                     {
-                        customer.idCustomer = Int32.Parse(database.dataReader["idCustomer"].ToString());
-                        customer.name = database.dataReader["name"].ToString();
-                        customer.email = database.dataReader["email"].ToString();
+                        Customer.shared.idCustomer = Int32.Parse(database.dataReader["idCustomer"].ToString());
+                        Customer.shared.name = database.dataReader["name"].ToString();
+                        Customer.shared.email = database.dataReader["email"].ToString();
                         result = LoginResult.success;
                     }
                 }

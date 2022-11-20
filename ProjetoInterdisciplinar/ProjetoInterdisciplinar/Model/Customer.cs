@@ -10,6 +10,8 @@ namespace ProjetoInterdisciplinar.Model
 {
     internal class Customer
     {
+        public static readonly Customer shared = new Customer();
+
         public int idCustomer { get; set; }
         public string name { get; set; }
         public string email { get; set; }
