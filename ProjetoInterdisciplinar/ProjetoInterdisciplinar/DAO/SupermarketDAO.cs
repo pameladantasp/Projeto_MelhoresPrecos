@@ -51,15 +51,16 @@ namespace ProjetoInterdisciplinar.DAO
             {
                 int idAddress = database.getNextId("address");
 
-                database.setInsertSupermarketQueryString();
-                database.configureMySqlCommand();
-                database.command.Parameters.AddWithValue("@name", supermarket.name);
-                database.command.Parameters.AddWithValue("@idAddress", idAddress);
-                bool didInsert = database.insert();
+                AddressDAO addressDAO = new AddressDAO();
+                bool didInsert = addressDAO.insertData(supermarket.address);
+
                 if (didInsert)
                 {
-                    AddressDAO addressDAO = new AddressDAO();
-                    addressDAO.insertData(supermarket.address);
+                    database.setInsertSupermarketQueryString();
+                    database.configureMySqlCommand();
+                    database.command.Parameters.AddWithValue("@name", supermarket.name);
+                    database.command.Parameters.AddWithValue("@idAddress", idAddress);
+                    database.insert();
                 }
             }
             catch (Exception ex)

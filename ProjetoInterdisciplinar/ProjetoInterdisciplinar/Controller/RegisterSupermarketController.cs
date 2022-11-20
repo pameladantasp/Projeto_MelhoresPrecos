@@ -1,4 +1,5 @@
 ﻿using Correios;
+using ProjetoInterdisciplinar.Model;
 using ProjetoInterdisciplinar.View;
 using System;
 using System.Collections.Generic;
@@ -68,6 +69,17 @@ namespace ProjetoInterdisciplinar.Controller
                 {
                     MessageBox.Show($"{error.Message}");
                 }
+            }
+        }
+        public void supermarketInsert(Supermarket supermarket)
+        {
+            try
+            {
+                supermarket.insert();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocorreu um erro ao realizar a operação", "Database", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

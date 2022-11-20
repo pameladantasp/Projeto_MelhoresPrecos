@@ -3,6 +3,7 @@ using System;
 using System.Windows.Forms;
 using System.Threading;
 using ProjetoInterdisciplinar.Controller;
+using ProjetoInterdisciplinar.Model;
 
 namespace ProjetoInterdisciplinar.View
 {
@@ -22,6 +23,17 @@ namespace ProjetoInterdisciplinar.View
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+            Supermarket supermarket = new Supermarket();
+            supermarket.name = txtName.Text;
+
+            supermarket.address = new Address();
+            supermarket.address.street = txtStreet.Text;
+            supermarket.address.number = txtNumber.Text;
+            supermarket.address.city = txtCity.Text;
+            supermarket.address.state = txtState.Text;
+            supermarket.address.postalCode = txtPostalCode.Text;
+
+            registerSupermarketController.supermarketInsert(supermarket);
             registerSupermarketController.closeView(this);
             registerSupermarketController.navigateToRegisterProductView();
         }
