@@ -1,5 +1,4 @@
-﻿using Correios;
-using ProjetoInterdisciplinar.Model;
+﻿using ProjetoInterdisciplinar.Model;
 using ProjetoInterdisciplinar.View;
 using static ProjetoInterdisciplinar.Helpers.Enums;
 using System;

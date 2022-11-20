@@ -1,7 +1,4 @@
-﻿using Correios;
-using ProjetoInterdisciplinar.Model;
-using ProjetoInterdisciplinar.View;
-using System;
+﻿using ProjetoInterdisciplinar.View;
 using System.Threading;
 using System.Windows.Forms;
 using static ProjetoInterdisciplinar.Helpers.Enums;
