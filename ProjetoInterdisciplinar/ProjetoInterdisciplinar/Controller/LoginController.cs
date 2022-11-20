@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ProjetoInterdisciplinar
 {
-    internal class LoginController : Form
+    internal class LoginController
     {
         Thread t1;
 
@@ -26,7 +26,6 @@ namespace ProjetoInterdisciplinar
 
         private void setThread(Thread thread)
         {
-            this.Close();
             t1 = thread;
             t1.SetApartmentState(ApartmentState.STA);
             t1.Start();
@@ -40,6 +39,11 @@ namespace ProjetoInterdisciplinar
         private void openHomeScreen(object obj)
         {
             Application.Run(new HomeView());
+        }
+
+        public void closeView(Form form)
+        {
+            form.Close();
         }
 
         public LoginResult userSignIn(TextBox email, TextBox password)

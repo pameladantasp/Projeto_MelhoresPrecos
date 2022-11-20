@@ -13,14 +13,9 @@ using System.Windows.Forms;
 
 namespace ProjetoInterdisciplinar.Controller
 {
-    internal class RegisterProductController: Form
+    internal class RegisterProductController
     {
         Thread t1;
-
-        public RegisterProductController()
-        {
-
-        }
 
         public void navigateToRegisterSupermarketView()
         {
@@ -34,7 +29,6 @@ namespace ProjetoInterdisciplinar.Controller
 
         private void setThread(Thread thread)
         {
-            this.Close();
             t1 = thread;
             t1.SetApartmentState(ApartmentState.STA);
             t1.Start();
@@ -48,6 +42,11 @@ namespace ProjetoInterdisciplinar.Controller
         private void openHomeScreen(object obj)
         {
             Application.Run(new HomeView());
+        }
+
+        public void closeView(Form form)
+        {
+            form.Close();
         }
 
         public void fetch(ModelInterface model, ComboBox comboBox)

@@ -22,11 +22,13 @@ namespace ProjetoInterdisciplinar.View
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+            registerSupermarketController.closeView(this);
             registerSupermarketController.navigateToRegisterProductView();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            registerSupermarketController.closeView(this);
             registerSupermarketController.navigateToRegisterProductView();
         }
     }

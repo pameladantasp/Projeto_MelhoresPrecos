@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ProjetoInterdisciplinar.Controller
 {
-    internal class MainController: Form
+    internal class MainController
     {
         Thread t1;
 
@@ -26,7 +26,6 @@ namespace ProjetoInterdisciplinar.Controller
 
         private void setThread(Thread thread)
         {
-            this.Close();
             t1 = thread;
             t1.SetApartmentState(ApartmentState.STA);
             t1.Start();
@@ -40,6 +39,11 @@ namespace ProjetoInterdisciplinar.Controller
         private void openLoginScreen(object obj)
         {
             Application.Run(new LoginView());
+        }
+
+        public void closeView(Form form)
+        {
+            form.Close();
         }
 
         public void setPlaceholder(TextBox txtSearch)

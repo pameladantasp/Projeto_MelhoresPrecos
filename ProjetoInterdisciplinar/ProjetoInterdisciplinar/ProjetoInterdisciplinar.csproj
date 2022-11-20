@@ -177,27 +177,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\MainController.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Controller\RegisterProductController.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Controller\RegisterSupermarketController.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Controller\RegisterUserController.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Controller\MainController.cs" />
+    <Compile Include="Controller\RegisterProductController.cs" />
+    <Compile Include="Controller\RegisterSupermarketController.cs" />
+    <Compile Include="Controller\RegisterUserController.cs" />
     <Compile Include="DAO\AddressDAO.cs" />
     <Compile Include="DAO\CategoryDAO.cs" />
     <Compile Include="DAO\CustomerDAO.cs" />
     <Compile Include="DAO\ProductDAO.cs" />
     <Compile Include="DAO\RegisterProductDAO.cs" />
     <Compile Include="DAO\SupermarketDAO.cs" />
-    <Compile Include="Controller\LoginController.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Helpers\ModelInterface.cs" />
     <Compile Include="View\HomeView.cs">
       <SubType>Form</SubType>

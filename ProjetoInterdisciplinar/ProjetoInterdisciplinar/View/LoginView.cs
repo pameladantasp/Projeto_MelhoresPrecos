@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoInterdisciplinar.Controller;
+using System;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -16,6 +17,7 @@ namespace ProjetoInterdisciplinar.View
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+            loginController.closeView(this);
             loginController.navigateToRegisterUserView();
         }
 
@@ -24,6 +26,7 @@ namespace ProjetoInterdisciplinar.View
             LoginResult result = loginController.userSignIn(txtEmail, txtPassword);
 
             if ( result == LoginResult.success) {
+                loginController.closeView(this);
                 loginController.navigateToHomeView();
             }
         }

@@ -34,6 +34,7 @@ namespace ProjetoInterdisciplinar.View
 
         private void linkLbSupermarket_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            registerProductController.closeView(this);
             registerProductController.navigateToRegisterSupermarketView();
         }
 
@@ -55,6 +56,7 @@ namespace ProjetoInterdisciplinar.View
                 registerProduct.supermarket.name = cbSupermarket.Text;
 
                 registerProduct.insert();
+                registerProductController.closeView(this);
                 registerProductController.navigateToHomeView();
             }
             catch (Exception ex)

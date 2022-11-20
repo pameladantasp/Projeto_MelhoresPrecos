@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace ProjetoInterdisciplinar.Controller
 {
-    internal class RegisterSupermarketController: Form
+    internal class RegisterSupermarketController
     {
         Thread t1;
 
@@ -22,7 +22,6 @@ namespace ProjetoInterdisciplinar.Controller
 
         private void setThread(Thread thread)
         {
-            this.Close();
             t1 = thread;
             t1.SetApartmentState(ApartmentState.STA);
             t1.Start();
@@ -31,6 +30,11 @@ namespace ProjetoInterdisciplinar.Controller
         private void openRegisterProductScreen(object obj)
         {
             Application.Run(new RegisterProductView());
+        }
+
+        public void closeView(Form form)
+        {
+            form.Close();
         }
 
         public void localizePostalCode(

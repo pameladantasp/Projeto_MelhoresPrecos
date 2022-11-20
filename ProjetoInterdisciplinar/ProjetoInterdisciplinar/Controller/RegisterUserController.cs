@@ -13,7 +13,7 @@ using System.Xml.Linq;
 
 namespace ProjetoInterdisciplinar.Controller
 {
-    internal class RegisterUserController: Form
+    internal class RegisterUserController
     {
         Thread t1;
 
@@ -29,7 +29,6 @@ namespace ProjetoInterdisciplinar.Controller
 
         private void setThread(Thread thread)
         {
-            this.Close();
             t1 = thread;
             t1.SetApartmentState(ApartmentState.STA);
             t1.Start();
@@ -44,7 +43,10 @@ namespace ProjetoInterdisciplinar.Controller
         {
             Application.Run(new HomeView());
         }
-
+        public void closeView(Form form)
+        {
+            form.Close();
+        }
         public void localizePostalCode(
             MaskedTextBox txtPostalCode,
             TextBox txtState,

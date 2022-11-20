@@ -18,11 +18,13 @@ namespace ProjetoInterdisciplinar.View
 
         private void lbLogin_Click(object sender, EventArgs e)
         {
+            mainController.closeView(this);
             mainController.navigateToLoginView();
         }
 
         private void lbRegister_Click(object sender, EventArgs e)
         {
+            mainController.closeView(this);
             mainController.navigateToRegisterUserView();
         }
 

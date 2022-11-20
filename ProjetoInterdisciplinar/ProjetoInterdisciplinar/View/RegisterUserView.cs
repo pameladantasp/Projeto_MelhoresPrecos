@@ -32,11 +32,13 @@ namespace ProjetoInterdisciplinar.View
             customer.address.postalCode = txtPostalCode.Text;
 
             registerUserController.userSignUp(customer);
+            registerUserController.closeView(this);
             registerUserController.navigateToHomeView();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            registerUserController.closeView(this);
             registerUserController.navigateToMainView();
         }
 
