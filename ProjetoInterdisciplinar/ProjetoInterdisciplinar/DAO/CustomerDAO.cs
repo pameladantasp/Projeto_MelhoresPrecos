@@ -12,6 +12,7 @@ namespace ProjetoInterdisciplinar.DAO
     internal class CustomerDAO
     {
         private Database database;
+        private ErrorResult result;
         public string message;
         public CustomerDAO()
         {
@@ -20,8 +21,6 @@ namespace ProjetoInterdisciplinar.DAO
 
         public ErrorResult verifyLogin(Customer customer)
         {
-            ErrorResult result = ErrorResult.invalide;
-
             try
             {
                 database.selectLoginQueryString();
@@ -56,7 +55,7 @@ namespace ProjetoInterdisciplinar.DAO
             }
             return result;
         }
-        public void insertData(Customer customer)
+        public ErrorResult insertData(Customer customer)
         {
             try
             {
@@ -74,16 +73,23 @@ namespace ProjetoInterdisciplinar.DAO
                     database.command.Parameters.AddWithValue("@password", customer.password);
                     database.command.Parameters.AddWithValue("@idAddress", idAddress);
                     database.insert();
+                    result = ErrorResult.success;
+                }
+                else
+                {
+                    result = ErrorResult.failure;
                 }
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                result = ErrorResult.failure;
             }
             finally
             {
                 database.closeConnection();
             }
+            return result;
         }
         public void updateData(Customer customer)
         {

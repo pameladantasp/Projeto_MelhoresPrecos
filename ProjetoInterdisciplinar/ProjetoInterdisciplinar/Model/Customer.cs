@@ -1,5 +1,6 @@
 ﻿using ProjetoInterdisciplinar.DAO;
 using ProjetoInterdisciplinar.Helpers;
+using static ProjetoInterdisciplinar.Helpers.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,13 +27,13 @@ namespace ProjetoInterdisciplinar.Model
             dao = new CustomerDAO();
         }
 
-        public Enums.ErrorResult login()
+        public ErrorResult login()
         {
             return dao.verifyLogin(this);
         }
-        public void insert()
+        public ErrorResult insert()
         {
-            dao.insertData(this);
+           return dao.insertData(this);
         }
         public void update()
         {
