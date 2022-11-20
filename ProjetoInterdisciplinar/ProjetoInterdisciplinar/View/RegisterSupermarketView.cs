@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using ProjetoInterdisciplinar.Controller;
+using ProjetoInterdisciplinar.Helpers;
 using ProjetoInterdisciplinar.Model;
 using static ProjetoInterdisciplinar.Helpers.Enums;
 
@@ -17,7 +18,12 @@ namespace ProjetoInterdisciplinar.View
 
         private void txtPostalCode_Leave(object sender, EventArgs e)
         {
-            registerSupermarketController.localizePostalCode(txtPostalCode, txtState, txtStreet, txtCity);
+            ApiPostalCode apiPostalCode =  new ApiPostalCode();
+
+            Address address = apiPostalCode.localizePostalCode(txtPostalCode.Text);
+            txtState.Text = address.state;
+            txtStreet.Text = address.street;
+            txtCity.Text = address.city;
         }
 
         private void btnRegister_Click(object sender, EventArgs e)

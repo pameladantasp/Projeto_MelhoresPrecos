@@ -188,6 +188,7 @@
     <Compile Include="DAO\RegisterProductDAO.cs" />
     <Compile Include="DAO\SupermarketDAO.cs" />
     <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="Helpers\ApiPostalCode.cs" />
     <Compile Include="Helpers\Enums.cs" />
     <Compile Include="Helpers\ModelInterface.cs" />
     <Compile Include="View\HomeView.cs">
