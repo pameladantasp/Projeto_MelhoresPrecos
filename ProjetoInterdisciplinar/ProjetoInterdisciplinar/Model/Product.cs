@@ -20,15 +20,15 @@ namespace ProjetoInterdisciplinar.Model
         {
             dao = new ProductDAO();
         }
-        public void insertProduct()
+        public void insert()
         {
             dao.insertData(this);
         }
-        public void updateProduct()
+        public void update()
         {
             dao.updateData(this);
         }
-        public bool deleteProduct()
+        public bool delete()
         {
             return dao.delete(this.idProduct);
         }

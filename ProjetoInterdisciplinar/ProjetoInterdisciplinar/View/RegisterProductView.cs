@@ -54,7 +54,7 @@ namespace ProjetoInterdisciplinar.View
                 registerProduct.supermarket.idSupermarket = Int32.Parse(cbSupermarket.SelectedValue.ToString());
                 registerProduct.supermarket.name = cbSupermarket.Text;
 
-                registerProduct.insertProduct();
+                registerProduct.insert();
                 registerProductController.navigateToHomeView();
             }
             catch (Exception ex)

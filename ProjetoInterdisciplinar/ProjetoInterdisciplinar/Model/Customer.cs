@@ -27,15 +27,15 @@ namespace ProjetoInterdisciplinar.Model
         {
             return dao.verifyLogin(this);
         }
-        public void insertCostumer()
+        public void insert()
         {
             dao.insertData(this);
         }
-        public void updateCostumer()
+        public void update()
         {
             dao.updateData(this);
         }
-        public bool deleteCostumer()
+        public bool delete()
         {
             return dao.deleteData(this.idCustomer);
         }

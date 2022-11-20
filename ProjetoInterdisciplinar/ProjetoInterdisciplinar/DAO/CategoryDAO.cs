@@ -11,7 +11,6 @@ namespace ProjetoInterdisciplinar.DAO
     {
         private Database database;
         
-
         public CategoryDAO()
         {
             database = new Database();

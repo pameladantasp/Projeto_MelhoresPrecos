@@ -84,7 +84,7 @@ namespace ProjetoInterdisciplinar.Controller
         {
             try
             {
-                customer.insertCostumer();
+                customer.insert();
             }
             catch (Exception)
             {

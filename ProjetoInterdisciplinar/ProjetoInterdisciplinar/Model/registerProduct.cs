@@ -22,20 +22,17 @@ namespace ProjetoInterdisciplinar.Model
 
         public RegisterProduct()
         {
-            this.supermarket = new Supermarket();
-            this.product = new Product();
-            this.product.category = new Category();
             dao = new RegisterProductDAO();
         }
-        public void insertProduct()
+        public void insert()
         {
             dao.insertData(this);
         }
-        public void updateProduct()
+        public void update()
         {
             dao.updateData(this);
         }
-        public bool deleteProduct()
+        public bool delete()
         {
             return dao.deleteData(this.idRegister);
         }
