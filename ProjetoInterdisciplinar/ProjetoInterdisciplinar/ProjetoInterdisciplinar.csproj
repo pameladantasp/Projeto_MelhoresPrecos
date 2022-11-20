@@ -183,6 +183,9 @@
     <Compile Include="Controller\RegisterSupermarketController.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Controller\RegisterUserController.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DAO\AddressDAO.cs" />
     <Compile Include="DAO\CategoryDAO.cs" />
     <Compile Include="DAO\CustomerDAO.cs" />
