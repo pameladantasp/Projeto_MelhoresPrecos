@@ -1,14 +1,18 @@
-﻿using ProjetoInterdisciplinar.Helpers;
+﻿using MySqlX.XDevAPI.Common;
+using ProjetoInterdisciplinar.Helpers;
 using ProjetoInterdisciplinar.Model;
 using System;
 using System.Data;
 using System.Windows.Forms;
+using static ProjetoInterdisciplinar.Helpers.Enums;
 
 namespace ProjetoInterdisciplinar.DAO
 {
     internal class SupermarketDAO
     {
         private Database database;
+        private ErrorResult result;
+
         public SupermarketDAO()
         {
             database = new Database();
@@ -41,7 +45,7 @@ namespace ProjetoInterdisciplinar.DAO
 
             return dataTable;
         }
-        public void insertData(Supermarket supermarket)
+        public ErrorResult insertData(Supermarket supermarket)
         {
             try
             {
@@ -57,16 +61,23 @@ namespace ProjetoInterdisciplinar.DAO
                     database.command.Parameters.AddWithValue("@name", supermarket.name);
                     database.command.Parameters.AddWithValue("@idAddress", idAddress);
                     database.insert();
+                    result = ErrorResult.success;
+                }
+                else
+                {
+                    result = ErrorResult.failure;
                 }
             }
             catch (Exception ex)
             {
+                result = ErrorResult.failure;
                 MessageBox.Show(ex.Message);
             }
             finally
             {
                 database.closeConnection();
             }
+            return result;
         }
         public void updateData(Supermarket supermarket)
         {

@@ -4,6 +4,7 @@ using ProjetoInterdisciplinar.View;
 using System;
 using System.Threading;
 using System.Windows.Forms;
+using static ProjetoInterdisciplinar.Helpers.Enums;
 
 namespace ProjetoInterdisciplinar.Controller
 {
@@ -66,16 +67,23 @@ namespace ProjetoInterdisciplinar.Controller
                 }
             }
         }
-        public void supermarketInsert(Supermarket supermarket)
+        public void showMessageBox(ErrorResult result)
         {
-            try
+            switch (result)
             {
-                supermarket.insert();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ocorreu um erro ao realizar a operação", "Database", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                case ErrorResult.success:
+                    MessageBox.Show("Cadastro realizado e logado com sucesso", "Entrando", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    break;
+
+                case ErrorResult.invalide:
+                    MessageBox.Show("Cadastro realizado com sucesso", "Faca seu login", MessageBoxButtons.OK);
+                    break;
+
+                case ErrorResult.failure:
+                    MessageBox.Show("Tente novamente", "Falha no cadastro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
             }
         }
+
     }
 }

@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using ProjetoInterdisciplinar.Controller;
 using ProjetoInterdisciplinar.Model;
+using static ProjetoInterdisciplinar.Helpers.Enums;
 
 namespace ProjetoInterdisciplinar.View
 {
@@ -31,9 +32,13 @@ namespace ProjetoInterdisciplinar.View
             supermarket.address.state = txtState.Text;
             supermarket.address.postalCode = txtPostalCode.Text;
 
-            registerSupermarketController.supermarketInsert(supermarket);
-            registerSupermarketController.closeView(this);
-            registerSupermarketController.navigateToRegisterProductView();
+            ErrorResult result = supermarket.insert();
+            if(result == ErrorResult.success)
+            {
+                registerSupermarketController.showMessageBox(result);
+                registerSupermarketController.closeView(this);
+                registerSupermarketController.navigateToRegisterProductView();
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
