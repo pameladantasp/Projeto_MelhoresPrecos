@@ -1,4 +1,5 @@
 ﻿using ProjetoInterdisciplinar.DAO;
+using ProjetoInterdisciplinar.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ProjetoInterdisciplinar.Model
 {
-    internal class Supermarket
+    internal class Supermarket : ModelInterface
     {
         public int idSupermarket { get; set; }
         public string name { get; set; }
@@ -22,19 +23,19 @@ namespace ProjetoInterdisciplinar.Model
             this.address = new Address();
             dao = new SupermarketDAO();
         }
-        public DataTable selectSupermarket()
+        public DataTable select()
         {
             return dao.selectData(this);
         }
-        public void insertSupermarket()
+        public void insert()
         {
             dao.insertData(this);
         }
-        public void updateSupermarket()
+        public void update()
         {
             dao.updateData(this);
         }
-        public bool deleteSupermarket()
+        public bool delete()
         {
             return dao.deleteData(this.idSupermarket);
         }

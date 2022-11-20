@@ -1,4 +1,5 @@
 ﻿using ProjetoInterdisciplinar.DAO;
+using ProjetoInterdisciplinar.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ProjetoInterdisciplinar.Model
 {
-    internal class Category
+    internal class Category : ModelInterface
     {
         public int idCategory { get; set; }
         public string type { get; set; }
