@@ -14,7 +14,7 @@ FROM
     customer C ON R.idCustomer = C.idCustomer
 WHERE
     C.idCustomer IN (SELECT idCustomer FROM
-					(SELECT idCustomer FROM customer WHERE email = 'testeUser@gmail.com') 
+					(SELECT idCustomer FROM customer WHERE email = 'teste@gmail.com') 
 					  AS CustomerIDRelatory)
 ORDER BY R.dateRegister DESC
 
