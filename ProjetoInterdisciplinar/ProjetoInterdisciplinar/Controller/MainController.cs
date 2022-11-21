@@ -1,4 +1,6 @@
-﻿using ProjetoInterdisciplinar.View;
+﻿using ProjetoInterdisciplinar.Model;
+using ProjetoInterdisciplinar.View;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
@@ -61,15 +63,18 @@ namespace ProjetoInterdisciplinar.Controller
 
         public void populateItems(FlowLayoutPanel flowPanel)
         {
-            ListItem[] listItems = new ListItem[20];
+            RegisterProduct registerProduct = new RegisterProduct();
+            List<RegisterProduct> registerProductList = registerProduct.select();
+
+            ListItem[] listItems = new ListItem[registerProductList.Count];
 
             for (int i = 0; i < listItems.Length; i++)
             {
                 listItems[i] = new ListItem();
-                listItems[i].UserName = "Pamela Dantas";
-                listItems[i].DescriptionProduct = "Refrigerante Coca Cola Pet 3L";
-                listItems[i].SupermarketName = "Supermercado Enxuto";
-                listItems[i].Price = "R$ 9.99";
+                listItems[i].UserName = registerProductList[i].customer.name;
+                listItems[i].DescriptionProduct = registerProductList[i].product.name;
+                listItems[i].SupermarketName = registerProductList[i].supermarket.name;
+                listItems[i].Price = registerProductList[i].price.ToString();
 
                 if (flowPanel.Controls.Count < 0)
                 {
