@@ -177,6 +177,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\HomeController.cs" />
     <Compile Include="Controller\MainController.cs" />
     <Compile Include="Controller\RegisterProductController.cs" />
     <Compile Include="Controller\RegisterSupermarketController.cs" />
