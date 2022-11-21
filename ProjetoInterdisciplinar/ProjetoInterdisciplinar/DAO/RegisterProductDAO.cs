@@ -1,6 +1,7 @@
 ﻿using ProjetoInterdisciplinar.Helpers;
 using ProjetoInterdisciplinar.Model;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using static ProjetoInterdisciplinar.Helpers.Enums;
 
@@ -10,9 +11,54 @@ namespace ProjetoInterdisciplinar.DAO
     {
         private Database database;
         private ErrorResult result;
+        private RegisterProduct registerProduct;
+        private int limiter = 20;
         public RegisterProductDAO()
         {
             database = new Database();
+        }
+
+        public List<RegisterProduct> selectData()
+        {
+            List<RegisterProduct> registerProductList = new List<RegisterProduct>();
+
+            try
+            {
+                database.selectRegisterProductQueryString();
+                database.configureMySqlCommand();
+                database.command.Parameters.AddWithValue("@limit", limiter);
+                database.select();
+
+                if (database.dataReader.HasRows)
+                {
+                    while (database.dataReader.Read())
+                    {
+                        registerProduct = new RegisterProduct();
+
+                        registerProduct.customer = new Customer();
+                        registerProduct.customer.name = database.dataReader["customerName"].ToString();
+
+                        registerProduct.supermarket = new Supermarket();
+                        registerProduct.supermarket.name = database.dataReader["supermarketName"].ToString();
+
+                        registerProduct.product = new Product();
+                        registerProduct.product.name = database.dataReader["productDescription"].ToString();
+
+                        registerProduct.price = (float)database.dataReader["price"];
+
+                        registerProductList.Add(registerProduct);
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                database.closeConnection();
+            }
+            return registerProductList;
         }
 
         public ErrorResult insertData(RegisterProduct registerProduct)

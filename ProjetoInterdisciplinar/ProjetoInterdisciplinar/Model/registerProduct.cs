@@ -1,5 +1,6 @@
 ﻿using ProjetoInterdisciplinar.DAO;
 using System;
+using System.Collections.Generic;
 using static ProjetoInterdisciplinar.Helpers.Enums;
 
 namespace ProjetoInterdisciplinar.Model
@@ -18,6 +19,11 @@ namespace ProjetoInterdisciplinar.Model
         public RegisterProduct()
         {
             dao = new RegisterProductDAO();
+        }
+
+        public List<RegisterProduct> select()
+        {
+            return dao.selectData();
         }
         public ErrorResult insert()
         {

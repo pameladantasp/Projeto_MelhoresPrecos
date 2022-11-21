@@ -1,6 +1,10 @@
 ﻿using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Asn1.X509;
+using ProjetoInterdisciplinar.Model;
 using System;
+using System.Collections.Generic;
 using System.Data;
+using System.Reflection;
 using System.Windows.Forms;
 using static ProjetoInterdisciplinar.Helpers.Enums;
 
@@ -217,6 +221,18 @@ namespace ProjetoInterdisciplinar.Helpers
         }
 
         //Query registerProduct
+
+        public void selectRegisterProductQueryString()
+        {
+            query = "SELECT C.name AS 'customerName', S.name AS 'supermarketName'," +
+                    "       P.name AS 'productDescription', RP.price AS 'price' " +
+                    "  FROM registerProduct AS RP " +
+                    "     INNER JOIN customer AS C ON RP.idCustomer = C.idCustomer " +
+                    "     INNER JOIN supermarket AS S ON RP.idSupermarket = S.idSupermarket " +
+                    "     INNER JOIN product AS P ON RP.idProduct = P.idProduct " +
+                    "ORDER BY RP.dateRegister DESC " +
+                    "LIMIT @limit";
+        }
         public void setUpdateRegisterProductQueryString()
         {
             query = "UPDATE registerProduct SET (idRegister, idCustomer, idSupermarket, idProduct, price, dateRegister) " +
