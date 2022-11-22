@@ -26,7 +26,6 @@ namespace ProjetoInterdisciplinar.Helpers
         private string getConnectionString()
         {
             databaseConnetionString = "datasource=sql10.freemysqlhosting.net;username=sql10527490;password=MAPprojeto;database=sql10527490";
-           //connectionString = ConfigurationManager.ConnectionStrings["ProjetoInterdisciplinar.Properties.Settings.databaseConnectionString"].ConnectionString;
             return databaseConnetionString;
         }
         private bool openConnection()
@@ -222,16 +221,35 @@ namespace ProjetoInterdisciplinar.Helpers
 
         //Query registerProduct
 
-        public void selectRegisterProductQueryString()
+        public void selectRegisterProductQueryString(WhereType whereType)
         {
+            string where = "";
+
+            switch (whereType)
+            {
+                case WhereType.like:
+                    where = "INNER JOIN address AS A ON S.idAddress = A.idAddress " +
+                        "INNER JOIN(" +
+                        "      SELECT SA.city, SA.state FROM customer AS SC " +
+                        "          INNER JOIN address AS SA ON SC.idAddress = SA.idAddress " +
+                        "      WHERE SC.idCustomer = 1 " +
+                        ") AS SUB ON SUB.city = A.city AND SUB.state = A.state " +
+                        "WHERE P.name LIKE '%%' " +
+                        "ORDER BY P.name";
+                break;
+
+                case WhereType.limit:
+                    where = "ORDER BY RP.dateRegister DESC " +
+                            "LIMIT @limit";
+                break;
+            }
+
             query = "SELECT C.name AS 'customerName', S.name AS 'supermarketName'," +
                     "       P.name AS 'productDescription', RP.price AS 'price' " +
                     "  FROM registerProduct AS RP " +
                     "     INNER JOIN customer AS C ON RP.idCustomer = C.idCustomer " +
                     "     INNER JOIN supermarket AS S ON RP.idSupermarket = S.idSupermarket " +
-                    "     INNER JOIN product AS P ON RP.idProduct = P.idProduct " +
-                    "ORDER BY RP.dateRegister DESC " +
-                    "LIMIT @limit";
+                    "     INNER JOIN product AS P ON RP.idProduct = P.idProduct " + where;
         }
         public void setUpdateRegisterProductQueryString()
         {

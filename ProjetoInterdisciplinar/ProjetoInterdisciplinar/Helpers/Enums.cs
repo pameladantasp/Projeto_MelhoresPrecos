@@ -19,5 +19,11 @@ namespace ProjetoInterdisciplinar.Helpers
             supermarket,
             registerProduct
         }
+
+        public enum WhereType
+        {
+            like,
+            limit
+        }
     }
 }
