@@ -10,6 +10,7 @@ namespace ProjetoInterdisciplinar.View
         public HomeView()
         {
             InitializeComponent();
+            homeController = new HomeController();
         }
 
         private void HomeView_Load(object sender, EventArgs e)
