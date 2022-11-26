@@ -61,8 +61,11 @@ namespace ProjetoInterdisciplinar.View
                 if(result == ErrorResult.success)
                 {
                     registerProductController.showMessageBox(result);
-                    registerProductController.closeView(this);
-                    registerProductController.navigateToHomeView();
+                    txtDescription.Text = "";
+                    txtDate.Text = "";
+                    txtPrice.Text = "";
+                    cbCategory.Text = "";
+                    cbSupermarket.Text = "";
                 }
                 else
                 {
@@ -75,9 +78,9 @@ namespace ProjetoInterdisciplinar.View
             } 
         }
 
-        private void btnAddProduct_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-            // TODO: It will be defined
+            registerProductController.closeView(this);
+            registerProductController.navigateToHomeView();        }
         }
     }
-}

@@ -48,7 +48,7 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.lbDate = new System.Windows.Forms.Label();
             this.panelBtnCancel = new System.Windows.Forms.Panel();
-            this.btnAddProduct = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.panelBtnRegister = new System.Windows.Forms.Panel();
             this.btnRegisterProduct = new System.Windows.Forms.Button();
             this.linkLbSupermarket = new System.Windows.Forms.LinkLabel();
@@ -309,7 +309,7 @@
             // 
             this.panelBtnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelBtnCancel.Controls.Add(this.btnAddProduct);
+            this.panelBtnCancel.Controls.Add(this.btnCancel);
             this.panelBtnCancel.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelBtnCancel.Location = new System.Drawing.Point(38, 464);
             this.panelBtnCancel.Margin = new System.Windows.Forms.Padding(2);
@@ -317,23 +317,23 @@
             this.panelBtnCancel.Size = new System.Drawing.Size(355, 44);
             this.panelBtnCancel.TabIndex = 27;
             // 
-            // btnAddProduct
+            // btnCancel
             // 
-            this.btnAddProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(82)))), ((int)(((byte)(65)))));
-            this.btnAddProduct.FlatAppearance.BorderSize = 0;
-            this.btnAddProduct.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddProduct.ForeColor = System.Drawing.Color.White;
-            this.btnAddProduct.Location = new System.Drawing.Point(16, 2);
-            this.btnAddProduct.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(330, 40);
-            this.btnAddProduct.TabIndex = 7;
-            this.btnAddProduct.Text = "ADICIONAR PRODUTO";
-            this.btnAddProduct.UseVisualStyleBackColor = false;
-            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(82)))), ((int)(((byte)(65)))));
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(16, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(330, 40);
+            this.btnCancel.TabIndex = 7;
+            this.btnCancel.Text = "CANCELAR";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // panelBtnRegister
             // 
@@ -451,7 +451,7 @@
         private System.Windows.Forms.Label lbDate;
         private System.Windows.Forms.MaskedTextBox txtDate;
         private System.Windows.Forms.Panel panelBtnCancel;
-        private System.Windows.Forms.Button btnAddProduct;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Panel panelBtnRegister;
         private System.Windows.Forms.Button btnRegisterProduct;
         private System.Windows.Forms.LinkLabel linkLbSupermarket;
