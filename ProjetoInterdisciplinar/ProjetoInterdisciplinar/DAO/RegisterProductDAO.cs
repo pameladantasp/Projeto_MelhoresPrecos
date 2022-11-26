@@ -24,7 +24,7 @@ namespace ProjetoInterdisciplinar.DAO
 
             try
             {
-                database.selectRegisterProductQueryString();
+                database.selectRegisterProductQueryString(WhereType.limit);
                 database.configureMySqlCommand();
                 database.command.Parameters.AddWithValue("@limit", limiter);
                 database.select();
