@@ -33,7 +33,7 @@ namespace ProjetoInterdisciplinar.View
 
             ErrorResult result = registerUserController.userSignUp(customer);
             if (result == ErrorResult.success)
-            {
+            { 
                 registerUserController.closeView(this);
                 registerUserController.navigateToHomeView();
             }
@@ -58,6 +58,18 @@ namespace ProjetoInterdisciplinar.View
             txtState.Text = address.state;
             txtStreet.Text = address.street;
             txtCity.Text = address.city;
+        }
+
+        private void txtConfPassword_TextChanged(object sender, EventArgs e)
+        {
+            if(txtConfPassword.Text == txtPassword.Text)
+            {
+                lbConfPassword.ForeColor = System.Drawing.Color.Green;
+            }
+            else
+            {
+                lbConfPassword.ForeColor = System.Drawing.Color.Red;
+            }
         }
     }
 }
