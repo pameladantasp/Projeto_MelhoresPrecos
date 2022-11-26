@@ -506,6 +506,7 @@
             this.txtConfPassword.PasswordChar = '*';
             this.txtConfPassword.Size = new System.Drawing.Size(199, 16);
             this.txtConfPassword.TabIndex = 8;
+            this.txtConfPassword.TextChanged += new System.EventHandler(this.txtConfPassword_TextChanged);
             // 
             // panelBtnRegister
             // 
