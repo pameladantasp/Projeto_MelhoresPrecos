@@ -40,5 +40,10 @@ namespace ProjetoInterdisciplinar.View
         {
             mainController.populateItems(flowLayoutPanel1);
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
