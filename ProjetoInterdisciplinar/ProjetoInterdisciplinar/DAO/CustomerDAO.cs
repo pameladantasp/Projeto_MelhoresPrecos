@@ -24,7 +24,7 @@ namespace ProjetoInterdisciplinar.DAO
                 database.selectLoginQueryString();
                 database.configureMySqlCommand();
                 database.command.Parameters.AddWithValue("@login", customer.email);
-                database.command.Parameters.AddWithValue("@password", customer.password);
+                database.command.Parameters.AddWithValue("@password", EasyEncryption.MD5.ComputeMD5Hash(customer.password));
                 database.select();
 
                 if (database.dataReader.HasRows)
@@ -64,11 +64,11 @@ namespace ProjetoInterdisciplinar.DAO
 
                 if (didInsert)
                 {
-                    database.setInsertQueryString(Enums.QueryType.customer);
+                    database.setInsertQueryString(QueryType.customer);
                     database.configureMySqlCommand();
                     database.command.Parameters.AddWithValue("@name", customer.name);
                     database.command.Parameters.AddWithValue("@email", customer.email);
-                    database.command.Parameters.AddWithValue("@password", customer.password);
+                    database.command.Parameters.AddWithValue("@password", EasyEncryption.MD5.ComputeMD5Hash(customer.password));
                     database.command.Parameters.AddWithValue("@idAddress", idAddress);
                     database.insert();
                     result = ErrorResult.success;
