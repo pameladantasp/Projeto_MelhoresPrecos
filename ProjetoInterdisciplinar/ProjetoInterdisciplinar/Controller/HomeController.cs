@@ -79,9 +79,10 @@ namespace ProjetoInterdisciplinar.Controller
                 }
                 else
                 {
-                    flowPanel.Controls.Add(listItems[i]);
+                    //flowPanel.Controls.Add(listItems[i]);
                 }
             }
+            flowPanel.Controls.AddRange(listItems);
         }
 
         public void search(FlowLayoutPanel flowPanel, string searchText)

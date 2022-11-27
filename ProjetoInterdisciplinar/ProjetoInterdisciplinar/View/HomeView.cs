@@ -8,6 +8,7 @@ namespace ProjetoInterdisciplinar.View
     public partial class HomeView : Form
     {
         private HomeController homeController;
+        private bool isTextBoxEdited = false;
         public HomeView()
         {
             InitializeComponent();
@@ -39,11 +40,12 @@ namespace ProjetoInterdisciplinar.View
                 flowLayoutPanel1.Controls.Clear();
                 homeController.search(flowLayoutPanel1, txtSearch.Text);
             }
-            else if(txtSearch.Text == "")
+            else if(txtSearch.Text == "" && isTextBoxEdited == true)
             {
                 flowLayoutPanel1.Controls.Clear();
                 homeController.populateItems(flowLayoutPanel1);
             }
+            isTextBoxEdited = true;
         }
 
         private void txtSearch_Enter(object sender, EventArgs e)
