@@ -28,7 +28,7 @@ namespace ProjetoInterdisciplinar.DAO
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
+                Console.WriteLine(ex.Message);
                 return false;
             }
             finally
