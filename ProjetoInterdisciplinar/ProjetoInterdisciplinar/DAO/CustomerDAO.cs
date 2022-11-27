@@ -27,19 +27,22 @@ namespace ProjetoInterdisciplinar.DAO
                 database.command.Parameters.AddWithValue("@password", EasyEncryption.MD5.ComputeMD5Hash(customer.password));
                 database.select();
 
-                if (database.dataReader.HasRows)
+                if (database.dataReader != null)
                 {
-                    while(database.dataReader.Read())
+                    if (database.dataReader.HasRows)
                     {
-                        Customer.shared.idCustomer = Int32.Parse(database.dataReader["idCustomer"].ToString());
-                        Customer.shared.name = database.dataReader["name"].ToString();
-                        Customer.shared.email = database.dataReader["email"].ToString();
-                        result = ErrorResult.success;
+                        while (database.dataReader.Read())
+                        {
+                            Customer.shared.idCustomer = Int32.Parse(database.dataReader["idCustomer"].ToString());
+                            Customer.shared.name = database.dataReader["name"].ToString();
+                            Customer.shared.email = database.dataReader["email"].ToString();
+                            result = ErrorResult.success;
+                        }
                     }
-                }
-                else
-                {
-                    result = ErrorResult.invalide;
+                    else
+                    {
+                        result = ErrorResult.invalide;
+                    }
                 }
             }
             catch(MySqlException)
