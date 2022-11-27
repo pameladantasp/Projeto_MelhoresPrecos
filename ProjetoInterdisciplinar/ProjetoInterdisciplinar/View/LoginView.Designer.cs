@@ -61,7 +61,7 @@
             this.panelEmail.Margin = new System.Windows.Forms.Padding(2);
             this.panelEmail.Name = "panelEmail";
             this.panelEmail.Size = new System.Drawing.Size(334, 35);
-            this.panelEmail.TabIndex = 26;
+            this.panelEmail.TabIndex = 0;
             // 
             // panel4
             // 
@@ -114,7 +114,7 @@
             this.panelPassword.Margin = new System.Windows.Forms.Padding(2);
             this.panelPassword.Name = "panelPassword";
             this.panelPassword.Size = new System.Drawing.Size(334, 35);
-            this.panelPassword.TabIndex = 27;
+            this.panelPassword.TabIndex = 1;
             // 
             // panel16
             // 
@@ -177,7 +177,7 @@
             this.panelBtnRegister.Margin = new System.Windows.Forms.Padding(2);
             this.panelBtnRegister.Name = "panelBtnRegister";
             this.panelBtnRegister.Size = new System.Drawing.Size(334, 44);
-            this.panelBtnRegister.TabIndex = 29;
+            this.panelBtnRegister.TabIndex = 3;
             // 
             // btnLogin
             // 
@@ -207,7 +207,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(334, 44);
-            this.panel1.TabIndex = 29;
+            this.panel1.TabIndex = 4;
             // 
             // btnRegister
             // 
