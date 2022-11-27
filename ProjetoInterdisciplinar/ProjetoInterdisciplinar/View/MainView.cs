@@ -26,24 +26,19 @@ namespace ProjetoInterdisciplinar.View
             mainController.navigateToRegisterUserView();
         }
 
-        private void txtSearch_Enter(object sender, EventArgs e)
-        {
-            mainController.setPlaceholder(txtSearch);
-        }
-
-        private void txtSearch_Leave(object sender, EventArgs e)
-        {
-            mainController.removePlaceholder(txtSearch);
-        }
-
         private void MainView_Load(object sender, EventArgs e)
         {
             mainController.populateItems(flowLayoutPanel1);
         }
 
-        private void txtSearch_TextChanged(object sender, EventArgs e)
+        private void txtSearch_Enter(object sender, EventArgs e)
         {
-            
+            mainController.removePlaceholder(txtSearch);
+        }
+
+        private void txtSearch_Leave(object sender, EventArgs e)
+        {
+            mainController.setPlaceholder(txtSearch);
         }
     }
 }

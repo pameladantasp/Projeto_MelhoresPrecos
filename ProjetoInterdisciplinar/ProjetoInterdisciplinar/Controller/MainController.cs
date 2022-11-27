@@ -43,7 +43,7 @@ namespace ProjetoInterdisciplinar.Controller
             form.Close();
         }
 
-        public void setPlaceholder(TextBox txtSearch)
+        public void removePlaceholder(TextBox txtSearch)
         {
             if (txtSearch.Text == "Busque por um produto...")
             {
@@ -52,7 +52,7 @@ namespace ProjetoInterdisciplinar.Controller
             }
         }
 
-        public void removePlaceholder(TextBox txtSearch)
+        public void setPlaceholder(TextBox txtSearch)
         {
             if (txtSearch.Text == "")
             {
