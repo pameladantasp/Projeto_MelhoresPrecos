@@ -21,9 +21,16 @@ namespace ProjetoInterdisciplinar.View
             ApiPostalCode apiPostalCode =  new ApiPostalCode();
 
             Address address = apiPostalCode.localizePostalCode(txtPostalCode.Text);
-            txtState.Text = address.state;
-            txtStreet.Text = address.street;
-            txtCity.Text = address.city;
+            if(address != null)
+            {
+                txtState.Text = address.state;
+                txtStreet.Text = address.street;
+                txtCity.Text = address.city;
+            }
+            else
+            {
+                MessageBox.Show("Por favor preencha seu CEP!", "O CEP esta vazio", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
