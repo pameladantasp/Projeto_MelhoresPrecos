@@ -58,6 +58,10 @@
             this.panelBtnRegister = new System.Windows.Forms.Panel();
             this.btnRegister = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txtDistrict = new System.Windows.Forms.TextBox();
+            this.lbDistrict = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             this.panelCity.SuspendLayout();
             this.panelNumber.SuspendLayout();
@@ -67,6 +71,7 @@
             this.panelName.SuspendLayout();
             this.panelBtnCancel.SuspendLayout();
             this.panelBtnRegister.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pctLogo
@@ -89,7 +94,7 @@
             this.panelCity.Controls.Add(this.txtCity);
             this.panelCity.Controls.Add(this.lbCity);
             this.panelCity.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panelCity.Location = new System.Drawing.Point(42, 345);
+            this.panelCity.Location = new System.Drawing.Point(42, 384);
             this.panelCity.Margin = new System.Windows.Forms.Padding(2);
             this.panelCity.MaximumSize = new System.Drawing.Size(200, 35);
             this.panelCity.Name = "panelCity";
@@ -144,7 +149,7 @@
             this.panelNumber.Controls.Add(this.txtNumber);
             this.panelNumber.Controls.Add(this.lbNumber);
             this.panelNumber.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panelNumber.Location = new System.Drawing.Point(237, 346);
+            this.panelNumber.Location = new System.Drawing.Point(237, 385);
             this.panelNumber.Margin = new System.Windows.Forms.Padding(2);
             this.panelNumber.Name = "panelNumber";
             this.panelNumber.Size = new System.Drawing.Size(160, 34);
@@ -408,7 +413,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBtnCancel.Controls.Add(this.btnCancel);
             this.panelBtnCancel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panelBtnCancel.Location = new System.Drawing.Point(42, 455);
+            this.panelBtnCancel.Location = new System.Drawing.Point(42, 494);
             this.panelBtnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.panelBtnCancel.Name = "panelBtnCancel";
             this.panelBtnCancel.Size = new System.Drawing.Size(355, 44);
@@ -438,7 +443,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBtnRegister.Controls.Add(this.btnRegister);
             this.panelBtnRegister.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panelBtnRegister.Location = new System.Drawing.Point(42, 407);
+            this.panelBtnRegister.Location = new System.Drawing.Point(42, 446);
             this.panelBtnRegister.Margin = new System.Windows.Forms.Padding(2);
             this.panelBtnRegister.Name = "panelBtnRegister";
             this.panelBtnRegister.Size = new System.Drawing.Size(355, 44);
@@ -474,12 +479,66 @@
             this.label1.TabIndex = 35;
             this.label1.Text = "Cadastro Supermercado";
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.txtDistrict);
+            this.panel1.Controls.Add(this.lbDistrict);
+            this.panel1.Location = new System.Drawing.Point(42, 345);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(355, 35);
+            this.panel1.TabIndex = 30;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel3.Location = new System.Drawing.Point(16, 31);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(330, 1);
+            this.panel3.TabIndex = 1;
+            // 
+            // txtDistrict
+            // 
+            this.txtDistrict.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDistrict.BackColor = System.Drawing.Color.White;
+            this.txtDistrict.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDistrict.Enabled = false;
+            this.txtDistrict.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDistrict.Location = new System.Drawing.Point(67, 8);
+            this.txtDistrict.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDistrict.Name = "txtDistrict";
+            this.txtDistrict.Size = new System.Drawing.Size(279, 16);
+            this.txtDistrict.TabIndex = 4;
+            // 
+            // lbDistrict
+            // 
+            this.lbDistrict.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbDistrict.AutoSize = true;
+            this.lbDistrict.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lbDistrict.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDistrict.Location = new System.Drawing.Point(14, 8);
+            this.lbDistrict.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbDistrict.Name = "lbDistrict";
+            this.lbDistrict.Size = new System.Drawing.Size(50, 15);
+            this.lbDistrict.TabIndex = 8;
+            this.lbDistrict.Text = "Bairro:";
+            // 
             // RegisterSupermarketView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(433, 531);
+            this.ClientSize = new System.Drawing.Size(433, 556);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelBtnCancel);
             this.Controls.Add(this.panelBtnRegister);
@@ -490,8 +549,8 @@
             this.Controls.Add(this.panelPostalCode);
             this.Controls.Add(this.panelStreet);
             this.Controls.Add(this.panelName);
-            this.MaximumSize = new System.Drawing.Size(449, 570);
-            this.MinimumSize = new System.Drawing.Size(449, 570);
+            this.MaximumSize = new System.Drawing.Size(449, 595);
+            this.MinimumSize = new System.Drawing.Size(449, 595);
             this.Name = "RegisterSupermarketView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
@@ -509,6 +568,8 @@
             this.panelName.PerformLayout();
             this.panelBtnCancel.ResumeLayout(false);
             this.panelBtnRegister.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -546,5 +607,9 @@
         private System.Windows.Forms.Panel panelBtnRegister;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox txtDistrict;
+        private System.Windows.Forms.Label lbDistrict;
     }
 }

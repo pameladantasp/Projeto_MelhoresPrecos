@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnConfiguration = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnHistoryPrice = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@
             this.labelSearch = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnConfiguration = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelUserInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctUser)).BeginInit();
@@ -65,6 +65,21 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(176, 471);
             this.panel1.TabIndex = 5;
+            // 
+            // btnConfiguration
+            // 
+            this.btnConfiguration.FlatAppearance.BorderSize = 0;
+            this.btnConfiguration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfiguration.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfiguration.ForeColor = System.Drawing.Color.White;
+            this.btnConfiguration.Image = global::ProjetoInterdisciplinar.Properties.Resources.icon_configuration_28;
+            this.btnConfiguration.Location = new System.Drawing.Point(0, 298);
+            this.btnConfiguration.Name = "btnConfiguration";
+            this.btnConfiguration.Size = new System.Drawing.Size(176, 48);
+            this.btnConfiguration.TabIndex = 2;
+            this.btnConfiguration.Text = "Configurações";
+            this.btnConfiguration.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnConfiguration.UseVisualStyleBackColor = true;
             // 
             // btnLogout
             // 
@@ -124,7 +139,7 @@
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(176, 48);
             this.btnReport.TabIndex = 1;
-            this.btnReport.Text = "Gerar Relatorio    ";
+            this.btnReport.Text = "Gerar Relatório    ";
             this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnReport.UseVisualStyleBackColor = true;
             // 
@@ -246,21 +261,6 @@
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
             this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
-            // 
-            // btnConfiguration
-            // 
-            this.btnConfiguration.FlatAppearance.BorderSize = 0;
-            this.btnConfiguration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfiguration.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfiguration.ForeColor = System.Drawing.Color.White;
-            this.btnConfiguration.Image = global::ProjetoInterdisciplinar.Properties.Resources.icon_configuration_28;
-            this.btnConfiguration.Location = new System.Drawing.Point(0, 298);
-            this.btnConfiguration.Name = "btnConfiguration";
-            this.btnConfiguration.Size = new System.Drawing.Size(176, 48);
-            this.btnConfiguration.TabIndex = 2;
-            this.btnConfiguration.Text = "Configuracoes";
-            this.btnConfiguration.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnConfiguration.UseVisualStyleBackColor = true;
             // 
             // HomeView
             // 
