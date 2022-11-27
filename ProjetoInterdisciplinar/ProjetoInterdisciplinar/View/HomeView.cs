@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using ProjetoInterdisciplinar.Controller;
+using ProjetoInterdisciplinar.Model;
 
 namespace ProjetoInterdisciplinar.View
 {
@@ -16,6 +17,7 @@ namespace ProjetoInterdisciplinar.View
         private void HomeView_Load(object sender, EventArgs e)
         {
             homeController.populateItems(flowLayoutPanel1);
+            lbUserName.Text = Customer.shared.name;
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -42,6 +44,16 @@ namespace ProjetoInterdisciplinar.View
                 flowLayoutPanel1.Controls.Clear();
                 homeController.populateItems(flowLayoutPanel1);
             }
+        }
+
+        private void txtSearch_Enter(object sender, EventArgs e)
+        {
+            homeController.setPlaceholder(txtSearch);
+        }
+
+        private void txtSearch_Leave(object sender, EventArgs e)
+        {
+            homeController.removePlaceholder(txtSearch);
         }
     }
 }

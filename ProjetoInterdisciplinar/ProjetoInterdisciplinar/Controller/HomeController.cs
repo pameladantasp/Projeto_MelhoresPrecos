@@ -1,6 +1,7 @@
 ﻿using ProjetoInterdisciplinar.Model;
 using ProjetoInterdisciplinar.View;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -19,6 +20,23 @@ namespace ProjetoInterdisciplinar.Controller
             setThread(new Thread(openRegisterProductScreen));
         }
 
+        public void setPlaceholder(TextBox txtSearch)
+        {
+            if (txtSearch.Text == "Busque por um produto...")
+            {
+                txtSearch.Text = "";
+                txtSearch.ForeColor = Color.Black;
+            }
+        }
+
+        public void removePlaceholder(TextBox txtSearch)
+        {
+            if (txtSearch.Text == "")
+            {
+                txtSearch.Text = "Busque por um produto...";
+                txtSearch.ForeColor = Color.Silver;
+            }
+        }
         private void setThread(Thread thread)
         {
             t1 = thread;
