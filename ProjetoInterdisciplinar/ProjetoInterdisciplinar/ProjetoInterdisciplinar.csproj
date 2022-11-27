@@ -291,7 +291,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\icon-add-28.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logoAppTranslucido.png" />
   </ItemGroup>
@@ -318,6 +320,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_user_white_100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-history-28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-ranking-28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-ranking28.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

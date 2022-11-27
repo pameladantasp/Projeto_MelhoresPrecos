@@ -83,9 +83,49 @@ namespace ProjetoInterdisciplinar.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_add_28 {
+            get {
+                object obj = ResourceManager.GetObject("icon-add-28", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_history_28 {
+            get {
+                object obj = ResourceManager.GetObject("icon-history-28", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_logout {
             get {
                 object obj = ResourceManager.GetObject("icon_logout", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_ranking_28 {
+            get {
+                object obj = ResourceManager.GetObject("icon-ranking-28", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_ranking28 {
+            get {
+                object obj = ResourceManager.GetObject("icon-ranking28", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
