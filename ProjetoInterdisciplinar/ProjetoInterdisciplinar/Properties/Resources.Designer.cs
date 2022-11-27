@@ -93,6 +93,16 @@ namespace ProjetoInterdisciplinar.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_configuration_28 {
+            get {
+                object obj = ResourceManager.GetObject("icon-configuration-28", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_history_28 {
             get {
                 object obj = ResourceManager.GetObject("icon-history-28", resourceCulture);
