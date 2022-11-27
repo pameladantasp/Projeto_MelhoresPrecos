@@ -33,7 +33,7 @@ namespace ProjetoInterdisciplinar.DAO
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -54,7 +54,7 @@ namespace ProjetoInterdisciplinar.DAO
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -73,7 +73,7 @@ namespace ProjetoInterdisciplinar.DAO
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -95,7 +95,7 @@ namespace ProjetoInterdisciplinar.DAO
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
                 didDelete = false;
             }
             finally

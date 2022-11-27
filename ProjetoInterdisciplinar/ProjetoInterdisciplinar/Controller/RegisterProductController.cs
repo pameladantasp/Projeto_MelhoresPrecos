@@ -59,7 +59,7 @@ namespace ProjetoInterdisciplinar.Controller
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
         }
         public void showMessageBox(ErrorResult result)

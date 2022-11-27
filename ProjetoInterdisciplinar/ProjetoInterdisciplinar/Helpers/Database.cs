@@ -71,7 +71,7 @@ namespace ProjetoInterdisciplinar.Helpers
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
                 return false;
             }
             return true;
@@ -96,7 +96,7 @@ namespace ProjetoInterdisciplinar.Helpers
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
         }
 
