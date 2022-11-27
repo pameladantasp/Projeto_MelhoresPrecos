@@ -67,11 +67,11 @@ namespace ProjetoInterdisciplinar.Controller
             switch (result)
             {
                 case ErrorResult.success:
-                    MessageBox.Show("Cadastro realizado e logado com sucesso", "Entrando", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Produto adicionado com sucesso", "Adicionado!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
 
                 case ErrorResult.invalide:
-                    MessageBox.Show("Cadastro realizado com sucesso", "Faca seu login", MessageBoxButtons.OK);
+                    MessageBox.Show("Produto não foi adicionado", "Invalido!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
 
                 case ErrorResult.failure:
