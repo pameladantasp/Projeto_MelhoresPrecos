@@ -1,6 +1,9 @@
-﻿using ProjetoInterdisciplinar.DAO;
+﻿
+
+ using ProjetoInterdisciplinar.DAO;
 using System;
 using System.Collections.Generic;
+using System.Windows.Forms;
 using static ProjetoInterdisciplinar.Helpers.Enums;
 
 namespace ProjetoInterdisciplinar.Model
@@ -24,6 +27,11 @@ namespace ProjetoInterdisciplinar.Model
         public List<RegisterProduct> select()
         {
             return dao.selectData();
+        }
+
+        public List<RegisterProduct> search(string searchText)
+        {
+            return dao.searchData(searchText);
         }
         public ErrorResult insert()
         {

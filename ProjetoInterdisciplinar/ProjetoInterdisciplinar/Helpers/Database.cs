@@ -221,7 +221,7 @@ namespace ProjetoInterdisciplinar.Helpers
 
         //Query registerProduct
 
-        public void selectRegisterProductQueryString(WhereType whereType)
+        public void selectRegisterProductQueryString(WhereType whereType, string search = "")
         {
             string where = "";
 
@@ -234,7 +234,7 @@ namespace ProjetoInterdisciplinar.Helpers
                         "          INNER JOIN address AS SA ON SC.idAddress = SA.idAddress " +
                         "      WHERE SC.idCustomer = @idCustomer " +
                         ") AS SUB ON SUB.city = A.city AND SUB.state = A.state " +
-                        "WHERE P.name LIKE '%@search%' " +
+                        "WHERE P.name LIKE '%"+ search +"%' " +
                         "ORDER BY P.name";
                 break;
 

@@ -18,6 +18,57 @@ namespace ProjetoInterdisciplinar.DAO
             database = new Database();
         }
 
+        public List<RegisterProduct> searchData(string search)
+        {
+            List<RegisterProduct> registerProducts = new List<RegisterProduct>();
+
+            try
+            {
+                database.selectRegisterProductQueryString(WhereType.like, search);
+                database.configureMySqlCommand();
+                database.command.Parameters.AddWithValue("@idCustomer", Customer.shared.idCustomer);
+                database.select();
+
+                if (database.dataReader != null)
+                {
+                    if (database.dataReader.HasRows)
+                    {
+                        while (database.dataReader.Read())
+                        {
+                            registerProduct = new RegisterProduct();
+
+                            registerProduct.customer = new Customer();
+                            registerProduct.customer.name = database.dataReader["customerName"].ToString();
+
+                            registerProduct.supermarket = new Supermarket();
+                            registerProduct.supermarket.name = database.dataReader["supermarketName"].ToString();
+
+                            registerProduct.product = new Product();
+                            registerProduct.product.name = database.dataReader["productDescription"].ToString();
+
+                            registerProduct.price = (float)database.dataReader["price"];
+
+                            registerProducts.Add(registerProduct);
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Por favor tente mais tarde!", "Sem internet", MessageBoxButtons.OK);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                database.closeConnection();
+            }
+
+            return registerProducts;
+        }
+
         public List<RegisterProduct> selectData()
         {
             List<RegisterProduct> registerProductList = new List<RegisterProduct>();
@@ -29,24 +80,27 @@ namespace ProjetoInterdisciplinar.DAO
                 database.command.Parameters.AddWithValue("@limit", limiter);
                 database.select();
 
-                if (database.dataReader.HasRows)
+                if(database.dataReader != null)
                 {
-                    while (database.dataReader.Read())
+                    if (database.dataReader.HasRows)
                     {
-                        registerProduct = new RegisterProduct();
+                        while (database.dataReader.Read())
+                        {
+                            registerProduct = new RegisterProduct();
 
-                        registerProduct.customer = new Customer();
-                        registerProduct.customer.name = database.dataReader["customerName"].ToString();
+                            registerProduct.customer = new Customer();
+                            registerProduct.customer.name = database.dataReader["customerName"].ToString();
 
-                        registerProduct.supermarket = new Supermarket();
-                        registerProduct.supermarket.name = database.dataReader["supermarketName"].ToString();
+                            registerProduct.supermarket = new Supermarket();
+                            registerProduct.supermarket.name = database.dataReader["supermarketName"].ToString();
 
-                        registerProduct.product = new Product();
-                        registerProduct.product.name = database.dataReader["productDescription"].ToString();
+                            registerProduct.product = new Product();
+                            registerProduct.product.name = database.dataReader["productDescription"].ToString();
 
-                        registerProduct.price = (float)database.dataReader["price"];
+                            registerProduct.price = (float)database.dataReader["price"];
 
-                        registerProductList.Add(registerProduct);
+                            registerProductList.Add(registerProduct);
+                        }
                     }
                 }
             }

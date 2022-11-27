@@ -240,13 +240,14 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(615, 22);
             this.txtSearch.TabIndex = 4;
-            this.txtSearch.Text = "Busque por um produto...";
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // HomeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(847, 471);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panelSearch);

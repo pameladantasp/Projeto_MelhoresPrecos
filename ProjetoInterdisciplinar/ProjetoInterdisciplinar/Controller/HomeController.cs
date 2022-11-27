@@ -65,5 +65,31 @@ namespace ProjetoInterdisciplinar.Controller
                 }
             }
         }
+
+        public void search(FlowLayoutPanel flowPanel, string searchText)
+        {
+            RegisterProduct registerProduct = new RegisterProduct();
+            List<RegisterProduct> registerProducts = registerProduct.search(searchText);
+
+            ListItem[] listItems = new ListItem[registerProducts.Count];
+
+            for (int i = 0; i < listItems.Length; i++)
+            {
+                listItems[i] = new ListItem();
+                listItems[i].UserName = registerProducts[i].customer.name;
+                listItems[i].DescriptionProduct = registerProducts[i].product.name;
+                listItems[i].SupermarketName = registerProducts[i].supermarket.name;
+                listItems[i].Price = registerProducts[i].price.ToString();
+
+                if (flowPanel.Controls.Count < 0)
+                {
+                    flowPanel.Controls.Clear();
+                }
+                else
+                {
+                    flowPanel.Controls.Add(listItems[i]);
+                }
+            }
+        }
     }
 }

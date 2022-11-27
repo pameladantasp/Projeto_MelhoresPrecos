@@ -29,5 +29,19 @@ namespace ProjetoInterdisciplinar.View
             homeController.closeView(this);
             homeController.navigateToRegisterProductView();
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if(txtSearch.Text.Length >= 3)
+            {
+                flowLayoutPanel1.Controls.Clear();
+                homeController.search(flowLayoutPanel1, txtSearch.Text);
+            }
+            else if(txtSearch.Text == "")
+            {
+                flowLayoutPanel1.Controls.Clear();
+                homeController.populateItems(flowLayoutPanel1);
+            }
+        }
     }
 }
