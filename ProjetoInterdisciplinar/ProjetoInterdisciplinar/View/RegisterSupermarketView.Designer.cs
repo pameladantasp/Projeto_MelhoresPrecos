@@ -233,7 +233,7 @@
             this.txtState.MaxLength = 2;
             this.txtState.Name = "txtState";
             this.txtState.Size = new System.Drawing.Size(82, 16);
-            this.txtState.TabIndex = 3;
+            this.txtState.TabIndex = 2;
             // 
             // lblState
             // 
@@ -273,7 +273,7 @@
             this.txtPostalCode.Mask = "00000-999";
             this.txtPostalCode.Name = "txtPostalCode";
             this.txtPostalCode.Size = new System.Drawing.Size(124, 15);
-            this.txtPostalCode.TabIndex = 2;
+            this.txtPostalCode.TabIndex = 1;
             this.txtPostalCode.Leave += new System.EventHandler(this.txtPostalCode_Leave);
             // 
             // panel14
@@ -338,7 +338,7 @@
             this.txtStreet.Margin = new System.Windows.Forms.Padding(2);
             this.txtStreet.Name = "txtStreet";
             this.txtStreet.Size = new System.Drawing.Size(243, 16);
-            this.txtStreet.TabIndex = 4;
+            this.txtStreet.TabIndex = 3;
             // 
             // lbStreet
             // 
@@ -432,7 +432,7 @@
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(330, 40);
-            this.btnCancel.TabIndex = 7;
+            this.btnCancel.TabIndex = 8;
             this.btnCancel.Text = "CANCELAR";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -462,7 +462,7 @@
             this.btnRegister.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(330, 40);
-            this.btnRegister.TabIndex = 6;
+            this.btnRegister.TabIndex = 7;
             this.btnRegister.Text = "CADASTRAR";
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
