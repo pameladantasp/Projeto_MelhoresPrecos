@@ -28,6 +28,7 @@ namespace ProjetoInterdisciplinar.View
 
                 customer.address = new Address();
                 customer.address.street = txtStreet.Text;
+                customer.address.district = txtDistrict.Text;
                 customer.address.number = txtNumber.Text;
                 customer.address.city = txtCity.Text;
                 customer.address.state = txtState.Text;
@@ -60,13 +61,13 @@ namespace ProjetoInterdisciplinar.View
         private void txtPostalCode_Leave(object sender, EventArgs e)
         {
             ApiPostalCode apiPostalCode = new ApiPostalCode();
-
             Address address = apiPostalCode.localizePostalCode(txtPostalCode.Text);
+
             if(address != null)
             {
-
                 txtState.Text = address.state;
                 txtStreet.Text = address.street;
+                txtDistrict.Text = address.district;
                 txtCity.Text = address.city;
             }
         }
@@ -85,7 +86,7 @@ namespace ProjetoInterdisciplinar.View
 
         private void txtName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space);
         }
     }
 }

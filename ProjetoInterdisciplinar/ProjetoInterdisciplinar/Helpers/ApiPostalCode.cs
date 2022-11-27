@@ -23,6 +23,7 @@ namespace ProjetoInterdisciplinar.Helpers
                     {
                         address = new Address();
                         address.state = response.uf;
+                        address.district = response.bairro;
                         address.street = response.end;
                         address.city = response.cidade;
                     }

@@ -10,6 +10,7 @@ namespace ProjetoInterdisciplinar.Model
     {
         public int idAddress { get; set; }
         public string street { get; set; }
+        public string district { get; set; }
         public string number { get; set; }
         public string city { get; set; }
         public string state { get; set; }

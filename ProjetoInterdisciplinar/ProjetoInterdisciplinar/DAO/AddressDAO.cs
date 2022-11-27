@@ -21,6 +21,7 @@ namespace ProjetoInterdisciplinar.DAO
                 database.configureMySqlCommand();
                 database.command.Parameters.AddWithValue("@street", address.street);
                 database.command.Parameters.AddWithValue("@number", address.number);
+                database.command.Parameters.AddWithValue("@district", address.district);
                 database.command.Parameters.AddWithValue("@city", address.city);
                 database.command.Parameters.AddWithValue("@state", address.state);
                 database.command.Parameters.AddWithValue("@postalCode", address.postalCode);
@@ -46,6 +47,7 @@ namespace ProjetoInterdisciplinar.DAO
                 database.configureMySqlCommand();
                 database.command.Parameters.AddWithValue("@street", address.street);
                 database.command.Parameters.AddWithValue("@number", address.number);
+                database.command.Parameters.AddWithValue("@district", address.district);
                 database.command.Parameters.AddWithValue("@city", address.city);
                 database.command.Parameters.AddWithValue("@state", address.state);
                 database.command.Parameters.AddWithValue("@postalCode", address.postalCode);

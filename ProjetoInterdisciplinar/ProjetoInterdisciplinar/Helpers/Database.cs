@@ -110,8 +110,8 @@ namespace ProjetoInterdisciplinar.Helpers
             switch(queryType)
             {
                 case QueryType.address:
-                    query = "INSERT INTO address (street, number, city, state, postalCode)" +
-                            " VALUES (@street, @number, @city, @state, @postalCode)";
+                    query = "INSERT INTO address (street, number, district, city, state, postalCode)" +
+                            " VALUES (@street, @number, @district, @city, @state, @postalCode)";
                     break;
 
                 case QueryType.category:
@@ -142,7 +142,7 @@ namespace ProjetoInterdisciplinar.Helpers
         //Query Address
         public void setUpdateAddressQueryString()
         {
-            query = "UPDATE address SET (street = @street, number = @number, city = @city, state = @state, postalCode = @postalCode) " +
+            query = "UPDATE address SET (street = @street, number = @number, district = @district, city = @city, state = @state, postalCode = @postalCode) " +
                 "WHERE idAddress = @idAddress";
         }
         public void setDeleteAddressQueryString()
