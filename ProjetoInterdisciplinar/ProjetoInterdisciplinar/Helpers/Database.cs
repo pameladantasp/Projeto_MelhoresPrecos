@@ -206,18 +206,12 @@ namespace ProjetoInterdisciplinar.Helpers
                     break;
             }
         }
-      
-        //Query customer
 
         //login
         public void selectLoginQueryString()
         {
             query = "SELECT idCustomer, name, email FROM customer " +
                "WHERE email = @login AND password = @password";
-        }
-        public void setLoadQueryString()
-        {
-            query = "SELECT * FROM customer";
         }
 
 
