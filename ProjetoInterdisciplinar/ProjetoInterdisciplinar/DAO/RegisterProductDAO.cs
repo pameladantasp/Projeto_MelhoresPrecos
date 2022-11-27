@@ -161,7 +161,7 @@ namespace ProjetoInterdisciplinar.DAO
         {
             try
             {
-                database.setUpdateRegisterProductQueryString();
+                database.setUpdateQueryString(QueryType.registerProduct);
                 database.configureMySqlCommand(); 
                 database.command.Parameters.AddWithValue("@price", registerProduct.price);
                 database.command.Parameters.AddWithValue("@dataRegister", registerProduct.dateRegister);

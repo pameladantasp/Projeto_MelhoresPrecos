@@ -2,6 +2,7 @@
 using ProjetoInterdisciplinar.Model;
 using System;
 using System.Windows.Forms;
+using static ProjetoInterdisciplinar.Helpers.Enums;
 
 namespace ProjetoInterdisciplinar.DAO
 {
@@ -44,7 +45,7 @@ namespace ProjetoInterdisciplinar.DAO
         {
             try
             {
-                database.setUpdateProductQueryString();
+                database.setUpdateQueryString(QueryType.product);
                 database.configureMySqlCommand();
                 database.command.Parameters.AddWithValue("@name", product.name);
                 database.insert();

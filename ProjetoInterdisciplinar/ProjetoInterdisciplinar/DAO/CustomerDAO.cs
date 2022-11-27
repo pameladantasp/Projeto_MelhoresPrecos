@@ -96,7 +96,7 @@ namespace ProjetoInterdisciplinar.DAO
         {
             try
             {
-                database.setUpdateCustomerQueryString();
+                database.setUpdateQueryString(QueryType.customer);
                 database.configureMySqlCommand();
                 database.command.Parameters.AddWithValue("@name", customer.name);
                 database.command.Parameters.AddWithValue("@email", customer.email);

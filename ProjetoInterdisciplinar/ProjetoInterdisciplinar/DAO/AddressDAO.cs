@@ -2,6 +2,7 @@
 using ProjetoInterdisciplinar.Model;
 using System;
 using System.Windows.Forms;
+using static ProjetoInterdisciplinar.Helpers.Enums;
 
 namespace ProjetoInterdisciplinar.DAO
 {
@@ -43,7 +44,7 @@ namespace ProjetoInterdisciplinar.DAO
         {
             try
             {
-                database.setUpdateAddressQueryString();
+                database.setUpdateQueryString(QueryType.address);
                 database.configureMySqlCommand();
                 database.command.Parameters.AddWithValue("@street", address.street);
                 database.command.Parameters.AddWithValue("@number", address.number);

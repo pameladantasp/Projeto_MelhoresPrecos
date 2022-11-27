@@ -83,7 +83,7 @@ namespace ProjetoInterdisciplinar.DAO
         {
             try
             {
-                database.setUpdateSupermarketQueryString();
+                database.setUpdateQueryString(QueryType.supermarket);
                 database.configureMySqlCommand();
                 database.command.Parameters.AddWithValue("@name", supermarket.name);
                 database.insert();

@@ -43,11 +43,11 @@ namespace ProjetoInterdisciplinar.Helpers
                 switch (ex.Number)
                 {
                     case 0:
-                        MessageBox.Show("Cannot connect to server. Contact administrador");
+                        MessageBox.Show("No foi possível se conetar com o servidor. Contate o administrador");
                         break;
 
                     case 1045:
-                        MessageBox.Show("Invalidate username/password, please try again");
+                        MessageBox.Show("Email ou senha invalida, por favor tente novamente");
                         break;
                 }
                 return false;
@@ -139,12 +139,43 @@ namespace ProjetoInterdisciplinar.Helpers
             }
         }
 
-        //Query Address
-        public void setUpdateAddressQueryString()
+        public void setUpdateQueryString(QueryType queryType)
         {
-            query = "UPDATE address SET (street = @street, number = @number, district = @district, city = @city, state = @state, postalCode = @postalCode) " +
-                "WHERE idAddress = @idAddress";
+            switch(queryType)
+            {
+                case QueryType.address:
+                    query = "UPDATE address SET (street = @street, number = @number, district = @district, city = @city, state = @state, postalCode = @postalCode) " +
+                            "WHERE idAddress = @idAddress";
+                    break;
+
+                case QueryType.category:
+                    query = "UPDATE category SET type = @type " +
+                            "WHERE idCategory = @idCategory";
+                    break;
+
+                case QueryType.customer:
+                    query = "UPDATE customer SET name = @name, email = @email, password = @password " +
+                            "WHERE idCustomer = @idCustomer";
+                    break;
+
+                case QueryType.product:
+                    query = "UPDATE product SET name = @name " +
+                            "WHERE idProduct = @idProduct";
+                    break;
+
+                case QueryType.supermarket:
+                    query = "UPDATE supermarket SET name = @name " +
+                            "WHERE idSupermarket = @idSupermarket";
+                    break;
+
+                case QueryType.registerProduct:
+                    query = "UPDATE registerProduct SET (idRegister, idCustomer, idSupermarket, idProduct, price, dateRegister) " +
+                            "VALUES (@idRegister, @idCustomer, @idSupermarket, @idProduct, @price, @dateRegister)";
+                    break;
+            }
         }
+
+        //Query Address
         public void setDeleteAddressQueryString()
         {
             query = "DELETE FROM address ";
@@ -163,11 +194,7 @@ namespace ProjetoInterdisciplinar.Helpers
         {
             query = "SELECT * FROM customer";
         }
-        public void setUpdateCustomerQueryString()
-        {
-            query = "UPDATE customer SET name = @name, email = @email, password = @password " +
-                "WHERE idCustomer = @idCustomer";
-        }
+   
         public void setDeleteCustomerQueryString()
         {
             query = "DELETE FROM customer ";
@@ -178,11 +205,6 @@ namespace ProjetoInterdisciplinar.Helpers
         public void selectSupermarketQueryString()
         {
             query = "SELECT idSupermarket, name FROM supermarket ORDER BY name";
-        }
-        public void setUpdateSupermarketQueryString()
-        {
-            query = "UPDATE supermarket SET name = @name " +
-                "WHERE idSupermarket = @idSupermarket";
         }
         public void setDeleteSupermarketQueryString()
         {
@@ -196,11 +218,6 @@ namespace ProjetoInterdisciplinar.Helpers
         {
             query = "SELECT idCategory, type FROM category ORDER BY type";
         }
-        public void setUpdateCategoryQueryString()
-        {
-            query = "UPDATE category SET type = @type " +
-                "WHERE idCategory = @idCategory";
-        }
         public void setDeleteCategoryQueryString()
         {
             query = "DELETE FROM category ";
@@ -208,11 +225,7 @@ namespace ProjetoInterdisciplinar.Helpers
         }
 
         //Query Product
-        public void setUpdateProductQueryString()
-        {
-            query = "UPDATE product SET name = @name " +
-                "WHERE idProduct = @idProduct";
-        }
+
         public void setDeleteProductQueryString()
         {
             query = "DELETE FROM product ";
@@ -251,11 +264,7 @@ namespace ProjetoInterdisciplinar.Helpers
                     "     INNER JOIN supermarket AS S ON RP.idSupermarket = S.idSupermarket " +
                     "     INNER JOIN product AS P ON RP.idProduct = P.idProduct " + where;
         }
-        public void setUpdateRegisterProductQueryString()
-        {
-            query = "UPDATE registerProduct SET (idRegister, idCustomer, idSupermarket, idProduct, price, dateRegister) " +
-                "VALUES (@idRegister, @idCustomer, @idSupermarket, @idProduct, @price, @dateRegister)";
-        }
+        
         public void setDeleteRegisterProductQueryString()
         {
             query = "DELETE FROM registerProduct ";

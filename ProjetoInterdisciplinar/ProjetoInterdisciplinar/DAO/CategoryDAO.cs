@@ -3,6 +3,7 @@ using ProjetoInterdisciplinar.Model;
 using System;
 using System.Data;
 using System.Windows.Forms;
+using static ProjetoInterdisciplinar.Helpers.Enums;
 
 namespace ProjetoInterdisciplinar.DAO
 {
@@ -66,7 +67,7 @@ namespace ProjetoInterdisciplinar.DAO
         {
             try
             {
-                database.setUpdateCategoryQueryString();
+                database.setUpdateQueryString(QueryType.category);
                 database.configureMySqlCommand();
                 database.command.Parameters.AddWithValue("@type", category.type);
                 database.insert();
