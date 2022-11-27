@@ -143,6 +143,7 @@
             this.cbCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategory.FormattingEnabled = true;
             this.cbCategory.Location = new System.Drawing.Point(92, 11);
             this.cbCategory.Name = "cbCategory";
@@ -179,6 +180,7 @@
             this.cbSupermarket.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbSupermarket.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSupermarket.FormattingEnabled = true;
             this.cbSupermarket.Location = new System.Drawing.Point(123, 11);
             this.cbSupermarket.Name = "cbSupermarket";

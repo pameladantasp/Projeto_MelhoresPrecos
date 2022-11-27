@@ -82,5 +82,10 @@ namespace ProjetoInterdisciplinar.View
                 lbConfPassword.ForeColor = System.Drawing.Color.Red;
             }
         }
+
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
     }
 }
