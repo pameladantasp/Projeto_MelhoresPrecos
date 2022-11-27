@@ -361,7 +361,7 @@
             this.btnRegisterProduct.Name = "btnRegisterProduct";
             this.btnRegisterProduct.Size = new System.Drawing.Size(330, 40);
             this.btnRegisterProduct.TabIndex = 6;
-            this.btnRegisterProduct.Text = "CADASTRAR PRODUTO";
+            this.btnRegisterProduct.Text = "ADICIONAR PRODUTO";
             this.btnRegisterProduct.UseVisualStyleBackColor = false;
             this.btnRegisterProduct.Click += new System.EventHandler(this.btnRegisterProduct_Click);
             // 
