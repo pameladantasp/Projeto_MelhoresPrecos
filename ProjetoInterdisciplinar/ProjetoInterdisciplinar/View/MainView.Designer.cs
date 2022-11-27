@@ -30,14 +30,14 @@
         {
             this.lbLogin = new System.Windows.Forms.Label();
             this.lbRegister = new System.Windows.Forms.Label();
-            this.labelSearch = new System.Windows.Forms.Label();
             this.panelToolbar = new System.Windows.Forms.Panel();
             this.panelButtons = new System.Windows.Forms.Panel();
             this.pctLogo = new System.Windows.Forms.PictureBox();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.panelSearch = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelSearch = new System.Windows.Forms.Panel();
+            this.labelSearch = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.panelToolbar.SuspendLayout();
             this.panelButtons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
@@ -78,19 +78,6 @@
             this.lbRegister.Text = "CADASTRAR";
             this.lbRegister.Click += new System.EventHandler(this.lbRegister_Click);
             // 
-            // labelSearch
-            // 
-            this.labelSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelSearch.AutoSize = true;
-            this.labelSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSearch.Location = new System.Drawing.Point(2, 11);
-            this.labelSearch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelSearch.Name = "labelSearch";
-            this.labelSearch.Size = new System.Drawing.Size(415, 17);
-            this.labelSearch.TabIndex = 2;
-            this.labelSearch.Text = "Pesquise seus produtos e descubra os melhores precos";
-            // 
             // panelToolbar
             // 
             this.panelToolbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(82)))), ((int)(((byte)(65)))));
@@ -126,46 +113,6 @@
             this.pctLogo.TabIndex = 2;
             this.pctLogo.TabStop = false;
             // 
-            // txtSearch
-            // 
-            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearch.BackColor = System.Drawing.SystemColors.Window;
-            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.ForeColor = System.Drawing.Color.Silver;
-            this.txtSearch.Location = new System.Drawing.Point(3, 41);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(615, 22);
-            this.txtSearch.TabIndex = 4;
-            this.txtSearch.Text = "Busque por um produto...";
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
-            this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
-            this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
-            // 
-            // panelSearch
-            // 
-            this.panelSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelSearch.Controls.Add(this.labelSearch);
-            this.panelSearch.Controls.Add(this.pictureBox2);
-            this.panelSearch.Controls.Add(this.txtSearch);
-            this.panelSearch.Location = new System.Drawing.Point(36, 57);
-            this.panelSearch.Name = "panelSearch";
-            this.panelSearch.Size = new System.Drawing.Size(621, 67);
-            this.panelSearch.TabIndex = 6;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = global::ProjetoInterdisciplinar.Properties.Resources.search_png;
-            this.pictureBox2.Location = new System.Drawing.Point(593, 43);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(22, 16);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -177,18 +124,68 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(621, 313);
             this.flowLayoutPanel1.TabIndex = 7;
             // 
+            // panelSearch
+            // 
+            this.panelSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelSearch.Controls.Add(this.labelSearch);
+            this.panelSearch.Controls.Add(this.pictureBox2);
+            this.panelSearch.Controls.Add(this.txtSearch);
+            this.panelSearch.Location = new System.Drawing.Point(36, 57);
+            this.panelSearch.Name = "panelSearch";
+            this.panelSearch.Size = new System.Drawing.Size(621, 67);
+            this.panelSearch.TabIndex = 9;
+            // 
+            // labelSearch
+            // 
+            this.labelSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelSearch.AutoSize = true;
+            this.labelSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSearch.Location = new System.Drawing.Point(2, 11);
+            this.labelSearch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelSearch.Name = "labelSearch";
+            this.labelSearch.Size = new System.Drawing.Size(415, 17);
+            this.labelSearch.TabIndex = 2;
+            this.labelSearch.Text = "Pesquise seus produtos e descubra os melhores precos";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = global::ProjetoInterdisciplinar.Properties.Resources.search_png;
+            this.pictureBox2.Location = new System.Drawing.Point(595, 43);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(22, 16);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearch.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.Silver;
+            this.txtSearch.Location = new System.Drawing.Point(3, 41);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(618, 22);
+            this.txtSearch.TabIndex = 4;
+            this.txtSearch.Text = "Busque por um produto...";
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(694, 481);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panelSearch);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panelToolbar);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(900, 900);
+            this.MaximumSize = new System.Drawing.Size(910, 910);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(510, 510);
             this.Name = "MainView";
@@ -209,13 +206,13 @@
 
         private System.Windows.Forms.Label lbLogin;
         private System.Windows.Forms.Label lbRegister;
-        private System.Windows.Forms.Label labelSearch;
         private System.Windows.Forms.Panel panelToolbar;
         private System.Windows.Forms.PictureBox pctLogo;
-        private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panelSearch;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panelButtons;
+        private System.Windows.Forms.Panel panelSearch;
+        private System.Windows.Forms.Label labelSearch;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox txtSearch;
     }
 }
