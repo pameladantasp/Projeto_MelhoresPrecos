@@ -28,22 +28,29 @@ namespace ProjetoInterdisciplinar.View
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            Supermarket supermarket = new Supermarket();
-            supermarket.name = txtName.Text.Trim();
-
-            supermarket.address = new Address();
-            supermarket.address.street = txtStreet.Text;
-            supermarket.address.number = txtNumber.Text;
-            supermarket.address.city = txtCity.Text;
-            supermarket.address.state = txtState.Text;
-            supermarket.address.postalCode = txtPostalCode.Text;
-
-            ErrorResult result = supermarket.insert();
-            if(result == ErrorResult.success)
+            if (txtName.Text != "" && txtPostalCode.Text != "")
             {
-                registerSupermarketController.showMessageBox(result);
-                registerSupermarketController.closeView(this);
-                registerSupermarketController.navigateToRegisterProductView();
+                Supermarket supermarket = new Supermarket();
+                supermarket.name = txtName.Text.Trim();
+
+                supermarket.address = new Address();
+                supermarket.address.street = txtStreet.Text;
+                supermarket.address.number = txtNumber.Text;
+                supermarket.address.city = txtCity.Text;
+                supermarket.address.state = txtState.Text;
+                supermarket.address.postalCode = txtPostalCode.Text;
+
+                ErrorResult result = supermarket.insert();
+                if (result == ErrorResult.success)
+                {
+                    registerSupermarketController.showMessageBox(result);
+                    registerSupermarketController.closeView(this);
+                    registerSupermarketController.navigateToRegisterProductView();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor preencha os campos vazios!", "Campos vazios", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -38,44 +38,51 @@ namespace ProjetoInterdisciplinar.View
 
         private void btnRegisterProduct_Click(object sender, EventArgs e)
         {
-            try
+            if (txtDescription.Text != "" && txtDate.Text != "" && txtPrice.Text != "" && cbCategory.Text != "" && cbSupermarket.Text != "")
             {
-                RegisterProduct registerProduct = new RegisterProduct();
-                registerProduct.price = float.Parse(txtPrice.Text.Trim());
-                registerProduct.dateRegister = DateTime.Parse(txtDate.Text);
-
-                registerProduct.product = new Product();
-                registerProduct.product.name = txtDescription.Text.Trim();
-
-                registerProduct.product.category = new Category();
-                registerProduct.product.category.idCategory = Int32.Parse(cbCategory.SelectedValue.ToString());
-                registerProduct.product.category.type = cbCategory.Text;
-
-                registerProduct.supermarket = new Supermarket();
-                registerProduct.supermarket.idSupermarket = Int32.Parse(cbSupermarket.SelectedValue.ToString());
-                registerProduct.supermarket.name = cbSupermarket.Text;
-
-                registerProduct.customer = Customer.shared;
-
-                ErrorResult result = registerProduct.insert();
-                if(result == ErrorResult.success)
+                try
                 {
-                    registerProductController.showMessageBox(result);
-                    txtDescription.Text = "";
-                    txtDate.Text = "";
-                    txtPrice.Text = "";
-                    cbCategory.Text = "";
-                    cbSupermarket.Text = "";
+                    RegisterProduct registerProduct = new RegisterProduct();
+                    registerProduct.price = float.Parse(txtPrice.Text.Trim());
+                    registerProduct.dateRegister = DateTime.Parse(txtDate.Text);
+
+                    registerProduct.product = new Product();
+                    registerProduct.product.name = txtDescription.Text.Trim();
+
+                    registerProduct.product.category = new Category();
+                    registerProduct.product.category.idCategory = Int32.Parse(cbCategory.SelectedValue.ToString());
+                    registerProduct.product.category.type = cbCategory.Text;
+
+                    registerProduct.supermarket = new Supermarket();
+                    registerProduct.supermarket.idSupermarket = Int32.Parse(cbSupermarket.SelectedValue.ToString());
+                    registerProduct.supermarket.name = cbSupermarket.Text;
+
+                    registerProduct.customer = Customer.shared;
+
+                    ErrorResult result = registerProduct.insert();
+                    if (result == ErrorResult.success)
+                    {
+                        registerProductController.showMessageBox(result);
+                        txtDescription.Text = "";
+                        txtDate.Text = "";
+                        txtPrice.Text = "";
+                        cbCategory.Text = "";
+                        cbSupermarket.Text = "";
+                    }
+                    else
+                    {
+                        registerProductController.showMessageBox(result);
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    registerProductController.showMessageBox(result);
+                    Console.WriteLine(ex.Message);
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);   
-            } 
+                MessageBox.Show("Por favor preencha os campos vazios!", "Campos vazios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
