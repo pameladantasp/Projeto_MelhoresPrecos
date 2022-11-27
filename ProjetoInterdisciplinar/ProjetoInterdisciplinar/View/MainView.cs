@@ -31,14 +31,14 @@ namespace ProjetoInterdisciplinar.View
             mainController.populateItems(flowLayoutPanel1);
         }
 
-        private void txtSearch_Enter(object sender, EventArgs e)
-        {
-            mainController.removePlaceholder(txtSearch);
-        }
-
         private void txtSearch_Leave(object sender, EventArgs e)
         {
             mainController.setPlaceholder(txtSearch);
+        }
+
+        private void txtSearch_Enter(object sender, EventArgs e)
+        {
+            mainController.removePlaceholder(txtSearch);
         }
     }
 }

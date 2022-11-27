@@ -173,6 +173,8 @@
             this.txtSearch.Size = new System.Drawing.Size(618, 22);
             this.txtSearch.TabIndex = 4;
             this.txtSearch.Text = "Busque por um produto...";
+            this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
+            this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
             // 
             // MainView
             // 
