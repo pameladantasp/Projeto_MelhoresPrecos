@@ -65,7 +65,7 @@ namespace ProjetoInterdisciplinar.DAO
 
             try
             {
-                database.setDeleteProductQueryString();
+                database.setDeleteQueryString(QueryType.product);
                 database.configureMySqlCommand();
                 database.command.Parameters.AddWithValue("@idProduct", idProduct);
                 database.insert();

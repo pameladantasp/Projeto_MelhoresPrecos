@@ -103,7 +103,7 @@ namespace ProjetoInterdisciplinar.DAO
 
             try
             {
-                database.setDeleteSupermarketQueryString();
+                database.setDeleteQueryString(QueryType.supermarket);
                 database.configureMySqlCommand();
                 database.command.Parameters.AddWithValue("@idSupermarket", idSupermarket);
                 database.insert();

@@ -118,7 +118,7 @@ namespace ProjetoInterdisciplinar.DAO
 
             try
             {
-                database.setDeleteCustomerQueryString();
+                database.setDeleteQueryString(QueryType.customer);
                 database.configureMySqlCommand();
                 database.command.Parameters.AddWithValue("@idCustomer", idCustomer);
                 database.insert();

@@ -88,7 +88,7 @@ namespace ProjetoInterdisciplinar.DAO
 
             try
             {
-                database.setDeleteCategoryQueryString();
+                database.setDeleteQueryString(QueryType.category);
                 database.configureMySqlCommand();
                 database.command.Parameters.AddWithValue("@idCategroy", idCategory);
                 database.insert();

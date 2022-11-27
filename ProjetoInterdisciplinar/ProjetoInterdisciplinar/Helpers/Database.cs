@@ -1,10 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
-using Org.BouncyCastle.Asn1.X509;
-using ProjetoInterdisciplinar.Model;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Reflection;
 using System.Windows.Forms;
 using static ProjetoInterdisciplinar.Helpers.Enums;
 
@@ -175,13 +171,42 @@ namespace ProjetoInterdisciplinar.Helpers
             }
         }
 
-        //Query Address
-        public void setDeleteAddressQueryString()
+        public void setDeleteQueryString(QueryType queryType)
         {
-            query = "DELETE FROM address ";
-            query += "WHERE idAddress = @idAddress";
-        }
+            switch (queryType)
+            {
+                case QueryType.address:
+                    query = "DELETE FROM address ";
+                    query += "WHERE idAddress = @idAddress";
+                    break;
 
+                case QueryType.category:
+                    query = "DELETE FROM category ";
+                    query += "WHERE idCategory = @idCategory";
+                    break;
+
+                case QueryType.customer:
+                    query = "DELETE FROM customer ";
+                    query += "WHERE idCustomer = @idCustomer";
+                    break;
+
+                case QueryType.product:
+                    query = "DELETE FROM product ";
+                    query += "WHERE idProduct = @idProduct";
+                    break;
+
+                case QueryType.supermarket:
+                    query = "DELETE FROM supermarket ";
+                    query += "WHERE idSupermarket = @idSupermarket";
+                    break;
+
+                case QueryType.registerProduct:
+                    query = "DELETE FROM registerProduct ";
+                    query += "WHERE idRegister = @idRegister";
+                    break;
+            }
+        }
+      
         //Query customer
 
         //login
@@ -194,22 +219,12 @@ namespace ProjetoInterdisciplinar.Helpers
         {
             query = "SELECT * FROM customer";
         }
-   
-        public void setDeleteCustomerQueryString()
-        {
-            query = "DELETE FROM customer ";
-            query += "WHERE idCustomer = @idCustomer";
-        }
+
 
         //Query supermarket
         public void selectSupermarketQueryString()
         {
             query = "SELECT idSupermarket, name FROM supermarket ORDER BY name";
-        }
-        public void setDeleteSupermarketQueryString()
-        {
-            query = "DELETE FROM supermarket ";
-            query += "WHERE idSupermarket = @idSupermarket";
         }
 
         //Query category
@@ -217,19 +232,6 @@ namespace ProjetoInterdisciplinar.Helpers
         public void selectCategoryQueryString()
         {
             query = "SELECT idCategory, type FROM category ORDER BY type";
-        }
-        public void setDeleteCategoryQueryString()
-        {
-            query = "DELETE FROM category ";
-            query += "WHERE idCategory = @idCategory";
-        }
-
-        //Query Product
-
-        public void setDeleteProductQueryString()
-        {
-            query = "DELETE FROM product ";
-            query += "WHERE idProduct = @idProduct";
         }
 
         //Query registerProduct
@@ -263,12 +265,6 @@ namespace ProjetoInterdisciplinar.Helpers
                     "     INNER JOIN customer AS C ON RP.idCustomer = C.idCustomer " +
                     "     INNER JOIN supermarket AS S ON RP.idSupermarket = S.idSupermarket " +
                     "     INNER JOIN product AS P ON RP.idProduct = P.idProduct " + where;
-        }
-        
-        public void setDeleteRegisterProductQueryString()
-        {
-            query = "DELETE FROM registerProduct ";
-            query += "WHERE idRegister = @idRegister";
         }
 
         public int getNextId(string nameTable)

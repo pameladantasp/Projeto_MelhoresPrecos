@@ -182,7 +182,7 @@ namespace ProjetoInterdisciplinar.DAO
 
             try
             {
-                database.setDeleteRegisterProductQueryString();
+                database.setDeleteQueryString(QueryType.registerProduct);
                 database.configureMySqlCommand();
                 database.command.Parameters.AddWithValue("@idRegister", idRegisterProduct);
                 database.insert();

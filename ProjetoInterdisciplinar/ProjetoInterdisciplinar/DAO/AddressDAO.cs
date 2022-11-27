@@ -70,7 +70,7 @@ namespace ProjetoInterdisciplinar.DAO
 
             try
             {
-                database.setDeleteAddressQueryString();
+                database.setDeleteQueryString(QueryType.address);
                 database.configureMySqlCommand();
                 database.command.Parameters.AddWithValue("@idAddress", idAddress);
                 database.insert();
