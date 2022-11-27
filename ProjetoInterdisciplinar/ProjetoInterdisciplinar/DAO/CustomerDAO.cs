@@ -81,9 +81,9 @@ namespace ProjetoInterdisciplinar.DAO
                     result = ErrorResult.failure;
                 }
             }
-            catch(Exception ex)
+            catch(MySqlException)
             {
-                MessageBox.Show(ex.Message);
+                this.message = "Erro na conexao com o banco de dados!";
                 result = ErrorResult.failure;
             }
             finally

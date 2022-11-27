@@ -22,11 +22,19 @@ namespace ProjetoInterdisciplinar.View
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            ErrorResult result = loginController.userSignIn(txtEmail, txtPassword);
+            if (txtEmail.Text != "" && txtPassword.Text != "")
+            {
+                ErrorResult result = loginController.userSignIn(txtEmail, txtPassword);
 
-            if ( result == ErrorResult.success) {
-                loginController.closeView(this);
-                loginController.navigateToHomeView();
+                if (result == ErrorResult.success)
+                {
+                    loginController.closeView(this);
+                    loginController.navigateToHomeView();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Preencha todos os campos por favor!", "Os campos estao vazios", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
