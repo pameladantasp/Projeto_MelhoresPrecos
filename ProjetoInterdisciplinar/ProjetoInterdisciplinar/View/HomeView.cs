@@ -52,14 +52,14 @@ namespace ProjetoInterdisciplinar.View
 
         private void txtSearch_Enter(object sender, EventArgs e)
         {
-            homeController.setPlaceholder(txtSearch);
+            homeController.removePlaceholder(txtSearch);
             textBoxEnabled = true;
         }
 
         private void txtSearch_Leave(object sender, EventArgs e)
         {
             textBoxEnabled = false;
-            homeController.removePlaceholder(txtSearch);
+            homeController.setPlaceholder(txtSearch);
         }
     }
 }
