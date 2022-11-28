@@ -1,9 +1,6 @@
-﻿
-
- using ProjetoInterdisciplinar.DAO;
+﻿using ProjetoInterdisciplinar.DAO;
 using System;
 using System.Collections.Generic;
-using System.Windows.Forms;
 using static ProjetoInterdisciplinar.Helpers.Enums;
 
 namespace ProjetoInterdisciplinar.Model

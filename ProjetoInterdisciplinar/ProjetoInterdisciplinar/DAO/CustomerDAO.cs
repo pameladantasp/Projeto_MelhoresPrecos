@@ -1,7 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using ProjetoInterdisciplinar.Model;
 using System;
-using System.Windows.Forms;
 using ProjetoInterdisciplinar.Helpers;
 using static ProjetoInterdisciplinar.Helpers.Enums;
 
