@@ -225,6 +225,7 @@
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "VOLTAR";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // panelBtnRegister
             // 
