@@ -20,6 +20,11 @@ namespace ProjetoInterdisciplinar
             setThread(new Thread(openHomeScreen));
         }
 
+        public void navigateToRetrievePasswordView() 
+        {
+            setThread(new Thread(openRetrievePasswordScreen));
+        }
+
         private void setThread(Thread thread)
         {
             t1 = thread;
@@ -35,6 +40,11 @@ namespace ProjetoInterdisciplinar
         private void openHomeScreen(object obj)
         {
             Application.Run(new HomeView());
+        }
+
+        private void openRetrievePasswordScreen(object obj)
+        {
+            Application.Run(new RetrievePasswordView());
         }
 
         public void closeView(Form form)

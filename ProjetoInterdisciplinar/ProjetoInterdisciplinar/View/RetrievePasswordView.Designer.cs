@@ -1,6 +1,6 @@
 ﻿namespace ProjetoInterdisciplinar.View
 {
-    partial class RetrievePassword
+    partial class RetrievePasswordView
     {
         /// <summary>
         /// Required designer variable.
@@ -72,6 +72,7 @@
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "VOLTAR";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // panelBtnRegister
             // 
@@ -101,6 +102,7 @@
             this.btnRetrievePassword.TabIndex = 3;
             this.btnRetrievePassword.Text = "REDEFINIR";
             this.btnRetrievePassword.UseVisualStyleBackColor = false;
+            this.btnRetrievePassword.Click += new System.EventHandler(this.btnRetrievePassword_Click);
             // 
             // label1
             // 
@@ -175,7 +177,7 @@
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
             // 
-            // RetrievePassword
+            // RetrievePasswordView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -188,7 +190,9 @@
             this.Controls.Add(this.panelEmail);
             this.MaximumSize = new System.Drawing.Size(454, 594);
             this.MinimumSize = new System.Drawing.Size(454, 594);
-            this.Name = "RetrievePassword";
+            this.Name = "RetrievePasswordView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RetrievePasswordView_KeyPress);
             this.panel1.ResumeLayout(false);
             this.panelBtnRegister.ResumeLayout(false);
             this.panelEmail.ResumeLayout(false);

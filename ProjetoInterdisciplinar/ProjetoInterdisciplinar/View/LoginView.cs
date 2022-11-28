@@ -37,5 +37,11 @@ namespace ProjetoInterdisciplinar.View
                 MessageBox.Show("Preencha todos os campos por favor!", "Os campos estao vazios", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            loginController.closeView(this);
+            loginController.navigateToRetrievePasswordView();
+        }
     }
 }

@@ -185,6 +185,7 @@
     <Compile Include="Controller\RegisterProductController.cs" />
     <Compile Include="Controller\RegisterSupermarketController.cs" />
     <Compile Include="Controller\RegisterUserController.cs" />
+    <Compile Include="Controller\RetrievePasswordController.cs" />
     <Compile Include="DAO\AddressDAO.cs" />
     <Compile Include="DAO\CategoryDAO.cs" />
     <Compile Include="DAO\CustomerDAO.cs" />
@@ -246,11 +247,11 @@
     <Compile Include="View\RegisterUserView.Designer.cs">
       <DependentUpon>RegisterUserView.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\RetrievePassword.cs">
+    <Compile Include="View\RetrievePasswordView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\RetrievePassword.Designer.cs">
-      <DependentUpon>RetrievePassword.cs</DependentUpon>
+    <Compile Include="View\RetrievePasswordView.Designer.cs">
+      <DependentUpon>RetrievePasswordView.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="View\HomeView.resx">
       <DependentUpon>HomeView.cs</DependentUpon>
@@ -283,8 +284,8 @@
     <EmbeddedResource Include="View\RegisterUserView.resx">
       <DependentUpon>RegisterUserView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\RetrievePassword.resx">
-      <DependentUpon>RetrievePassword.cs</DependentUpon>
+    <EmbeddedResource Include="View\RetrievePasswordView.resx">
+      <DependentUpon>RetrievePasswordView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
