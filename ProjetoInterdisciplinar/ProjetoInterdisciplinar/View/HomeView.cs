@@ -61,5 +61,11 @@ namespace ProjetoInterdisciplinar.View
             textBoxEnabled = false;
             homeController.setPlaceholder(txtSearch);
         }
+
+        private void btnConfiguration_Click(object sender, EventArgs e)
+        {
+            homeController.closeView(this);
+            homeController.navigateToConfigurationView();
+        }
     }
 }

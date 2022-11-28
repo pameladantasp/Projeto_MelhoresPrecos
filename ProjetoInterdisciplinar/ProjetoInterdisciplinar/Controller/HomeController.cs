@@ -19,6 +19,10 @@ namespace ProjetoInterdisciplinar.Controller
         {
             setThread(new Thread(openRegisterProductScreen));
         }
+        public void navigateToConfigurationView()
+        {
+            setThread(new Thread(openConfigurationScreen));
+        }
 
         public void removePlaceholder(TextBox txtSearch)
         {
@@ -51,6 +55,11 @@ namespace ProjetoInterdisciplinar.Controller
         private void openRegisterProductScreen()
         {
             Application.Run(new RegisterProductView());
+        }
+
+        private void openConfigurationScreen()
+        {
+            Application.Run(new ConfigurationView());
         }
 
         public void closeView(Form form)

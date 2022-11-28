@@ -36,13 +36,13 @@
             this.btnReport = new System.Windows.Forms.Button();
             this.btnRegisterProduct = new System.Windows.Forms.Button();
             this.panelUserInfo = new System.Windows.Forms.Panel();
+            this.lbUserName = new System.Windows.Forms.Label();
             this.pctUser = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelSearch = new System.Windows.Forms.Panel();
             this.labelSearch = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.lbUserName = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panelUserInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctUser)).BeginInit();
@@ -80,6 +80,7 @@
             this.btnConfiguration.Text = "Configurações";
             this.btnConfiguration.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnConfiguration.UseVisualStyleBackColor = true;
+            this.btnConfiguration.Click += new System.EventHandler(this.btnConfiguration_Click);
             // 
             // btnLogout
             // 
@@ -173,6 +174,22 @@
             this.panelUserInfo.Size = new System.Drawing.Size(173, 121);
             this.panelUserInfo.TabIndex = 0;
             // 
+            // lbUserName
+            // 
+            this.lbUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbUserName.AutoSize = true;
+            this.lbUserName.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUserName.ForeColor = System.Drawing.Color.White;
+            this.lbUserName.Location = new System.Drawing.Point(12, 84);
+            this.lbUserName.MaximumSize = new System.Drawing.Size(176, 0);
+            this.lbUserName.Name = "lbUserName";
+            this.lbUserName.Padding = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.lbUserName.Size = new System.Drawing.Size(100, 21);
+            this.lbUserName.TabIndex = 1;
+            this.lbUserName.Text = "User Name";
+            // 
             // pctUser
             // 
             this.pctUser.Image = global::ProjetoInterdisciplinar.Properties.Resources.icon_user_white_100;
@@ -247,22 +264,6 @@
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
             this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
-            // 
-            // lbUserName
-            // 
-            this.lbUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbUserName.AutoSize = true;
-            this.lbUserName.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUserName.ForeColor = System.Drawing.Color.White;
-            this.lbUserName.Location = new System.Drawing.Point(12, 84);
-            this.lbUserName.MaximumSize = new System.Drawing.Size(176, 0);
-            this.lbUserName.Name = "lbUserName";
-            this.lbUserName.Padding = new System.Windows.Forms.Padding(3, 0, 3, 0);
-            this.lbUserName.Size = new System.Drawing.Size(100, 21);
-            this.lbUserName.TabIndex = 1;
-            this.lbUserName.Text = "User Name";
             // 
             // HomeView
             // 
