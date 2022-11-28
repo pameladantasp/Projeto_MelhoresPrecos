@@ -130,8 +130,8 @@
   <data name="logoAppTranslucido" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logoAppTranslucido.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon-configuration-28" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon-configuration-28.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon-ranking28" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-ranking28.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,11 +139,14 @@
   <data name="user.png" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user.png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon-ranking28" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon-ranking28.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon-configuration-28" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-configuration-28.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="grocery.png" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\grocery.png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon-user-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-user-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon-history-28" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-history-28.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,13 +157,16 @@
   <data name="userIcon.png" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\userIcon.png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon-user-28" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-user-28.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon_user_white_100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_user_white_100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon-add-28" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-add-28.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon-user-28" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon-user-28.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon-user-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-user-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
