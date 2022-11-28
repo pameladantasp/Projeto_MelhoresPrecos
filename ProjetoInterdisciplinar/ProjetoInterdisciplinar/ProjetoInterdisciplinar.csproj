@@ -196,6 +196,12 @@
     <Compile Include="Helpers\ApiPostalCode.cs" />
     <Compile Include="Helpers\Enums.cs" />
     <Compile Include="Helpers\ModelInterface.cs" />
+    <Compile Include="View\ConfigurationView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ConfigurationView.Designer.cs">
+      <DependentUpon>ConfigurationView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\HomeView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +259,9 @@
     <Compile Include="View\RetrievePasswordView.Designer.cs">
       <DependentUpon>RetrievePasswordView.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\ConfigurationView.resx">
+      <DependentUpon>ConfigurationView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\HomeView.resx">
       <DependentUpon>HomeView.cs</DependentUpon>
     </EmbeddedResource>
@@ -345,6 +354,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon-user-28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-user-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-user-100.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
