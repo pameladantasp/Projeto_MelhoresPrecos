@@ -246,6 +246,12 @@
     <Compile Include="View\RegisterUserView.Designer.cs">
       <DependentUpon>RegisterUserView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\RetrievePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RetrievePassword.Designer.cs">
+      <DependentUpon>RetrievePassword.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\HomeView.resx">
       <DependentUpon>HomeView.cs</DependentUpon>
     </EmbeddedResource>
@@ -276,6 +282,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\RegisterUserView.resx">
       <DependentUpon>RegisterUserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RetrievePassword.resx">
+      <DependentUpon>RetrievePassword.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
