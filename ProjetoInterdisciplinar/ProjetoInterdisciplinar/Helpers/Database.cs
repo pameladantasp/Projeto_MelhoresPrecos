@@ -1,6 +1,8 @@
 ﻿using MySql.Data.MySqlClient;
+using ProjetoInterdisciplinar.Model;
 using System;
 using System.Data;
+using System.Reflection;
 using System.Windows.Forms;
 using static ProjetoInterdisciplinar.Helpers.Enums;
 
@@ -214,6 +216,16 @@ namespace ProjetoInterdisciplinar.Helpers
                "WHERE email = @login AND password = @password";
         }
 
+        //Query customer
+        public void selectCustomerQueryString()
+        {
+            query = "SELECT C.idCustomer AS 'idCustomer', C.name AS 'customerName', C.email As 'customerEmail'," +
+                    "       A.idAddress AS 'idAddress', A.street AS 'street', A.number AS 'number', A.district AS 'district'," +
+                    "       A.city AS 'city', A.state AS 'state', A.postalCode AS 'postalCode' " +
+                    "   FROM customer AS C " +
+                    "       INNER JOIN address AS A ON C.idAddress = A.idAddress " +
+                    "   WHERE C.idCustomer = @idCustomer";
+        }
 
         //Query supermarket
         public void selectSupermarketQueryString()

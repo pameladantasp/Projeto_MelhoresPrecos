@@ -3,6 +3,7 @@ using ProjetoInterdisciplinar.Model;
 using System;
 using ProjetoInterdisciplinar.Helpers;
 using static ProjetoInterdisciplinar.Helpers.Enums;
+using System.Collections.Generic;
 
 namespace ProjetoInterdisciplinar.DAO
 {
@@ -10,6 +11,7 @@ namespace ProjetoInterdisciplinar.DAO
     {
         private Database database;
         private ErrorResult result;
+        private Customer customer;
         public string message;
         public CustomerDAO()
         {
@@ -54,6 +56,47 @@ namespace ProjetoInterdisciplinar.DAO
                database.closeConnection();
             }
             return result;
+        }
+
+        public Customer selectData()
+        {
+            try
+            {
+                database.selectCustomerQueryString();
+                database.configureMySqlCommand();
+                database.command.Parameters.AddWithValue("@idCustomer", Customer.shared.idCustomer);
+                database.select();
+
+                if(database.dataReader != null)
+                {
+                    if (database.dataReader.Read())
+                    {
+                        customer = new Customer();
+
+                        customer.idCustomer = (int)database.dataReader["idCustomer"];
+                        customer.name = database.dataReader["customerName"].ToString();
+                        customer.email = database.dataReader["customerEmail"].ToString();
+
+                        customer.address = new Address();
+                        customer.address.idAddress = (int)database.dataReader["idAddress"];
+                        customer.address.street = database.dataReader["street"].ToString();
+                        customer.address.number = database.dataReader["number"].ToString();
+                        customer.address.district = database.dataReader["district"].ToString();
+                        customer.address.city = database.dataReader["city"].ToString();
+                        customer.address.state = database.dataReader["state"].ToString();
+                        customer.address.postalCode = database.dataReader["postalCode"].ToString();
+                    }
+                }
+            }
+            catch(MySqlException)
+            {
+                this.message = "Erro na conexao com o banco de dados!";
+            }
+            finally
+            {
+                database.closeConnection();
+            }
+            return customer;
         }
         public ErrorResult insertData(Customer customer)
         {

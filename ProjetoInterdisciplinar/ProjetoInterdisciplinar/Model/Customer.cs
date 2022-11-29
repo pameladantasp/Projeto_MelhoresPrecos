@@ -24,6 +24,10 @@ namespace ProjetoInterdisciplinar.Model
         {
             return dao.verifyLogin(this);
         }
+        public Customer select()
+        {
+            return dao.selectData();
+        }
         public ErrorResult insert()
         {
            return dao.insertData(this);
