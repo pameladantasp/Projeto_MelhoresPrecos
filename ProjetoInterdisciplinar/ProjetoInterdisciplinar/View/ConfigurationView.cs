@@ -50,8 +50,7 @@ namespace ProjetoInterdisciplinar.View
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (txtName.Text != "" && txtEmail.Text != "" && txtPassword.Text != "" && txtConfPassword.Text != "" && txtPostalCode.Text != "")
-            {
-                Customer customer = new Customer();
+            { 
                 customer.name = txtName.Text.Trim();
                 customer.email = txtEmail.Text.Trim();
                 customer.password = txtPassword.Text.Trim();

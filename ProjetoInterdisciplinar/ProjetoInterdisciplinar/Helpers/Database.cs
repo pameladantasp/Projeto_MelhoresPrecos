@@ -153,8 +153,8 @@ namespace ProjetoInterdisciplinar.Helpers
 
                 case QueryType.customer:
                     query = "UPDATE customer AS C, address AS A " +
-                            "SET C.idCustomer = @idCustomer C.name = @name, C.email = @email C.password = @password, " +
-                            "A.idAddress = @idAddress, A.street = @street,  A.number = @number, " +
+                            "SET C.name = @name, C.email = @email, C.password = @password, " +
+                            "A.street = @street,  A.number = @number, " +
                             "A.district = @district, A.city = @city, A.state = @state, A.postalCode = @postalCode " +
                             "WHERE C.idAddress = A.idAddress AND C.idCustomer = @idCustomer";
                     break;
