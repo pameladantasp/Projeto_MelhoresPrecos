@@ -32,9 +32,9 @@ namespace ProjetoInterdisciplinar.Model
         {
            return dao.insertData(this);
         }
-        public void update()
+        public ErrorResult update()
         {
-            dao.updateData(this);
+            return dao.updateData(this);
         }
         public bool delete()
         {

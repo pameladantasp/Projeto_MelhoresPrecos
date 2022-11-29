@@ -134,25 +134,37 @@ namespace ProjetoInterdisciplinar.DAO
             }
             return result;
         }
-        public void updateData(Customer customer)
+        public ErrorResult updateData(Customer customer)
         {
             try
             {
                 database.setUpdateQueryString(QueryType.customer);
                 database.configureMySqlCommand();
+                database.command.Parameters.AddWithValue("@idCustomer", customer.idCustomer);
                 database.command.Parameters.AddWithValue("@name", customer.name);
                 database.command.Parameters.AddWithValue("@email", customer.email);
-                database.command.Parameters.AddWithValue("@password", customer.password);
+                database.command.Parameters.AddWithValue("@password", EasyEncryption.MD5.ComputeMD5Hash(customer.password));
+
+                database.command.Parameters.AddWithValue("@idAddress", customer.address.idAddress);
+                database.command.Parameters.AddWithValue("@street", customer.address.street);
+                database.command.Parameters.AddWithValue("@number", customer.address.number);
+                database.command.Parameters.AddWithValue("@district", customer.address.district);
+                database.command.Parameters.AddWithValue("@city", customer.address.city);
+                database.command.Parameters.AddWithValue("@state", customer.address.state);
+                database.command.Parameters.AddWithValue("@postalCode", customer.address.postalCode);
                 database.insert();
+                result = ErrorResult.success;
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                result = ErrorResult.failure;
             }
             finally
             {
                 database.closeConnection();
             }
+            return result;
         }
         public bool deleteData(int idCustomer)
         {
