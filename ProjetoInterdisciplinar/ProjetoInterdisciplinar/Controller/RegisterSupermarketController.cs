@@ -35,7 +35,7 @@ namespace ProjetoInterdisciplinar.Controller
             switch (result)
             {
                 case ErrorResult.success:
-                    MessageBox.Show("Cadastro realizado com sucesso", "Cadastro de Supermercado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Cadastro realizado com sucesso", "Cadastro de Supermercado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
 
                 case ErrorResult.invalide:

@@ -55,7 +55,7 @@ namespace ProjetoInterdisciplinar.Controller
             switch (result)
             {
                 case ErrorResult.success:
-                    MessageBox.Show("Atualizacao com sucesso", "Deu certo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Atualizacao com sucesso", "Deu certo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
 
                 case ErrorResult.invalide:

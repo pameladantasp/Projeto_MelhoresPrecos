@@ -77,7 +77,7 @@ namespace ProjetoInterdisciplinar.Controller
             switch (result)
             {
                 case ErrorResult.success:
-                    MessageBox.Show("Cadastro realizado e logado com sucesso", "Entrando", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Cadastro realizado e logado com sucesso", "Entrando", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
 
                 case ErrorResult.invalide:

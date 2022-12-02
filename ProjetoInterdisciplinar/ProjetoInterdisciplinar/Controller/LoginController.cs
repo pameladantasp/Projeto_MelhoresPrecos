@@ -68,7 +68,7 @@ namespace ProjetoInterdisciplinar
             switch (result)
             {
                 case ErrorResult.success:
-                    MessageBox.Show("Logado com sucesso", "Entrando", MessageBoxButtons.OK, MessageBoxIcon.Warning);          
+                    MessageBox.Show("Logado com sucesso", "Entrando", MessageBoxButtons.OK, MessageBoxIcon.Information);          
                     break;
 
                 case ErrorResult.invalide:
