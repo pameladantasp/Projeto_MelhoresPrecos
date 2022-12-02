@@ -22,6 +22,25 @@ namespace ProjetoInterdisciplinar.View
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            signIn();
+        }
+
+        private void txtPassword_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                signIn();
+            }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            loginController.closeView(this);
+            loginController.navigateToRetrievePasswordView();
+        }
+
+        private void signIn()
+        {
             if (txtEmail.Text != "" && txtPassword.Text != "")
             {
                 ErrorResult result = loginController.userSignIn(txtEmail, txtPassword);
@@ -36,12 +55,6 @@ namespace ProjetoInterdisciplinar.View
             {
                 MessageBox.Show("Preencha todos os campos por favor!", "Os campos estao vazios", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            loginController.closeView(this);
-            loginController.navigateToRetrievePasswordView();
         }
     }
 }
