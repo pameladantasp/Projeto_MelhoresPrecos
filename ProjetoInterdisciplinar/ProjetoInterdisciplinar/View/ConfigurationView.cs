@@ -30,19 +30,22 @@ namespace ProjetoInterdisciplinar.View
         {
             Customer result =  customer.select();
 
-            Customer.shared.idCustomer = result.idCustomer;
-            txtName.Text = result.name;
-            txtEmail.Text = result.email;
+            if(result != null)
+            {
+                Customer.shared.idCustomer = result.idCustomer;
+                txtName.Text = result.name;
+                txtEmail.Text = result.email;
 
-            Customer.shared.address = new Address();
-            Customer.shared.address.idAddress = result.address.idAddress;
-            customer.address = new Address();
-            txtStreet.Text = result.address.street;
-            txtNumber.Text = result.address.number;
-            txtDistrict.Text = result.address.district;
-            txtCity.Text = result.address.city;
-            txtState.Text = result.address.state;
-            txtPostalCode.Text = result.address.postalCode;
+                Customer.shared.address = new Address();
+                Customer.shared.address.idAddress = result.address.idAddress;
+                customer.address = new Address();
+                txtStreet.Text = result.address.street;
+                txtNumber.Text = result.address.number;
+                txtDistrict.Text = result.address.district;
+                txtCity.Text = result.address.city;
+                txtState.Text = result.address.state;
+                txtPostalCode.Text = result.address.postalCode;
+            }
         }
 
         private void ConfigurationView_Load(object sender, EventArgs e)
