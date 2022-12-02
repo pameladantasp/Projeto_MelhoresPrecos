@@ -154,6 +154,12 @@ namespace ProjetoInterdisciplinar.DAO
                 database.command.Parameters.AddWithValue("@postalCode", customer.address.postalCode);
                 database.insert();
                 result = ErrorResult.success;
+
+                if(result == ErrorResult.success) {
+                    Customer.shared.idCustomer = customer.idCustomer;    
+                    Customer.shared.name = customer.name;
+                    Customer.shared.email = customer.email;
+                }
             }
             catch (Exception ex)
             {
