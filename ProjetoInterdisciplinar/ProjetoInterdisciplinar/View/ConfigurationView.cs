@@ -30,9 +30,12 @@ namespace ProjetoInterdisciplinar.View
         {
             Customer result =  customer.select();
 
+            Customer.shared.idCustomer = result.idCustomer;
             txtName.Text = result.name;
             txtEmail.Text = result.email;
 
+            Customer.shared.address = new Address();
+            Customer.shared.address.idAddress = result.address.idAddress;
             customer.address = new Address();
             txtStreet.Text = result.address.street;
             txtNumber.Text = result.address.number;
@@ -50,12 +53,14 @@ namespace ProjetoInterdisciplinar.View
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (txtName.Text != "" && txtEmail.Text != "" && txtPassword.Text != "" && txtConfPassword.Text != "" && txtPostalCode.Text != "")
-            { 
+            {
+                customer.idCustomer = Customer.shared.idCustomer;
                 customer.name = txtName.Text.Trim();
                 customer.email = txtEmail.Text.Trim();
                 customer.password = txtPassword.Text.Trim();
 
                 customer.address = new Address();
+                customer.address.idAddress = Customer.shared.address.idAddress;
                 customer.address.street = txtStreet.Text;
                 customer.address.district = txtDistrict.Text;
                 customer.address.number = txtNumber.Text;
