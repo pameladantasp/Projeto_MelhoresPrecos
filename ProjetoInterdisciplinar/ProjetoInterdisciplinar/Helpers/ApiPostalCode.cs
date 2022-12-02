@@ -37,9 +37,9 @@ namespace ProjetoInterdisciplinar.Helpers
                     MessageBox.Show("O campo CEP esta vazio", "Atencao!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
-            catch(Exception ex )
+            catch
             {
-                Console.WriteLine(ex.Message);
+                MessageBox.Show("CEP nao encontrado", "Atencao!", MessageBoxButtons.OK);
             }
             return address;
         }
