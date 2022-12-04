@@ -1,10 +1,12 @@
 <h1>Sistema de comparação de preços entre supermercados</h1>
 
-![Badge Working](http://img.shields.io/static/v1?label=STATUS&message=%20WORKING&color=blue&style=for-the-badge)
+![Badge Done](http://img.shields.io/static/v1?label=STATUS&message=DONE&color=green&style=for-the-badge)
 
-> `Plano de Projeto Interdisciplinar:` Um sistema criado em c# que ajude o usuário a comparar os preços dos produtos de mercado para tomar sua decisão de compra.  
+> `Plano de Projeto Interdisciplinar:` Um sistema criado em C# que ajude o usuário a comparar os preços dos produtos de mercado para tomar sua decisão de compra.  
 
 > `LP:` C-sharp
+
+> `BD:` MySQL Workbench
 
 > `ADS - IFSP - Campus Campinas`
 
