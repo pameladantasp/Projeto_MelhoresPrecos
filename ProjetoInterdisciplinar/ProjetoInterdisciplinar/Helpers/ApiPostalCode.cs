@@ -12,9 +12,9 @@ namespace ProjetoInterdisciplinar.Helpers
 
         public Address localizePostalCode(string txtPostalCode)
         {
-            try
+            if (!string.IsNullOrEmpty(txtPostalCode))
             {
-                if (!string.IsNullOrEmpty(txtPostalCode))
+                try
                 {
                     correiosApi = new CorreiosApi();
                     var response = correiosApi.consultaCEP(txtPostalCode);
@@ -29,17 +29,17 @@ namespace ProjetoInterdisciplinar.Helpers
                     }
                     else
                     {
-                        MessageBox.Show("CEP nao encontrado", "Atencao!", MessageBoxButtons.OK);
+                        MessageBox.Show("Por favor, informe um CEP valido", "Atencao!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("O campo CEP esta vazio", "Atencao!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(ex.Message, "Api correios", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch
+            else
             {
-                MessageBox.Show("CEP nao encontrado", "Atencao!", MessageBoxButtons.OK);
+                MessageBox.Show("Por favor, informe um CEP valido", "Atencao!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return address;
         }
